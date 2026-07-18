@@ -1,0 +1,16 @@
+# CQ8: Diferenca de nivel entre Objetivas e Subjetivas
+# (Proficiency disparity between objective and subjective tasks)
+PREFIX : <http://www.ontolearn.com/ontologia#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?tipoQuestao ?nivelLabel WHERE {
+  ?aprendiz rdfs:label "Joao Silva" ;
+            :desempenhoCompetencias ?des .
+  ?des :questaoRespondida ?quest ;
+       :proficienciaAtingida ?nivel .
+  ?quest a ?tipoQuestao .
+  ?nivel rdfs:label ?nivelLabel .
+
+  # Filtra apenas subclasses de Questao
+  FILTER(?tipoQuestao IN (:Objetiva, :Subjetiva))
+}
