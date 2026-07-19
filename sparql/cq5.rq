@@ -1,0 +1,11 @@
+# CQ5: Recursos para uma competencia
+# (Learning resources addressing a competency)
+PREFIX : <http://www.ontolearn.com/ontologia#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?recursoLabel ?url WHERE {
+  ?recurso :abordaCompetencia ?comp ;
+           rdfs:label ?recursoLabel ;
+           :url ?url .
+  ?comp rdfs:label "Heranca em Python" .
+}

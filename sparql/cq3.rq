@@ -1,0 +1,11 @@
+# CQ3: Avaliacoes para uma competencia
+# (Assessments mapped to evaluate a competency)
+PREFIX : <http://www.ontolearn.com/ontologia#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?avalLabel WHERE {
+  ?comp rdfs:label "Classes e Objetos em POO" .
+  ?quest :competenciasAvaliadas ?comp .
+  ?aval :temQuestao ?quest ;
+        rdfs:label ?avalLabel .
+}

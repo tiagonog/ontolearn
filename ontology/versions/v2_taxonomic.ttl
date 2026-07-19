@@ -1,0 +1,472 @@
+@prefix : <http://www.ontolearn.com/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ontolearn.com/ontologia> a owl:Ontology ;
+                                     rdfs:comment "Ontologia OntoLearn para Learning Analytics baseada em Competências. Versão aprimorada com axiomas avançados, modelo KSA e Taxonomia de Bloom." .
+
+#################################################################
+#    Propriedades de Objeto (Object Properties)
+#################################################################
+
+# --- Propriedades do Aprendiz ---
+:desempenhoCompetencias a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Aprendiz e seu(s) Desempenho(s)." ;
+    rdfs:domain :Aprendiz ;
+    rdfs:range :Desempenho_do_Aprendiz .
+
+:conquistasAdquiridas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Aprendiz e os Milestones alcançados." ;
+    rdfs:domain :Aprendiz ;
+    rdfs:range :Milestone_de_Aprendizagem .
+
+:trajetoriasRealizadas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Aprendiz e as Trajetórias que realizou." ;
+    rdfs:domain :Aprendiz ;
+    rdfs:range :Trajetórias_de_Aprendizagem .
+
+:historicoAprendizagem a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Aprendiz e os Recursos que utilizou." ;
+    rdfs:domain :Aprendiz ;
+    rdfs:range :Recurso_de_Aprendizagem .
+
+:estaInscritoEm a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Aprendiz e um Curso (Inversa de 'aprendizesInscritos')." ;
+    rdfs:domain :Aprendiz ;
+    rdfs:range :Curso ;
+    owl:inverseOf :aprendizesInscritos .
+
+# --- Propriedades do Instrutor ---
+:avaliaDesempenho a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Instrutor e o Desempenho que ele avalia." ;
+    rdfs:domain :Instrutor ;
+    rdfs:range :Desempenho_do_Aprendiz .
+
+:elaboraAvaliacoes a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Instrutor e as Avaliações que ele cria." ;
+    rdfs:domain :Instrutor ;
+    rdfs:range :Avaliação .
+
+:insereRecursos a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Instrutor e os Recursos que ele insere no sistema." ;
+    rdfs:domain :Instrutor ;
+    rdfs:range :Recurso_de_Aprendizagem .
+
+:éResponsavelPor a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Instrutor e um Curso (Inversa de 'instrutoresResponsaveis')." ;
+    rdfs:domain :Instrutor ;
+    rdfs:range :Curso ;
+    owl:inverseOf :instrutoresResponsaveis .
+
+# --- Propriedades do Curso ---
+:aprendizesInscritos a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Curso e os Aprendizes inscritos." ;
+    rdfs:domain :Curso ;
+    rdfs:range :Aprendiz .
+
+:recursosUtilizados a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Curso e os Recursos que ele utiliza." ;
+    rdfs:domain :Curso ;
+    rdfs:range :Recurso_de_Aprendizagem .
+
+:instrutoresResponsaveis a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Curso e seus Instrutores responsáveis." ;
+    rdfs:domain :Curso ;
+    rdfs:range :Instrutor .
+
+:avaliacoesAplicadas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Curso e as Avaliações que ele aplica." ;
+    rdfs:domain :Curso ;
+    rdfs:range :Avaliação .
+
+# --- Propriedades do Desempenho do Aprendiz ---
+:aprendizAvaliado a owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+    rdfs:comment "Relação funcional que liga um Desempenho a um único Aprendiz." ;
+    rdfs:domain :Desempenho_do_Aprendiz ;
+    rdfs:range :Aprendiz ;
+    owl:inverseOf :desempenhoCompetencias .
+
+:questaoRespondida a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Desempenho e a Questão respondida." ;
+    rdfs:domain :Desempenho_do_Aprendiz ;
+    rdfs:range :Questão .
+
+:proficienciaAtingida a owl:ObjectProperty ;
+    rdfs:comment "Relação entre um Desempenho e o Nível de Proficiência (Bloom) atingido." ;
+    rdfs:domain :Desempenho_do_Aprendiz ;
+    rdfs:range :Níveis_de_Proficiência .
+
+# --- Propriedades da Avaliação ---
+:questoesIncluidas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre uma Avaliação e as Questões que ela contém." ;
+    rdfs:domain :Avaliação ;
+    rdfs:range :Questão .
+
+# --- Propriedades da Questão ---
+:fazParteDaAvaliação a owl:ObjectProperty ;
+    rdfs:comment "Relação entre uma Questão e a Avaliação (Inversa de 'questoesIncluidas')." ;
+    rdfs:domain :Questão ;
+    rdfs:range :Avaliação ;
+    owl:inverseOf :questoesIncluidas .
+
+:competenciasAvaliadas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre uma Questão e a(s) Competência(s) que ela avalia." ;
+    rdfs:domain :Questão ;
+    rdfs:range :Competência .
+    
+:competenciaRelacionada a owl:ObjectProperty ;
+    rdfs:comment "Relação alternativa entre Questão e Competência (da Tabela 4.3)." ;
+    rdfs:domain :Questão ;
+    rdfs:range :Competência .
+
+:exigeNivel a owl:ObjectProperty ;
+    rdfs:comment "Nova propriedade: Relação entre uma Questão e o nível de Bloom que ela exige." ;
+    rdfs:domain :Questão ;
+    rdfs:range :Níveis_de_Proficiência .
+
+# --- Propriedades de Milestone e Trajetória ---
+:competenciasEnvolvidas a owl:ObjectProperty ;
+    rdfs:comment "Relação entre Milestone/Trajetória e as Competências envolvidas." ;
+    rdfs:domain [ a owl:Class ;
+                  owl:unionOf ( :Milestone_de_Aprendizagem
+                                :Trajetórias_de_Aprendizagem
+                              )
+                ] ;
+    rdfs:range :Competência .
+
+# --- Propriedades da Competência (Modelo KSA + Dependência) ---
+:requer a owl:ObjectProperty ,
+           owl:TransitiveProperty ;
+    rdfs:comment "Nova propriedade (Transitiva): Uma Competência requer outra. Ex: 'Prog. Python' requer 'Herança'." ;
+    rdfs:domain :Competência ;
+    rdfs:range :Competência .
+
+:éCompostoDeConhecimento a owl:ObjectProperty ;
+    rdfs:comment "Nova propriedade (KSA): Liga uma Competência ao Conhecimento (Saber o quê)." ;
+    rdfs:domain :Competência ;
+    rdfs:range :Conhecimento .
+
+:éCompostoDeHabilidade a owl:ObjectProperty ;
+    rdfs:comment "Nova propriedade (KSA): Liga uma Competência à Habilidade (Saber como fazer)." ;
+    rdfs:domain :Competência ;
+    rdfs:range :Habilidade .
+
+:éCompostoDeAtitude a owl:ObjectProperty ;
+    rdfs:comment "Nova propriedade (KSA): Liga uma Competência à Atitude (Querer fazer)." ;
+    rdfs:domain :Competência ;
+    rdfs:range :Atitude .
+
+
+#################################################################
+#    Propriedades de Dados (Data Properties)
+#################################################################
+
+# --- Propriedades de ID (Chaves) ---
+:idAprendiz a owl:DataProperty ,
+              owl:InverseFunctionalProperty .
+:idInstrutor a owl:DataProperty ,
+               owl:InverseFunctionalProperty .
+:idCompetencia a owl:DataProperty ,
+                 owl:InverseFunctionalProperty .
+:idRecurso a owl:DataProperty ,
+              owl:InverseFunctionalProperty .
+:idDesempenho a owl:DataProperty ,
+                 owl:InverseFunctionalProperty .
+:idCurso a owl:DataProperty ,
+            owl:InverseFunctionalProperty .
+:idAvaliacao a owl:DataProperty ,
+               owl:InverseFunctionalProperty .
+:idMilestone a owl:DataProperty ,
+                owl:InverseFunctionalProperty .
+:idNivel a owl:DataProperty ,
+            owl:InverseFunctionalProperty .
+:idTrajetoria a owl:DataProperty ,
+                 owl:InverseFunctionalProperty .
+:idQuestao a owl:DataProperty ,
+              owl:InverseFunctionalProperty .
+
+[ a owl:AllDifferent ;
+  owl:members ( :idAprendiz
+                :idInstrutor
+                :idCompetencia
+                :idRecurso
+                :idDesempenho
+                :idCurso
+                :idAvaliacao
+                :idMilestone
+                :idNivel
+                :idTrajetoria
+                :idQuestao
+              )
+] .
+
+# --- Propriedades Comuns ---
+:nome a owl:DataProperty ;
+        rdfs:domain [ a owl:Class ;
+                      owl:unionOf ( :Aprendiz
+                                    :Instrutor
+                                    :Competência
+                                  )
+                    ] ;
+        rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ;
+            rdfs:domain [ a owl:Class ;
+                          owl:unionOf ( :Competência
+                                        :Curso
+                                        :Avaliação
+                                        :Milestone_de_Aprendizagem
+                                        :Níveis_de_Proficiência
+                                      )
+                        ] ;
+            rdfs:range xsd:string .
+
+:tipo a owl:DataProperty ;
+        rdfs:domain [ a owl:Class ;
+                      owl:unionOf ( :Recurso_de_Aprendizagem
+                                    :Avaliação
+                                    :Milestone_de_Aprendizagem
+                                    :Questão
+                                  )
+                    ] ;
+        rdfs:range xsd:string .
+
+# --- Propriedades Específicas ---
+:area a owl:DataProperty ;
+    rdfs:domain :Competência ;
+    rdfs:range xsd:string .
+
+:url a owl:DataProperty ;
+    rdfs:domain :Recurso_de_Aprendizagem ;
+    rdfs:range xsd:anyURI . # Corrigido de String para anyURI
+
+:respostaAprendiz a owl:DataProperty ;
+    rdfs:domain :Desempenho_do_Aprendiz ;
+    rdfs:range xsd:string .
+
+:titulo a owl:DataProperty ;
+    rdfs:domain :Curso ;
+    rdfs:range xsd:string .
+
+:nível a owl:DataProperty ;
+    rdfs:domain :Curso ;
+    rdfs:range xsd:string .
+
+:data a owl:DataProperty ;
+    rdfs:domain :Milestone_de_Aprendizagem ;
+    rdfs:range xsd:dateTime . # Corrigido de String para dateTime
+
+:etapas a owl:DataProperty ;
+    rdfs:domain :Trajetórias_de_Aprendizagem ;
+    rdfs:range xsd:string . # Mantido como string, pode ser uma lista
+
+:enunciado a owl:DataProperty ;
+    rdfs:domain :Questão ;
+    rdfs:range xsd:string .
+
+:respostaCorreta a owl:DataProperty ;
+    rdfs:domain :Questão ;
+    rdfs:range xsd:string .
+
+:alternativas a owl:DataProperty ;
+    rdfs:domain :Questão ;
+    rdfs:range xsd:string . # Mantido como string, pode ser uma lista
+
+
+#################################################################
+#    Classes, Hierarquias e Axiomas
+#################################################################
+
+# --- Classes Principais (Core) ---
+:Milestone_de_Aprendizagem a owl:Class .
+:Trajetórias_de_Aprendizagem a owl:Class .
+:Curso a owl:Class .
+:Desempenho_do_Aprendiz a owl:Class .
+:Competência a owl:Class .
+
+# --- Novas Classes (Modelo KSA) ---
+:Conhecimento a owl:Class ;
+    rdfs:comment "Parte do modelo KSA: O 'Saber o quê'." .
+:Habilidade a owl:Class ;
+    rdfs:comment "Parte do modelo KSA: O 'Saber como fazer'." .
+:Atitude a owl:Class ;
+    rdfs:comment "Parte do modelo KSA: O 'Querer fazer'." .
+
+# --- Classes e Hierarquias (com Disjunção) ---
+
+# Hierarquia de Usuário
+:Usuário_do_AVA a owl:Class .
+
+:Aprendiz a owl:Class ;
+    rdfs:subClassOf :Usuário_do_AVA .
+
+:Instrutor a owl:Class ;
+    rdfs:subClassOf :Usuário_do_AVA .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Aprendiz
+                :Instrutor
+              )
+] .
+
+# Hierarquia de Avaliação
+:Avaliação a owl:Class .
+    :Mistas a owl:Class ;
+        rdfs:subClassOf :Avaliação .
+    :Subjetivas_Aval a owl:Class ;
+        rdfs:comment "Tipo de Avaliação Subjetiva (para diferenciar da Questão)" ;
+        rdfs:subClassOf :Avaliação .
+    :Objetivas_Aval a owl:Class ;
+        rdfs:comment "Tipo de Avaliação Objetiva (para diferenciar da Questão)" ;
+        rdfs:subClassOf :Avaliação .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Mistas
+                :Subjetivas_Aval
+                :Objetivas_Aval
+              )
+] .
+
+# Hierarquia de Questão (Baseado na Fig. 4.7)
+:Questão a owl:Class .
+
+    :Objetiva a owl:Class ;
+        rdfs:subClassOf :Questão .
+        :Preenchimento_de_lacunas a owl:Class ;
+            rdfs:subClassOf :Objetiva .
+        :Associação a owl:Class ;
+            rdfs:subClassOf :Objetiva .
+        :Verdadeiro_ou_falso a owl:Class ;
+            rdfs:subClassOf :Objetiva .
+        :Correspondencia a owl:Class ;
+            rdfs:subClassOf :Objetiva .
+        :Múltipla_escolha a owl:Class ;
+            rdfs:subClassOf :Objetiva .
+
+    :Subjetiva a owl:Class ;
+        rdfs:subClassOf :Questão .
+        :Discursiva a owl:Class ;
+            rdfs:subClassOf :Subjetiva .
+        :Aberta a owl:Class ;
+            rdfs:subClassOf :Subjetiva .
+        :Entrega_de_Atividades a owl:Class ;
+            rdfs:subClassOf :Subjetiva .
+        :Redação a owl:Class ;
+            rdfs:subClassOf :Subjetiva .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Objetiva
+                :Subjetiva
+              )
+] .
+
+# Hierarquia de Recurso de Aprendizagem (Baseado na Fig. 4.7)
+:Recurso_de_Aprendizagem a owl:Class .
+
+    :Multimidia a owl:Class ;
+        rdfs:subClassOf :Recurso_de_Aprendizagem .
+        :Página_Web a owl:Class ;
+            rdfs:subClassOf :Multimidia .
+        :Video a owl:Class ;
+            rdfs:subClassOf :Multimidia .
+        :Infográfico a owl:Class ;
+            rdfs:subClassOf :Multimidia .
+        :Audio a owl:Class ;
+            rdfs:subClassOf :Multimidia .
+
+    :Didático a owl:Class ;
+        rdfs:subClassOf :Recurso_de_Aprendizagem .
+        :Apostila a owl:Class ;
+            rdfs:subClassOf :Didático .
+        :Texto a owl:Class ;
+            rdfs:subClassOf :Didático .
+        :Livro a owl:Class ;
+            rdfs:subClassOf :Didático .
+
+    :Interativo a owl:Class ;
+        rdfs:subClassOf :Recurso_de_Aprendizagem .
+        :Jogo a owl:Class ;
+            rdfs:subClassOf :Interativo .
+        :Simulador a owl:Class ;
+            rdfs:subClassOf :Interativo .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Multimidia
+                :Didático
+                :Interativo
+              )
+] .
+
+# Hierarquia de Desempenho (Baseado na Fig. 4.7)
+:Desempenho_do_Aprendiz a owl:Class .
+    :Diagnóstico a owl:Class ;
+        rdfs:subClassOf :Desempenho_do_Aprendiz .
+    :Somativo a owl:Class ;
+        rdfs:subClassOf :Desempenho_do_Aprendiz .
+    :Formativo a owl:Class ;
+        rdfs:subClassOf :Desempenho_do_Aprendiz .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Diagnóstico
+                :Somativo
+                :Formativo
+              )
+] .
+
+# Hierarquia de Níveis de Proficiência (Taxonomia de Bloom)
+:Níveis_de_Proficiência a owl:Class .
+
+    :Lembrar a owl:Class ;
+        rdfs:comment "Nível 1 de Bloom: Recuperar fatos e conceitos básicos." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+    :Entender a owl:Class ;
+        rdfs:comment "Nível 2 de Bloom: Explicar ideias ou conceitos." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+    :Aplicar a owl:Class ;
+        rdfs:comment "Nível 3 de Bloom: Usar informação em novas situações." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+    :Analisar a owl:Class ;
+        rdfs:comment "Nível 4 de Bloom: Estabelecer conexões entre ideias." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+    :Avaliar a owl:Class ;
+        rdfs:comment "Nível 5 de Bloom: Justificar uma posição ou decisão." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+    :Criar a owl:Class ;
+        rdfs:comment "Nível 6 de Bloom: Produzir um trabalho novo ou original." ;
+        rdfs:subClassOf :Níveis_de_Proficiência .
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Lembrar
+                :Entender
+                :Aplicar
+                :Analisar
+                :Avaliar
+                :Criar
+              )
+] .
+
+
+# --- Axiomas de Disjunção Globais ---
+
+# Classes principais que não devem se sobrepor
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Usuário_do_AVA
+                :Competência
+                :Conhecimento
+                :Habilidade
+                :Atitude
+                :Recurso_de_Aprendizagem
+                :Desempenho_do_Aprendiz
+                :Curso
+                :Questão
+                :Avaliação
+                :Milestone_de_Aprendizagem
+                :Níveis_de_Proficiência
+                :Trajetórias_de_Aprendizagem
+              )
+] .
+
+# Fim do arquivo
