@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Resolve o IRI da OntoLearn para o arquivo local (Protege e ROBOT). -->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="OntoLearn v2.1" name="http://www.ontolearn.com/ontologia" uri="ontolearn-v2.1.owl"/>
+</catalog>

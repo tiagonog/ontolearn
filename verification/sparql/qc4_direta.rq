@@ -1,0 +1,14 @@
+# QC4 (forma direta) - mesma pergunta, sem caminho de propriedade.
+# Os pré-requisitos indiretos só aparecem quando a transitividade de
+# :requer (owl:TransitiveProperty) é materializada por um raciocinador.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?prerequisito WHERE {
+  VALUES ?nomeCompetencia { "Herança em Python" }       # parâmetro: competencia
+  ?comp :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  ?comp :requer ?pre .
+  ?pre :nome ?np .
+  BIND (STR(?np) AS ?prerequisito)
+}
+ORDER BY ?prerequisito

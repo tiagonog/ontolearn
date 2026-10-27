@@ -1,0 +1,15 @@
+# QC4 - Quais são os pré-requisitos (diretos e indiretos) necessários para
+# iniciar a competência "Y"?
+# Forma com caminho de propriedade (SPARQL 1.1): o operador + calcula o
+# fecho transitivo no momento da consulta, com ou sem raciocinador.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?prerequisito WHERE {
+  VALUES ?nomeCompetencia { "Herança em Python" }       # parâmetro: competencia
+  ?comp :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  ?comp :requer+ ?pre .
+  ?pre :nome ?np .
+  BIND (STR(?np) AS ?prerequisito)
+}
+ORDER BY ?prerequisito

@@ -1,0 +1,291 @@
+@prefix :        <http://www.ontolearn.com/ontologia#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =====================================================================
+#  OntoLearn - ABox sintetica de teste (arquivo separado)
+#  - Importa a OntoLearn v2.1 sem altera-la: nao declara classes nem
+#    propriedades; apenas individuos e assercoes.
+#  - Todos os dados sao ficticios (nenhum dado real de estudante).
+#  - Para abrir no Protege, mantenha catalog-v001.xml na mesma pasta:
+#    ele resolve o IRI importado para o arquivo local ontolearn-v2.1.owl.
+#  - Desenho dos casos de teste (ver Cap. 5 e Apendice de validacao):
+#    (a) cadeia de pre-requisitos de quatro niveis:
+#        Polimorfismo -> Heranca -> Classes e Objetos -> Tipos de Dados;
+#    (b) assercoes registradas em apenas um sentido de propriedades
+#        inversas (DEMP-0010, REC-0008), cuja recuperacao depende
+#        de inferencia;
+#    (c) questoes objetivas e subjetivas sobre a mesma competencia;
+#    (d) casos negativos: aprendiz sem evidencias (APR-0004) e
+#        aprendiz com nivel Aplicar fora da area de Programacao
+#        (APR-0005);
+#    (e) recursos vinculados a competencias e ao historico.
+# =====================================================================
+
+<http://www.ontolearn.com/ontologia/abox-teste> a owl:Ontology ;
+    owl:imports <http://www.ontolearn.com/ontologia> ;
+    rdfs:label "OntoLearn - ABox sintética de teste"@pt ;
+    dcterms:description "Base de fatos sintéticos usada na verificação das questões de competência e dos axiomas da OntoLearn v2.1. Não altera o vocabulário da ontologia."@pt ;
+    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.1" .
+
+# ---------------------------------------------------------------------
+# Escala de Bloom revisada: individuos de nivel ausentes na ABox de
+# referencia (que ja contem NP-Lembrar e NP-Aplicar)
+# ---------------------------------------------------------------------
+:NP-Entender a owl:NamedIndividual , :Entender ;
+    rdfs:label "Entender"@pt ;
+    :idNivel "NP-0002-Entender" ;
+    :descricao "Nível 2 de Bloom: construir significado a partir de mensagens instrucionais." .
+
+:NP-Analisar a owl:NamedIndividual , :Analisar ;
+    rdfs:label "Analisar"@pt ;
+    :idNivel "NP-0004-Analisar" ;
+    :descricao "Nível 4 de Bloom: decompor o material em partes e determinar como elas se relacionam." .
+
+:NP-Avaliar a owl:NamedIndividual , :AvaliarBloom ;
+    rdfs:label "Avaliar"@pt ;
+    :idNivel "NP-0005-Avaliar" ;
+    :descricao "Nível 5 de Bloom: fazer julgamentos com base em critérios e padrões." .
+
+:NP-Criar a owl:NamedIndividual , :Criar ;
+    rdfs:label "Criar"@pt ;
+    :idNivel "NP-0006-Criar" ;
+    :descricao "Nível 6 de Bloom: reunir elementos para formar um todo coerente ou original." .
+
+# ---------------------------------------------------------------------
+# Competencias e cadeia de pre-requisitos (caso a)
+# ---------------------------------------------------------------------
+:COMP-0003 a owl:NamedIndividual , :Competencia ;
+    :idCompetencia "COMP-0003" ;
+    :nome "Polimorfismo em Python" ;
+    :area "Programação de Computadores" ;
+    :descricao "Capacidade de projetar e implementar comportamento polimórfico por sobrescrita de métodos." ;
+    :requer :COMP-0002 ;
+    :ehCompostoDeConhecimento :KNOW-002 ;
+    :ehCompostoDeHabilidade :SKILL-002 .
+
+:COMP-0004 a owl:NamedIndividual , :Competencia ;
+    :idCompetencia "COMP-0004" ;
+    :nome "Tipos de Dados e Variáveis em Python" ;
+    :area "Programação de Computadores" ;
+    :descricao "Capacidade de declarar variáveis e operar corretamente sobre os tipos primitivos da linguagem." .
+
+# Fecha a cadeia: Classes e Objetos (COMP-0001, ja existente) requer Tipos de Dados
+:COMP-0001 :requer :COMP-0004 .
+
+:COMP-0005 a owl:NamedIndividual , :Competencia ;
+    :idCompetencia "COMP-0005" ;
+    :nome "Documentação de Código" ;
+    :area "Engenharia de Software" ;
+    :descricao "Capacidade de documentar funções e módulos de forma clara para outros desenvolvedores." ;
+    :ehCompostoDeHabilidade :SKILL-003 ;
+    :ehCompostoDeAtitude :ATT-001 .
+
+# Componentes CHA (KSA)
+:KNOW-002 a owl:NamedIndividual , :Conhecimento ;
+    :idConhecimento "KNOW-002" ;
+    :descricao "Conhecer o conceito de polimorfismo de subtipo e a resolução dinâmica de métodos." .
+
+:SKILL-002 a owl:NamedIndividual , :Habilidade ;
+    :idHabilidade "SKILL-002" ;
+    :descricao "Implementar uma hierarquia de classes em que subclasses sobrescrevem um mesmo método." .
+
+:SKILL-003 a owl:NamedIndividual , :Habilidade ;
+    :idHabilidade "SKILL-003" ;
+    :descricao "Redigir docstrings conforme a convenção PEP 257." .
+
+:ATT-001 a owl:NamedIndividual , :Atitude ;
+    :idAtitude "ATT-001" ;
+    :descricao "Valorizar a legibilidade e a documentação do código como compromisso com a equipe." .
+
+# ---------------------------------------------------------------------
+# Aprendizes (5 no total, incluindo APR-0001 da ABox de referencia)
+# ---------------------------------------------------------------------
+:APR-0002 a owl:NamedIndividual , :Aprendiz ;
+    :idAprendiz "APR-0002" ;
+    :nome "Ana Beatriz Rocha" ;
+    :estaInscritoEm :CUR-0001 ;
+    :desempenhoCompetencias :DEMP-0006 , :DEMP-0007 , :DEMP-0008 ;
+    :historicoAprendizagem :REC-0004 , :REC-0007 ;
+    :trajetoriasRealizadas :TRAJ-0001 .
+
+# APR-0003: o desempenho DEMP-0010 e registrado apenas no sentido
+# Desempenho -> Aprendiz (caso b); ver DEMP-0010.
+:APR-0003 a owl:NamedIndividual , :Aprendiz ;
+    :idAprendiz "APR-0003" ;
+    :nome "Carlos Menezes" ;
+    :estaInscritoEm :CUR-0001 ;
+    :desempenhoCompetencias :DEMP-0009 ;
+    :historicoAprendizagem :REC-0006 , :REC-0008 .
+
+# APR-0004: inscrita, sem nenhum registro de desempenho (caso d)
+:APR-0004 a owl:NamedIndividual , :Aprendiz ;
+    :idAprendiz "APR-0004" ;
+    :nome "Luiza Prado" ;
+    :estaInscritoEm :CUR-0001 .
+
+# APR-0005: atinge Aplicar apenas em competencia fora da area de Programacao (caso d)
+:APR-0005 a owl:NamedIndividual , :Aprendiz ;
+    :idAprendiz "APR-0005" ;
+    :nome "Rafael Teixeira" ;
+    :estaInscritoEm :CUR-0001 ;
+    :desempenhoCompetencias :DEMP-0011 .
+
+# ---------------------------------------------------------------------
+# Avaliacoes e questoes (caso c)
+# ---------------------------------------------------------------------
+:AVAL-0003 a owl:NamedIndividual , :ObjetivasAval ;
+    :idAvaliacao "AVAL-0003" ;
+    :tipo "Objetiva" ;
+    :descricao "Prova objetiva da unidade de Orientação a Objetos." ;
+    :aplicadaNoCurso :CUR-0001 ;
+    :elaboradaPor :INST-0001 .
+
+:AVAL-0004 a owl:NamedIndividual , :Avaliacao ;
+    :idAvaliacao "AVAL-0004" ;
+    :tipo "Discursiva" ;
+    :descricao "Atividade discursiva sobre projeto orientado a objetos e documentação de código." ;
+    :aplicadaNoCurso :CUR-0001 ;
+    :elaboradaPor :INST-0001 .
+
+:QUEST-0006 a owl:NamedIndividual , :Objetiva ;
+    :idQuestao "QUEST-0006" ;
+    :enunciado "Qual é a saída do programa em que Cachorro e Gato sobrescrevem o método falar() de Animal e ambos são chamados em um laço?" ;
+    :tipo "Múltipla Escolha" ;
+    :alternativas "a) Erro; b) Au, Miau; c) Animal, Animal; d) None" ;
+    :respostaCorreta "b) Au, Miau" ;
+    :competenciasAvaliadas :COMP-0003 , :COMP-0002 ;
+    :exigeNivel :NP-Aplicar ;
+    :fazParteDaAvaliacao :AVAL-0003 .
+
+:QUEST-0007 a owl:NamedIndividual , :Subjetiva ;
+    :idQuestao "QUEST-0007" ;
+    :enunciado "Analise como o uso de polimorfismo reduz o acoplamento entre os módulos de um sistema." ;
+    :competenciasAvaliadas :COMP-0003 ;
+    :exigeNivel :NP-Analisar ;
+    :fazParteDaAvaliacao :AVAL-0004 .
+
+:QUEST-0008 a owl:NamedIndividual , :Objetiva ;
+    :idQuestao "QUEST-0008" ;
+    :enunciado "Qual é a diferença entre uma classe e um objeto?" ;
+    :tipo "Múltipla Escolha" ;
+    :competenciasAvaliadas :COMP-0001 ;
+    :exigeNivel :NP-Entender ;
+    :fazParteDaAvaliacao :AVAL-0003 .
+
+:QUEST-0009 a owl:NamedIndividual , :Objetiva ;
+    :idQuestao "QUEST-0009" ;
+    :enunciado "Após a atribuição x = '3' + str(4), qual é o valor e o tipo de x?" ;
+    :tipo "Múltipla Escolha" ;
+    :competenciasAvaliadas :COMP-0004 ;
+    :exigeNivel :NP-Aplicar ;
+    :fazParteDaAvaliacao :AVAL-0003 .
+
+:QUEST-0010 a owl:NamedIndividual , :Subjetiva ;
+    :idQuestao "QUEST-0010" ;
+    :enunciado "Escreva a docstring da função calcular_media(notas) seguindo a PEP 257." ;
+    :competenciasAvaliadas :COMP-0005 ;
+    :exigeNivel :NP-Aplicar ;
+    :fazParteDaAvaliacao :AVAL-0004 .
+
+# ---------------------------------------------------------------------
+# Registros de desempenho
+# ---------------------------------------------------------------------
+:DEMP-0006 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0006" ;
+    :aprendizAvaliado :APR-0002 ;
+    :questaoRespondida :QUEST-0006 ;
+    :proficienciaAtingida :NP-Aplicar ;
+    :respostaAprendiz "b) Au, Miau" .
+
+:DEMP-0007 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0007" ;
+    :aprendizAvaliado :APR-0002 ;
+    :questaoRespondida :QUEST-0007 ;
+    :proficienciaAtingida :NP-Analisar ;
+    :temDesempenhoAvaliadoPor :INST-0001 ;
+    :respostaAprendiz "O código cliente depende apenas da interface de Animal; novas subclasses podem ser adicionadas sem alterá-lo." .
+
+:DEMP-0008 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0008" ;
+    :aprendizAvaliado :APR-0002 ;
+    :questaoRespondida :QUEST-0010 ;
+    :proficienciaAtingida :NP-Aplicar ;
+    :temDesempenhoAvaliadoPor :INST-0001 .
+
+:DEMP-0009 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0009" ;
+    :aprendizAvaliado :APR-0003 ;
+    :questaoRespondida :QUEST-0008 ;
+    :proficienciaAtingida :NP-Entender .
+
+# Caso b: apenas o sentido Desempenho -> Aprendiz e declarado.
+# :desempenhoCompetencias (Aprendiz -> Desempenho) so e obtida por inferencia
+# (inversa de :competenciasDoDesempenho).
+:DEMP-0010 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0010" ;
+    :competenciasDoDesempenho :APR-0003 ;
+    :aprendizAvaliado :APR-0003 ;
+    :questaoRespondida :QUEST-0009 ;
+    :proficienciaAtingida :NP-Aplicar .
+
+:DEMP-0011 a owl:NamedIndividual , :Formativo ;
+    :idDesempenho "DEMP-0011" ;
+    :aprendizAvaliado :APR-0005 ;
+    :questaoRespondida :QUEST-0010 ;
+    :proficienciaAtingida :NP-Aplicar ;
+    :temDesempenhoAvaliadoPor :INST-0001 .
+
+# ---------------------------------------------------------------------
+# Recursos de aprendizagem (caso e)
+# ---------------------------------------------------------------------
+# Vincula a competencias dois recursos ja existentes na ABox de referencia
+:REC-0002 :abordaCompetencia :COMP-0001 .
+:REC-0005 :abordaCompetencia :COMP-0002 .
+
+:REC-0006 a owl:NamedIndividual , :Didatico ;
+    :idRecurso "REC-0006" ;
+    :nome "Apostila: tipos de dados e variáveis" ;
+    :tipo "Texto" ;
+    :url "https://example.org/ontolearn/apostila-tipos"^^xsd:anyURI ;
+    :abordaCompetencia :COMP-0004 ;
+    :inseridoPor :INST-0001 .
+
+:REC-0007 a owl:NamedIndividual , :Interativo ;
+    :idRecurso "REC-0007" ;
+    :nome "Exercícios interativos de polimorfismo" ;
+    :tipo "Exercício interativo" ;
+    :url "https://example.org/ontolearn/exercicios-polimorfismo"^^xsd:anyURI ;
+    :abordaCompetencia :COMP-0003 ;
+    :inseridoPor :INST-0001 .
+
+# Caso b: o vinculo recurso-competencia e declarado apenas a partir da
+# competencia (:ehAbordadaPor), inversa de :abordaCompetencia.
+:REC-0008 a owl:NamedIndividual , :Video ;
+    :idRecurso "REC-0008" ;
+    :nome "Videoaula: classes e objetos" ;
+    :tipo "Vídeo" ;
+    :url "https://example.org/ontolearn/video-classes-objetos"^^xsd:anyURI .
+
+:COMP-0001 :ehAbordadaPor :REC-0008 .
+
+# ---------------------------------------------------------------------
+# Trajetoria e marco de aprendizagem
+# ---------------------------------------------------------------------
+:TRAJ-0001 a owl:NamedIndividual , :TrajetoriasDeAprendizagem ;
+    :idTrajetoria "TRAJ-0001" ;
+    :etapas "1) Tipos de dados e variáveis; 2) Classes e objetos; 3) Herança; 4) Polimorfismo" ;
+    :competenciasEnvolvidas :COMP-0004 , :COMP-0001 , :COMP-0002 , :COMP-0003 ;
+    :realizadaPor :APR-0002 .
+
+:MILE-0002 a owl:NamedIndividual , :MilestoneDeAprendizagem ;
+    :idMilestone "MILE-0002" ;
+    :tipo "Conclusão de Trilha" ;
+    :descricao "Conclusão da trilha de Orientação a Objetos." ;
+    :data "2026-06-30T18:00:00+00:00"^^xsd:dateTime ;
+    :adquiridaPor :APR-0002 ;
+    :competenciasEnvolvidas :COMP-0003 .

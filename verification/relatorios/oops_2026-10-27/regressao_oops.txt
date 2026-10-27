@@ -1,0 +1,60 @@
+Testes de regressão do repositório do OOPS! executados com a compilação local
+Código: https://github.com/oeg-upm/OOPS, commit 11572ea6b31cba29dd3f8a443e24311652f059de, com scripts/oops/P06.patch
+Programa: scripts/oops/RegressionOOPS.java, que reproduz src/test/java/es/upm/fi/oeg/oops/RegressionTests.java
+  sem JUnit: as 37 ontologias de teste de src/test/resources/data/input, todos os verificadores, comparação da
+  saída RDF com a saída esperada de src/test/resources/data/output, normalizada pela mesma consulta CONSTRUCT do
+  teste oficial (isomorfismo de grafos). A saída obtida é gravada em Turtle por Report.toTurtle e relida antes
+  da comparação, como a saída esperada, que também é um arquivo Turtle.
+Execução: 27/10/2026 (mesma compilação dos diagnósticos desta pasta)
+
+P02	DIFERE	esperado=36 triplas	obtido=36 triplas
+P03	DIFERE	esperado=66 triplas	obtido=66 triplas
+P04	confere	esperado=9 triplas	obtido=9 triplas
+P05	DIFERE	esperado=45 triplas	obtido=45 triplas
+P06	confere	esperado=37 triplas	obtido=37 triplas
+P07	confere	esperado=27 triplas	obtido=27 triplas
+P08	confere	esperado=50 triplas	obtido=50 triplas
+P10	confere	esperado=24 triplas	obtido=24 triplas
+P10-A	confere	esperado=17 triplas	obtido=17 triplas
+P10-B	confere	esperado=17 triplas	obtido=17 triplas
+P10-C	confere	esperado=17 triplas	obtido=17 triplas
+P11	confere	esperado=29 triplas	obtido=29 triplas
+P12	DIFERE	esperado=59 triplas	obtido=59 triplas
+P13	confere	esperado=42 triplas	obtido=42 triplas
+P19	confere	esperado=48 triplas	obtido=48 triplas
+P20	confere	esperado=64 triplas	obtido=64 triplas
+P21	confere	esperado=44 triplas	obtido=44 triplas
+P22M1	confere	esperado=43 triplas	obtido=43 triplas
+P22M2	confere	esperado=35 triplas	obtido=35 triplas
+P22M3	DIFERE	esperado=48 triplas	obtido=48 triplas
+P22M4	confere	esperado=28 triplas	obtido=28 triplas
+P24	confere	esperado=35 triplas	obtido=35 triplas
+P25	confere	esperado=25 triplas	obtido=25 triplas
+P26	confere	esperado=30 triplas	obtido=30 triplas
+P27	confere	esperado=74 triplas	obtido=74 triplas
+P28	confere	esperado=25 triplas	obtido=25 triplas
+P29	DIFERE	esperado=63 triplas	obtido=63 triplas
+P30	DIFERE	esperado=28 triplas	obtido=28 triplas
+P31	DIFERE	esperado=36 triplas	obtido=36 triplas
+P32	DIFERE	esperado=28 triplas	obtido=28 triplas
+P33	DIFERE	esperado=27 triplas	obtido=19 triplas
+P35	confere	esperado=72 triplas	obtido=72 triplas
+P36	confere	esperado=1 triplas	obtido=1 triplas
+P38	DIFERE	esperado=23 triplas	obtido=16 triplas
+P39	confere	esperado=16 triplas	obtido=16 triplas
+P40	confere	esperado=26 triplas	obtido=26 triplas
+P41	DIFERE	esperado=8 triplas	obtido=1 triplas
+Total: 25/37 conferem | diferem: P02 P03 P05 P12 P22M3 P29 P30 P31 P32 P33 P38 P41
+
+Diferenças (12 casos), conferidas triplo a triplo:
+- P02, P03, P05, P12, P22M3, P29, P30, P31 (8 casos): nos resultados compostos (pares ou grupos de elementos),
+  o código deste commit grava cada elemento afetado como IRI (por exemplo, P05.java: inverseRes.addProperty(
+  valueProp, property1)), enquanto os arquivos esperados, gerados antes dessa mudança, trazem os mesmos elementos
+  como literais xsd:anyURI. Os elementos, os códigos, as severidades e o número de casos coincidem.
+- P32 (1 caso): a descrição da armadilha no código deste commit é mais longa que a do arquivo esperado (frase
+  final acrescentada); os elementos e os demais campos coincidem.
+- P41 e P38 (2 casos): o verificador P41 consulta o serviço externo Licensius (www.licensius.appspot.com),
+  inacessível nesta execução; o arquivo esperado de P38 também contém um resultado de P41.
+- P33 (1 caso): o verificador lê a cadeia de propriedades pelo texto do axioma gerado pela OWL API, e a OWL API
+  5.1.9 escreve a cadeia com espaços ("ObjectPropertyChain( <...> )") que o verificador não reconhece. A OntoLearn
+  não tem cadeias de propriedades (owl:propertyChainAxiom), e o caso não se aplica a ela.

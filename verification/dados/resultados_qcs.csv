@@ -1,0 +1,21 @@
+id,qc,consulta,base,parametros,n_esperado,n_dependem_inferencia,n_declarado,n_inferido,confere_declarado,confere_inferido,obtido_inferido
+QC1-a,QC1,qc1.rq,v2.0,aprendiz=João Silva,1,0,1,1,sim,sim,Herança em Python
+QC1-b,QC1,qc1.rq,v2.0+teste,aprendiz=Carlos Menezes,2,1,1,2,sim,sim,Classes e Objetos em POO | Tipos de Dados e Variáveis em Python
+QC1-c,QC1,qc1.rq,v2.0+teste,aprendiz=Luiza Prado,0,0,0,0,sim,sim,(vazio)
+QC2-a,QC2,qc2.rq,v2.0,aprendiz=João Silva; competencia=Herança em Python,2,0,2,2,sim,sim,"Aplicar, QUEST-0003 | Lembrar, QUEST-0005"
+QC2-b,QC2,qc2.rq,v2.0+teste,aprendiz=Ana Beatriz Rocha; competencia=Polimorfismo em Python,2,0,2,2,sim,sim,"Analisar, QUEST-0007 | Aplicar, QUEST-0006"
+QC3-a,QC3,qc3.rq,v2.0,competencia=Classes e Objetos em POO,1,0,1,1,sim,sim,"AVAL-0002, QUEST-0001"
+QC3-b,QC3,qc3.rq,v2.0,competencia=Herança em Python,2,1,1,2,sim,sim,"AVAL-0002, QUEST-0003 | AVAL-0002, QUEST-0005"
+QC3-c,QC3,qc3.rq,v2.0+teste,competencia=Herança em Python,3,1,2,3,sim,sim,"AVAL-0002, QUEST-0003 | AVAL-0002, QUEST-0005 | AVAL-0003, QUEST-0006"
+QC4-a,QC4,qc4_caminho.rq,v2.0,competencia=Herança em Python,1,0,1,1,sim,sim,Classes e Objetos em POO
+QC4-b,QC4,qc4_caminho.rq,v2.0+teste,competencia=Polimorfismo em Python,3,0,3,3,sim,sim,Classes e Objetos em POO | Herança em Python | Tipos de Dados e Variáveis em Python
+QC4-c,QC4,qc4_direta.rq,v2.0+teste,competencia=Polimorfismo em Python,3,2,1,3,sim,sim,Classes e Objetos em POO | Herança em Python | Tipos de Dados e Variáveis em Python
+QC5-a,QC5,qc5.rq,v2.0,competencia=Herança em Python,1,0,1,1,sim,sim,"REC-0004, http://example.com/heranca-python-video"
+QC5-b,QC5,qc5.rq,v2.0+teste,competencia=Classes e Objetos em POO,2,1,1,2,sim,sim,"REC-0002, http://ontolearn.com/aula1-poo | REC-0008, https://example.org/ontolearn/video-classes-objetos"
+QC6-a,QC6,qc6.rq,v2.0,nivel=Aplicar; area=Programação,1,0,1,1,sim,sim,João Silva
+QC6-b,QC6,qc6.rq,v2.0+teste,nivel=Aplicar; area=Programação,3,1,2,3,sim,sim,Ana Beatriz Rocha | Carlos Menezes | João Silva
+QC7-a,QC7,qc7.rq,v2.0,aprendiz=João Silva; competencia=Herança em Python,0,0,0,0,sim,sim,(vazio)
+QC7-b,QC7,qc7.rq,v2.0+teste,aprendiz=João Silva; competencia=Herança em Python,1,0,1,1,sim,sim,http://ontolearn.com/exercicios-heranca
+QC7-c,QC7,qc7.rq,v2.0+teste,aprendiz=Carlos Menezes; competencia=Classes e Objetos em POO,1,1,0,1,sim,sim,https://example.org/ontolearn/video-classes-objetos
+QC8-a,QC8,qc8.rq,v2.0,,1,0,1,1,sim,sim,"João Silva, Herança em Python, Aplicar, Lembrar, 2"
+QC8-b,QC8,qc8.rq,v2.0+teste,,2,0,2,2,sim,sim,"Ana Beatriz Rocha, Polimorfismo em Python, Aplicar, Analisar, -1 | João Silva, Herança em Python, Aplicar, Lembrar, 2"

@@ -1,0 +1,9 @@
+### ontologia/ontolearn-v2.1.owl (106 classes e propriedades)
+- P08 sem rdfs:label: 0 -> []
+- P08 sem rdfs:comment: 0 -> []
+- P11 sem domínio: 0 -> []
+- P11 sem imagem: 0 -> []
+- P13 sem inversa: 0 -> []
+- P04 classes isoladas (aprox.): 0 -> []
+- P41 licença: 1 -> ['http://creativecommons.org/licenses/by/4.0/']
+

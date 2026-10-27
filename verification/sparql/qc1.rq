@@ -1,0 +1,18 @@
+# QC1 - Quais competências específicas um determinado aprendiz já demonstrou?
+# Operacionalização: competências avaliadas por questões que o aprendiz
+# respondeu e para as quais existe registro de desempenho (evidência),
+# independentemente do nível atingido.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?competencia WHERE {
+  VALUES ?nomeAprendiz { "João Silva" }                 # parâmetro: aprendiz
+  ?aprendiz a :Aprendiz ;
+            :nome ?na ;
+            :desempenhoCompetencias ?desempenho .
+  FILTER (STR(?na) = ?nomeAprendiz)
+  ?desempenho :questaoRespondida ?questao .
+  ?questao :competenciasAvaliadas ?comp .
+  ?comp :nome ?nc .
+  BIND (STR(?nc) AS ?competencia)
+}
+ORDER BY ?competencia

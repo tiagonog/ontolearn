@@ -1,0 +1,18 @@
+# QC7 - Quais foram as URLs dos recursos acessados por um aprendiz no seu
+# histórico de aprendizagem para uma determinada competência?
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?url WHERE {
+  VALUES ?nomeAprendiz    { "João Silva" }              # parâmetro: aprendiz
+  VALUES ?nomeCompetencia { "Herança em Python" }       # parâmetro: competencia
+  ?a a :Aprendiz ;
+     :nome ?na ;
+     :historicoAprendizagem ?rec .
+  FILTER (STR(?na) = ?nomeAprendiz)
+  ?rec :abordaCompetencia ?comp ;
+       :url ?u .
+  ?comp :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  BIND (STR(?u) AS ?url)
+}
+ORDER BY ?url

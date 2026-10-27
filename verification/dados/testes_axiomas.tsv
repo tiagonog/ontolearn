@@ -1,0 +1,65 @@
+versao	raciocinador	teste	familia	descricao	esperado	resultado	confere
+v2.1	HermiT	T01	Consistência	Ontologia com a ABox de 20 indivíduos	consistente	consistente	sim
+v2.1	HermiT	T02	Taxonomia (Subjetiva ⊑ Questao)	Indivíduo declarado apenas como Subjetiva é inferido como Questao?	acarreta Questao(TS)	acarreta Questao(TS)	sim
+v2.1	HermiT	T03	Transitividade (requer)	Cadeia T3→COMP-0002→COMP-0001→T4: T3 requer T4?	acarreta requer(T3, T4)	acarreta requer(T3, T4)	sim
+v2.1	HermiT	T04	Propriedades inversas	Desempenho registrado só no sentido Desempenho→Aprendiz é recuperado a partir do aprendiz?	acarreta desempenhoCompetencias(APR-0001, TD)	acarreta desempenhoCompetencias(APR-0001, TD)	sim
+v2.1	HermiT	T05	Hierarquia de propriedades (CHA)	COMP-0002 ehCompostoDeConhecimento KNOW-001 ⇒ temComponenteKSA?	acarreta temComponenteKSA(COMP-0002, KNOW-001)	acarreta temComponenteKSA(COMP-0002, KNOW-001)	sim
+v2.1	HermiT	T06	Disjunção CHA	Indivíduo declarado Conhecimento e Habilidade	inconsistente	inconsistente	sim
+v2.1	HermiT	T07	Disjunção das classes-raiz	Indivíduo declarado Aprendiz e Competencia	inconsistente	inconsistente	sim
+v2.1	HermiT	T08	Disjunção Objetiva/Subjetiva	Questão declarada Objetiva e Subjetiva	inconsistente	inconsistente	sim
+v2.1	HermiT	T09	Domínio + disjunção	Uso indevido: QUEST-0001 requer COMP-0001 (domínio de requer é Competencia)	inconsistente	inconsistente	sim
+v2.1	HermiT	T10	Funcionalidade sem UNA	DEMP-0003 recebe um segundo nível (NP-Lembrar)	acarreta NP-Aplicar = NP-Lembrar	acarreta NP-Aplicar = NP-Lembrar	sim
+v2.1	HermiT	T11	Funcionalidade + nomes distintos	T10 + DifferentIndividuals(NP-Aplicar, NP-Lembrar)	inconsistente	inconsistente	sim
+v2.1	HermiT	T12	Restrição existencial (mundo aberto)	DEMP-0004 não tem nível registrado	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	sim
+v2.1	HermiT	T13	Domínio de descricao	Atitude descrita com a propriedade descricao	consistente	consistente	sim
+v2.1	HermiT	T14	Domínio de data	Registro de desempenho DEMP-0003 datado com a propriedade data	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	sim
+v2.1	HermiT	T15	Papéis acumulados (Aprendiz e Instrutor)	Instrutor INST-0001 inscrito como aprendiz em um curso (estaInscritoEm)	consistente; acarreta Aprendiz(INST-0001)	consistente; acarreta Aprendiz(INST-0001)	sim
+v2.1	HermiT	T16	Participação opcional (recurso)	Recurso de aprendizagem sem competência associada	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	sim
+v2.1	Openllet	T01	Consistência	Ontologia com a ABox de 20 indivíduos	consistente	consistente	sim
+v2.1	Openllet	T02	Taxonomia (Subjetiva ⊑ Questao)	Indivíduo declarado apenas como Subjetiva é inferido como Questao?	acarreta Questao(TS)	acarreta Questao(TS)	sim
+v2.1	Openllet	T03	Transitividade (requer)	Cadeia T3→COMP-0002→COMP-0001→T4: T3 requer T4?	acarreta requer(T3, T4)	acarreta requer(T3, T4)	sim
+v2.1	Openllet	T04	Propriedades inversas	Desempenho registrado só no sentido Desempenho→Aprendiz é recuperado a partir do aprendiz?	acarreta desempenhoCompetencias(APR-0001, TD)	acarreta desempenhoCompetencias(APR-0001, TD)	sim
+v2.1	Openllet	T05	Hierarquia de propriedades (CHA)	COMP-0002 ehCompostoDeConhecimento KNOW-001 ⇒ temComponenteKSA?	acarreta temComponenteKSA(COMP-0002, KNOW-001)	acarreta temComponenteKSA(COMP-0002, KNOW-001)	sim
+v2.1	Openllet	T06	Disjunção CHA	Indivíduo declarado Conhecimento e Habilidade	inconsistente	inconsistente	sim
+v2.1	Openllet	T07	Disjunção das classes-raiz	Indivíduo declarado Aprendiz e Competencia	inconsistente	inconsistente	sim
+v2.1	Openllet	T08	Disjunção Objetiva/Subjetiva	Questão declarada Objetiva e Subjetiva	inconsistente	inconsistente	sim
+v2.1	Openllet	T09	Domínio + disjunção	Uso indevido: QUEST-0001 requer COMP-0001 (domínio de requer é Competencia)	inconsistente	inconsistente	sim
+v2.1	Openllet	T10	Funcionalidade sem UNA	DEMP-0003 recebe um segundo nível (NP-Lembrar)	acarreta NP-Aplicar = NP-Lembrar	acarreta NP-Aplicar = NP-Lembrar	sim
+v2.1	Openllet	T11	Funcionalidade + nomes distintos	T10 + DifferentIndividuals(NP-Aplicar, NP-Lembrar)	inconsistente	inconsistente	sim
+v2.1	Openllet	T12	Restrição existencial (mundo aberto)	DEMP-0004 não tem nível registrado	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	sim
+v2.1	Openllet	T13	Domínio de descricao	Atitude descrita com a propriedade descricao	consistente	consistente	sim
+v2.1	Openllet	T14	Domínio de data	Registro de desempenho DEMP-0003 datado com a propriedade data	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	sim
+v2.1	Openllet	T15	Papéis acumulados (Aprendiz e Instrutor)	Instrutor INST-0001 inscrito como aprendiz em um curso (estaInscritoEm)	consistente; acarreta Aprendiz(INST-0001)	consistente; acarreta Aprendiz(INST-0001)	sim
+v2.1	Openllet	T16	Participação opcional (recurso)	Recurso de aprendizagem sem competência associada	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	sim
+v2.1+ABox teste	HermiT	T01	Consistência	Ontologia com a ABox de 20 indivíduos	consistente	consistente	sim
+v2.1+ABox teste	HermiT	T02	Taxonomia (Subjetiva ⊑ Questao)	Indivíduo declarado apenas como Subjetiva é inferido como Questao?	acarreta Questao(TS)	acarreta Questao(TS)	sim
+v2.1+ABox teste	HermiT	T03	Transitividade (requer)	Cadeia T3→COMP-0002→COMP-0001→T4: T3 requer T4?	acarreta requer(T3, T4)	acarreta requer(T3, T4)	sim
+v2.1+ABox teste	HermiT	T04	Propriedades inversas	Desempenho registrado só no sentido Desempenho→Aprendiz é recuperado a partir do aprendiz?	acarreta desempenhoCompetencias(APR-0001, TD)	acarreta desempenhoCompetencias(APR-0001, TD)	sim
+v2.1+ABox teste	HermiT	T05	Hierarquia de propriedades (CHA)	COMP-0002 ehCompostoDeConhecimento KNOW-001 ⇒ temComponenteKSA?	acarreta temComponenteKSA(COMP-0002, KNOW-001)	acarreta temComponenteKSA(COMP-0002, KNOW-001)	sim
+v2.1+ABox teste	HermiT	T06	Disjunção CHA	Indivíduo declarado Conhecimento e Habilidade	inconsistente	inconsistente	sim
+v2.1+ABox teste	HermiT	T07	Disjunção das classes-raiz	Indivíduo declarado Aprendiz e Competencia	inconsistente	inconsistente	sim
+v2.1+ABox teste	HermiT	T08	Disjunção Objetiva/Subjetiva	Questão declarada Objetiva e Subjetiva	inconsistente	inconsistente	sim
+v2.1+ABox teste	HermiT	T09	Domínio + disjunção	Uso indevido: QUEST-0001 requer COMP-0001 (domínio de requer é Competencia)	inconsistente	inconsistente	sim
+v2.1+ABox teste	HermiT	T10	Funcionalidade sem UNA	DEMP-0003 recebe um segundo nível (NP-Lembrar)	acarreta NP-Aplicar = NP-Lembrar	acarreta NP-Aplicar = NP-Lembrar	sim
+v2.1+ABox teste	HermiT	T11	Funcionalidade + nomes distintos	T10 + DifferentIndividuals(NP-Aplicar, NP-Lembrar)	inconsistente	inconsistente	sim
+v2.1+ABox teste	HermiT	T12	Restrição existencial (mundo aberto)	DEMP-0004 não tem nível registrado	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	sim
+v2.1+ABox teste	HermiT	T13	Domínio de descricao	Atitude descrita com a propriedade descricao	consistente	consistente	sim
+v2.1+ABox teste	HermiT	T14	Domínio de data	Registro de desempenho DEMP-0003 datado com a propriedade data	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	sim
+v2.1+ABox teste	HermiT	T15	Papéis acumulados (Aprendiz e Instrutor)	Instrutor INST-0001 inscrito como aprendiz em um curso (estaInscritoEm)	consistente; acarreta Aprendiz(INST-0001)	consistente; acarreta Aprendiz(INST-0001)	sim
+v2.1+ABox teste	HermiT	T16	Participação opcional (recurso)	Recurso de aprendizagem sem competência associada	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	sim
+v2.1+ABox teste	Openllet	T01	Consistência	Ontologia com a ABox de 20 indivíduos	consistente	consistente	sim
+v2.1+ABox teste	Openllet	T02	Taxonomia (Subjetiva ⊑ Questao)	Indivíduo declarado apenas como Subjetiva é inferido como Questao?	acarreta Questao(TS)	acarreta Questao(TS)	sim
+v2.1+ABox teste	Openllet	T03	Transitividade (requer)	Cadeia T3→COMP-0002→COMP-0001→T4: T3 requer T4?	acarreta requer(T3, T4)	acarreta requer(T3, T4)	sim
+v2.1+ABox teste	Openllet	T04	Propriedades inversas	Desempenho registrado só no sentido Desempenho→Aprendiz é recuperado a partir do aprendiz?	acarreta desempenhoCompetencias(APR-0001, TD)	acarreta desempenhoCompetencias(APR-0001, TD)	sim
+v2.1+ABox teste	Openllet	T05	Hierarquia de propriedades (CHA)	COMP-0002 ehCompostoDeConhecimento KNOW-001 ⇒ temComponenteKSA?	acarreta temComponenteKSA(COMP-0002, KNOW-001)	acarreta temComponenteKSA(COMP-0002, KNOW-001)	sim
+v2.1+ABox teste	Openllet	T06	Disjunção CHA	Indivíduo declarado Conhecimento e Habilidade	inconsistente	inconsistente	sim
+v2.1+ABox teste	Openllet	T07	Disjunção das classes-raiz	Indivíduo declarado Aprendiz e Competencia	inconsistente	inconsistente	sim
+v2.1+ABox teste	Openllet	T08	Disjunção Objetiva/Subjetiva	Questão declarada Objetiva e Subjetiva	inconsistente	inconsistente	sim
+v2.1+ABox teste	Openllet	T09	Domínio + disjunção	Uso indevido: QUEST-0001 requer COMP-0001 (domínio de requer é Competencia)	inconsistente	inconsistente	sim
+v2.1+ABox teste	Openllet	T10	Funcionalidade sem UNA	DEMP-0003 recebe um segundo nível (NP-Lembrar)	acarreta NP-Aplicar = NP-Lembrar	acarreta NP-Aplicar = NP-Lembrar	sim
+v2.1+ABox teste	Openllet	T11	Funcionalidade + nomes distintos	T10 + DifferentIndividuals(NP-Aplicar, NP-Lembrar)	inconsistente	inconsistente	sim
+v2.1+ABox teste	Openllet	T12	Restrição existencial (mundo aberto)	DEMP-0004 não tem nível registrado	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	consistente; acarreta ∃proficienciaAtingida.NiveisDeProficiencia(DEMP-0004)	sim
+v2.1+ABox teste	Openllet	T13	Domínio de descricao	Atitude descrita com a propriedade descricao	consistente	consistente	sim
+v2.1+ABox teste	Openllet	T14	Domínio de data	Registro de desempenho DEMP-0003 datado com a propriedade data	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	consistente; não acarreta MilestoneDeAprendizagem(DEMP-0003)	sim
+v2.1+ABox teste	Openllet	T15	Papéis acumulados (Aprendiz e Instrutor)	Instrutor INST-0001 inscrito como aprendiz em um curso (estaInscritoEm)	consistente; acarreta Aprendiz(INST-0001)	consistente; acarreta Aprendiz(INST-0001)	sim
+v2.1+ABox teste	Openllet	T16	Participação opcional (recurso)	Recurso de aprendizagem sem competência associada	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	consistente; não acarreta ∃abordaCompetencia.Competencia(TR)	sim

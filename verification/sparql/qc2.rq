@@ -1,0 +1,26 @@
+# QC2 - Qual o nível de proficiência (Bloom) alcançado por um aprendiz
+# em uma competência específica?
+# Retorna cada nível evidenciado e a questão que o evidencia; a
+# consolidação em um único nível (p.ex., o mais alto ou o mais recente)
+# é regra da aplicação, não do modelo.
+PREFIX :     <http://www.ontolearn.com/ontologia#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?nivel ?questao WHERE {
+  VALUES ?nomeAprendiz    { "João Silva" }              # parâmetro: aprendiz
+  VALUES ?nomeCompetencia { "Herança em Python" }       # parâmetro: competencia
+  ?aprendiz a :Aprendiz ;
+            :nome ?na ;
+            :desempenhoCompetencias ?d .
+  FILTER (STR(?na) = ?nomeAprendiz)
+  ?d :questaoRespondida ?q ;
+     :proficienciaAtingida ?niv .
+  ?q :competenciasAvaliadas ?comp ;
+     :idQuestao ?idq .
+  ?comp :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  ?niv rdfs:label ?rotulo .
+  BIND (STR(?rotulo) AS ?nivel)
+  BIND (STR(?idq) AS ?questao)
+}
+ORDER BY ?nivel

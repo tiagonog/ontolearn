@@ -1,0 +1,18 @@
+### ontolearn-v2.1.owl
+OWL 2 DL	no perfil=true	violações=0	{}
+OWL 2 EL	no perfil=false	violações=35	{UseOfIllegalAxiom=27, UseOfIllegalClassExpression=8}
+OWL 2 QL	no perfil=false	violações=12	{UseOfIllegalAxiom=4, UseOfNonSuperClassExpression=8}
+OWL 2 RL	no perfil=false	violações=11	{UseOfNonSuperClassExpression=11}
+Consistente (HermiT): true
+Classes insatisfatíveis: 0 []
+Subsunções inferidas entre classes nomeadas fora do fecho declarado: 0 []
+
+### base_ampliada.owl
+OWL 2 DL	no perfil=true	violações=0	{}
+OWL 2 EL	no perfil=false	violações=35	{UseOfIllegalAxiom=27, UseOfIllegalClassExpression=8}
+OWL 2 QL	no perfil=false	violações=12	{UseOfIllegalAxiom=4, UseOfNonSuperClassExpression=8}
+OWL 2 RL	no perfil=false	violações=11	{UseOfNonSuperClassExpression=11}
+Consistente (HermiT): true
+Classes insatisfatíveis: 0 []
+Subsunções inferidas entre classes nomeadas fora do fecho declarado: 0 []
+

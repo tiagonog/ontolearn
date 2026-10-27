@@ -1,0 +1,23 @@
+@prefix oops:  <http://oops.linkeddata.es/def#> .
+
+<http://oops.linkeddata.es/data/4977238d-45de-4ed0-8665-4f528ed311b3>
+        a                               oops:pitfall ;
+        oops:hasAffectedElement         "http://www.ontolearn.com/ontologia#Subjetiva"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://www.ontolearn.com/ontologia#ehComponenteKSADe"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://www.ontolearn.com/ontologia#temComponenteKSA"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        oops:hasCode                    "P08-A - Missing annotations - Label & Comment" ;
+        oops:hasDescription             "This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5]." ;
+        oops:hasImportanceLevel         "MINOR" ;
+        oops:hasName                    "Missing annotations - Label & Comment" ;
+        oops:hasNumberAffectedElements  3 .
+
+<http://oops.linkeddata.es/data/e791383a-f189-4d5c-ae7a-4a2f9e8e4f04>
+        a                oops:response ;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/f706fe95-1a68-43ff-ace8-af844b4da704> , <http://oops.linkeddata.es/data/4977238d-45de-4ed0-8665-4f528ed311b3> .
+
+<http://oops.linkeddata.es/data/f706fe95-1a68-43ff-ace8-af844b4da704>
+        a                               oops:pitfall ;
+        oops:hasAffectedElement         "http://www.ontolearn.com/ontologia#temComponenteKSA"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://www.ontolearn.com/ontologia#ehComponenteKSADe"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        oops:hasCode                    "P11 - Missing domain or range in properties" ;
+        oops:hasDescription             "Object and/or datatype properties missing domain or range (or both of them) are included in the ontology." ;
+        oops:hasImportanceLevel         "IMPORTANT" ;
+        oops:hasName                    "Missing domain or range in properties" ;
+        oops:hasNumberAffectedElements  2 .

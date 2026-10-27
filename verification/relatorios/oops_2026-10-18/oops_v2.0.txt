@@ -1,0 +1,24 @@
+OOPS! (OntOlogy Pitfall Scanner!) - https://oops.linkeddata.es/ (formulário de entrada direta)
+Execução: 18/10/2026, 15h55 (horário de Recife), pelo navegador Chrome
+Arquivo submetido: ontolearn-v2.owl (v2.0), lido de
+  https://raw.githubusercontent.com/tiagonog/ontolearn/v2.0.0/ontology/ontolearn-v2.owl
+  74.962 bytes; SHA-256 1394c03c3b09dabd81f5ff059e02b64332ecdea2c2809d21af798b74e0ad70b8
+  (mesmo arquivo do depósito; MD5 d32b6b81e4c60cbee6c49ccf15fc3004)
+Opção "manter cópia da ontologia": desmarcada
+
+Evaluation results
+Pitfalls detected:
+Results for P08: Missing annotations. Minor - 3 cases
+  This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. [...]
+  • The following elements have neither rdfs:label or rdfs:comment (nor skos:definition) defined:
+  › http://www.ontolearn.com/ontologia#Subjetiva
+  • The following elements have neither rdfs:comment or skos:definition defined:
+  › http://www.ontolearn.com/ontologia#ehComponenteKSADe
+  › http://www.ontolearn.com/ontologia#temComponenteKSA
+Results for P11: Missing domain or range in properties. Important - 2 cases
+  Object and/or datatype properties without domain or range (or none of them) are included in the ontology.
+  • This pitfall appears in the following elements:
+  › http://www.ontolearn.com/ontologia#temComponenteKSA
+  › http://www.ontolearn.com/ontologia#ehComponenteKSADe
+Suggestions or warnings:
+  According to the highest importance level of pitfall found in your ontology the conformace bagde suggested is "Important pitfalls".

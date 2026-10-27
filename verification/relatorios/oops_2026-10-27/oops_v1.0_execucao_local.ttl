@@ -1,0 +1,23 @@
+@prefix oops:  <http://oops.linkeddata.es/def#> .
+
+<http://oops.linkeddata.es/data/c92ff9a0-a2cd-484d-955c-9c45b19a7e45>
+        a                oops:response ;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/17b34984-ccd3-4104-b523-a031c632deb8> , <http://oops.linkeddata.es/data/5b1c2917-7b07-471d-aa46-564c85e2f184> .
+
+<http://oops.linkeddata.es/data/17b34984-ccd3-4104-b523-a031c632deb8>
+        a                               oops:pitfall ;
+        oops:hasAffectedElement         "http://www.ontolearn.com/ontologia#Subjetiva"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        oops:hasCode                    "P08-A - Missing annotations - Label & Comment" ;
+        oops:hasDescription             "This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5]." ;
+        oops:hasImportanceLevel         "MINOR" ;
+        oops:hasName                    "Missing annotations - Label & Comment" ;
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/5b1c2917-7b07-471d-aa46-564c85e2f184>
+        a                               oops:pitfall ;
+        oops:hasAffectedElement         "http://www.ontolearn.com/ontologia#Subjetiva"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        oops:hasCode                    "P04 - Creating unconnected ontology elements" ;
+        oops:hasDescription             "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology." ;
+        oops:hasImportanceLevel         "MINOR" ;
+        oops:hasName                    "Creating unconnected ontology elements" ;
+        oops:hasNumberAffectedElements  1 .

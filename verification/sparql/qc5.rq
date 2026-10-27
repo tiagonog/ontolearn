@@ -1,0 +1,15 @@
+# QC5 - Quais recursos de aprendizagem (vídeos, textos, jogos) abordam a
+# competência "Z"?
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?recurso ?url WHERE {
+  VALUES ?nomeCompetencia { "Herança em Python" }       # parâmetro: competencia
+  ?comp :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  ?rec :abordaCompetencia ?comp ;
+       :idRecurso ?idr .
+  OPTIONAL { ?rec :url ?u }
+  BIND (STR(?idr) AS ?recurso)
+  BIND (STR(?u) AS ?url)
+}
+ORDER BY ?recurso

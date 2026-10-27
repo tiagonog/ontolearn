@@ -1,0 +1,17 @@
+# QC3 - Quais avaliações disponíveis no AVA estão mapeadas para testar a
+# competência "X"? Retorna a avaliação e a questão que realiza o mapeamento.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?avaliacao ?questao WHERE {
+  VALUES ?nomeCompetencia { "Classes e Objetos em POO" } # parâmetro: competencia
+  ?comp a :Competencia ;
+        :nome ?nc .
+  FILTER (STR(?nc) = ?nomeCompetencia)
+  ?q :competenciasAvaliadas ?comp ;
+     :fazParteDaAvaliacao ?aval ;
+     :idQuestao ?idq .
+  ?aval :idAvaliacao ?ida .
+  BIND (STR(?ida) AS ?avaliacao)
+  BIND (STR(?idq) AS ?questao)
+}
+ORDER BY ?avaliacao ?questao

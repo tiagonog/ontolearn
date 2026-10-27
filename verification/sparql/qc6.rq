@@ -1,0 +1,21 @@
+# QC6 - Quais aprendizes atingiram o nível de proficiência "Aplicar" em
+# competências da área de Programação?
+# O nível é identificado pela classe do indivíduo de nível (rdf:type) e a
+# área por correspondência de texto, insensível a maiúsculas.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT DISTINCT ?aprendiz WHERE {
+  VALUES ?classeNivel { :Aplicar }                      # parâmetro: nivel
+  VALUES ?termoArea   { "Programação" }                 # parâmetro: area
+  ?a a :Aprendiz ;
+     :nome ?na ;
+     :desempenhoCompetencias ?d .
+  ?d :proficienciaAtingida ?niv ;
+     :questaoRespondida ?q .
+  ?niv a ?classeNivel .
+  ?q :competenciasAvaliadas ?comp .
+  ?comp :area ?ar .
+  FILTER (CONTAINS(LCASE(STR(?ar)), LCASE(?termoArea)))
+  BIND (STR(?na) AS ?aprendiz)
+}
+ORDER BY ?aprendiz

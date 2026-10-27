@@ -1,0 +1,16 @@
+diff --git a/src/main/java/es/upm/fi/oeg/oops/checkers/P06.java b/src/main/java/es/upm/fi/oeg/oops/checkers/P06.java
+index d9ea3fd..fc1a3bf 100644
+--- a/src/main/java/es/upm/fi/oeg/oops/checkers/P06.java
++++ b/src/main/java/es/upm/fi/oeg/oops/checkers/P06.java
+@@ -81,7 +81,10 @@ public class P06 implements Checker {
+             }
+ 
+             // System.out.println("Para la clase: " + ontoClass.getLocalName());
+-            for (final OntClass currentClass : superClasses) {
++            // Correção local: percorre a lista por índice, pois ela cresce durante a varredura (o laço
++            // for-each original lança java.util.ConcurrentModificationException, como anota o TODO abaixo).
++            for (int k = 0; k < superClasses.size(); k++) {
++                final OntClass currentClass = superClasses.get(k);
+                 // por cada una de las clases de la lista miro sus subclases
+                 ExtIterIterable<OntClass> superClasses2 = null;
+                 while (true) {

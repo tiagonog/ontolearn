@@ -1,0 +1,14 @@
+{
+  "ontolearn-v2.1.owl": {
+    "elementos": 106,
+    "P08 sem rdfs:label": [],
+    "P08 sem rdfs:comment": [],
+    "P11 sem domínio": [],
+    "P11 sem imagem": [],
+    "P13 sem inversa": [],
+    "P04 classes isoladas (aprox.)": [],
+    "P41 licença": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ]
+  }
+}

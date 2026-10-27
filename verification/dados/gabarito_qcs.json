@@ -1,0 +1,132 @@
+{
+  "titulo": "Gabarito das Questões de Competência (QC) da OntoLearn v2.0",
+  "definido_em": "2026-10-11",
+  "procedimento": "Respostas esperadas derivadas manualmente da especificação das bases (ontolearn-v2.owl e ontolearn-abox-teste.ttl), antes da execução de qualquer consulta. Cada caso compara conjuntos de tuplas (ordem irrelevante). 'dependem_de_inferencia' lista as tuplas que só podem ser recuperadas após a materialização das inferências (inversas, transitividade, hierarquia), isto é, que não estão nas triplas declaradas.",
+  "bases": {
+    "v2.0": "ontolearn-v2.owl (ABox original, 20 indivíduos)",
+    "v2.0+teste": "ontolearn-v2.owl + ontolearn-abox-teste.ttl (ABox ampliada)"
+  },
+  "casos": [
+    {"id": "QC1-a", "qc": "QC1", "consulta": "qc1.rq", "base": "v2.0",
+     "parametros": {"aprendiz": "João Silva"},
+     "colunas": ["competencia"],
+     "esperado": [["Herança em Python"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC1-b", "qc": "QC1", "consulta": "qc1.rq", "base": "v2.0+teste",
+     "parametros": {"aprendiz": "Carlos Menezes"},
+     "colunas": ["competencia"],
+     "esperado": [["Classes e Objetos em POO"], ["Tipos de Dados e Variáveis em Python"]],
+     "dependem_de_inferencia": [["Tipos de Dados e Variáveis em Python"]]},
+
+    {"id": "QC1-c", "qc": "QC1", "consulta": "qc1.rq", "base": "v2.0+teste",
+     "parametros": {"aprendiz": "Luiza Prado"},
+     "colunas": ["competencia"],
+     "esperado": [],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC2-a", "qc": "QC2", "consulta": "qc2.rq", "base": "v2.0",
+     "parametros": {"aprendiz": "João Silva", "competencia": "Herança em Python"},
+     "colunas": ["nivel", "questao"],
+     "esperado": [["Aplicar", "QUEST-0003"], ["Lembrar", "QUEST-0005"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC2-b", "qc": "QC2", "consulta": "qc2.rq", "base": "v2.0+teste",
+     "parametros": {"aprendiz": "Ana Beatriz Rocha", "competencia": "Polimorfismo em Python"},
+     "colunas": ["nivel", "questao"],
+     "esperado": [["Aplicar", "QUEST-0006"], ["Analisar", "QUEST-0007"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC3-a", "qc": "QC3", "consulta": "qc3.rq", "base": "v2.0",
+     "parametros": {"competencia": "Classes e Objetos em POO"},
+     "colunas": ["avaliacao", "questao"],
+     "esperado": [["AVAL-0002", "QUEST-0001"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC3-b", "qc": "QC3", "consulta": "qc3.rq", "base": "v2.0",
+     "parametros": {"competencia": "Herança em Python"},
+     "colunas": ["avaliacao", "questao"],
+     "esperado": [["AVAL-0002", "QUEST-0003"], ["AVAL-0002", "QUEST-0005"]],
+     "dependem_de_inferencia": [["AVAL-0002", "QUEST-0003"]]},
+
+    {"id": "QC3-c", "qc": "QC3", "consulta": "qc3.rq", "base": "v2.0+teste",
+     "parametros": {"competencia": "Herança em Python"},
+     "colunas": ["avaliacao", "questao"],
+     "esperado": [["AVAL-0002", "QUEST-0003"], ["AVAL-0002", "QUEST-0005"], ["AVAL-0003", "QUEST-0006"]],
+     "dependem_de_inferencia": [["AVAL-0002", "QUEST-0003"]]},
+
+    {"id": "QC4-a", "qc": "QC4", "consulta": "qc4_caminho.rq", "base": "v2.0",
+     "parametros": {"competencia": "Herança em Python"},
+     "colunas": ["prerequisito"],
+     "esperado": [["Classes e Objetos em POO"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC4-b", "qc": "QC4", "consulta": "qc4_caminho.rq", "base": "v2.0+teste",
+     "parametros": {"competencia": "Polimorfismo em Python"},
+     "colunas": ["prerequisito"],
+     "esperado": [["Herança em Python"], ["Classes e Objetos em POO"], ["Tipos de Dados e Variáveis em Python"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC4-c", "qc": "QC4", "consulta": "qc4_direta.rq", "base": "v2.0+teste",
+     "parametros": {"competencia": "Polimorfismo em Python"},
+     "colunas": ["prerequisito"],
+     "esperado": [["Herança em Python"], ["Classes e Objetos em POO"], ["Tipos de Dados e Variáveis em Python"]],
+     "dependem_de_inferencia": [["Classes e Objetos em POO"], ["Tipos de Dados e Variáveis em Python"]]},
+
+    {"id": "QC5-a", "qc": "QC5", "consulta": "qc5.rq", "base": "v2.0",
+     "parametros": {"competencia": "Herança em Python"},
+     "colunas": ["recurso", "url"],
+     "esperado": [["REC-0004", "http://example.com/heranca-python-video"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC5-b", "qc": "QC5", "consulta": "qc5.rq", "base": "v2.0+teste",
+     "parametros": {"competencia": "Classes e Objetos em POO"},
+     "colunas": ["recurso", "url"],
+     "esperado": [["REC-0002", "http://ontolearn.com/aula1-poo"], ["REC-0008", "https://example.org/ontolearn/video-classes-objetos"]],
+     "dependem_de_inferencia": [["REC-0008", "https://example.org/ontolearn/video-classes-objetos"]]},
+
+    {"id": "QC6-a", "qc": "QC6", "consulta": "qc6.rq", "base": "v2.0",
+     "parametros": {"nivel": "Aplicar", "area": "Programação"},
+     "colunas": ["aprendiz"],
+     "esperado": [["João Silva"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC6-b", "qc": "QC6", "consulta": "qc6.rq", "base": "v2.0+teste",
+     "parametros": {"nivel": "Aplicar", "area": "Programação"},
+     "colunas": ["aprendiz"],
+     "esperado": [["João Silva"], ["Ana Beatriz Rocha"], ["Carlos Menezes"]],
+     "dependem_de_inferencia": [["Carlos Menezes"]]},
+
+    {"id": "QC7-a", "qc": "QC7", "consulta": "qc7.rq", "base": "v2.0",
+     "parametros": {"aprendiz": "João Silva", "competencia": "Herança em Python"},
+     "colunas": ["url"],
+     "esperado": [],
+     "dependem_de_inferencia": [],
+     "nota": "Lacuna de dados na ABox original: os recursos do histórico (REC-0002, REC-0005) não estão vinculados a competências."},
+
+    {"id": "QC7-b", "qc": "QC7", "consulta": "qc7.rq", "base": "v2.0+teste",
+     "parametros": {"aprendiz": "João Silva", "competencia": "Herança em Python"},
+     "colunas": ["url"],
+     "esperado": [["http://ontolearn.com/exercicios-heranca"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC7-c", "qc": "QC7", "consulta": "qc7.rq", "base": "v2.0+teste",
+     "parametros": {"aprendiz": "Carlos Menezes", "competencia": "Classes e Objetos em POO"},
+     "colunas": ["url"],
+     "esperado": [["https://example.org/ontolearn/video-classes-objetos"]],
+     "dependem_de_inferencia": [["https://example.org/ontolearn/video-classes-objetos"]]},
+
+    {"id": "QC8-a", "qc": "QC8", "consulta": "qc8.rq", "base": "v2.0",
+     "parametros": {},
+     "colunas": ["aprendiz", "competencia", "nivel_objetiva", "nivel_subjetiva", "disparidade"],
+     "esperado": [["João Silva", "Herança em Python", "Aplicar", "Lembrar", "2"]],
+     "dependem_de_inferencia": []},
+
+    {"id": "QC8-b", "qc": "QC8", "consulta": "qc8.rq", "base": "v2.0+teste",
+     "parametros": {},
+     "colunas": ["aprendiz", "competencia", "nivel_objetiva", "nivel_subjetiva", "disparidade"],
+     "esperado": [["João Silva", "Herança em Python", "Aplicar", "Lembrar", "2"],
+                  ["Ana Beatriz Rocha", "Polimorfismo em Python", "Aplicar", "Analisar", "-1"]],
+     "dependem_de_inferencia": []}
+  ]
+}

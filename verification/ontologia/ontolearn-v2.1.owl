@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.ontolearn.com/ontologia#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#APR-0001">
+    <conquistasAdquiridas rdf:resource="http://www.ontolearn.com/ontologia#MILE-0001"/>
+    <desempenhoCompetencias rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0003"/>
+    <desempenhoCompetencias rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0004"/>
+    <desempenhoCompetencias rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0005"/>
+    <estaInscritoEm rdf:resource="http://www.ontolearn.com/ontologia#CUR-0001"/>
+    <historicoAprendizagem rdf:resource="http://www.ontolearn.com/ontologia#REC-0002"/>
+    <historicoAprendizagem rdf:resource="http://www.ontolearn.com/ontologia#REC-0005"/>
+    <idAprendiz>APR-0001</idAprendiz>
+    <nome>João Silva</nome>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Aprendiz 0001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#AVAL-0002">
+    <descricao>Avaliação focada no conceito de herança...</descricao>
+    <idAvaliacao>AVAL-0002</idAvaliacao>
+    <questoesIncluidas rdf:resource="http://www.ontolearn.com/ontologia#QUEST-0003"/>
+    <tipo>Objetiva</tipo>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#ObjetivasAval"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Avaliação 0002</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Analisar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Analisar.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Analisar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Aplicar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Aplicar.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Aplicar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Aprendiz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Estudante ou aluno.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Aprendiz</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#UsuarioDoAva"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Atitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Componente atitudinal de uma competência (saber ser): disposições, valores e posturas que orientam a ação do aprendiz ao mobilizar conhecimentos e habilidades, como valorizar a legibilidade do código.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Atitude</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Avaliacao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Instrumento aplicado em um curso para obter evidências da aprendizagem, como uma prova ou um questionário, composto por uma ou mais questões.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Avaliação</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#AvaliarBloom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Avaliar.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Avaliar (Bloom)</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#COMP-0001">
+    <area>Programação de Computadores</area>
+    <idCompetencia>COMP-0001</idCompetencia>
+    <nome>Classes e Objetos em POO</nome>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Competência 0001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#COMP-0002">
+    <area>Programação de Computadores</area>
+    <descricao>Capacidade de utilizar herança para reutilizar e estender o código...</descricao>
+    <ehCompostoDeConhecimento rdf:resource="http://www.ontolearn.com/ontologia#KNOW-001"/>
+    <ehCompostoDeHabilidade rdf:resource="http://www.ontolearn.com/ontologia#SKILL-001"/>
+    <idCompetencia>COMP-0002</idCompetencia>
+    <nome>Herança em Python</nome>
+    <requer rdf:resource="http://www.ontolearn.com/ontologia#COMP-0001"/>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Competência 0002</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#CUR-0001">
+    <aprendizesInscritos rdf:resource="http://www.ontolearn.com/ontologia#APR-0001"/>
+    <avaliacoesAplicadas rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+    <descricao>Curso básico para aprender Python.</descricao>
+    <idCurso>CUR-0001</idCurso>
+    <instrutoresResponsaveis rdf:resource="http://www.ontolearn.com/ontologia#INST-0001"/>
+    <nivel>Educação Terciária de Ciclo Curto</nivel>
+    <titulo>Introdução à Programação com Python</titulo>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Curso 0001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Competencia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Conjunto de conhecimentos, habilidades e atitudes.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Competência</rdfs:label>
+    <owl:disjointWith rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Conhecimento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Componente cognitivo de uma competência (saber): informações, fatos, conceitos e princípios de um domínio que o aprendiz precisa compreender, como a definição de superclasse e de subclasse.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Conhecimento</rdfs:label>
+    <owl:disjointWith rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <owl:disjointWith rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Criar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Criar.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Criar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Curso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Oferta formativa disponibilizada no AVA, com título, nível e descrição, na qual os aprendizes se inscrevem e à qual se vinculam os instrutores responsáveis, os recursos e as avaliações.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Curso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#DEMP-0003">
+    <aprendizAvaliado rdf:resource="http://www.ontolearn.com/ontologia#APR-0001"/>
+    <idDesempenho>DEMP-0003</idDesempenho>
+    <proficienciaAtingida rdf:resource="http://www.ontolearn.com/ontologia#NP-Aplicar"/>
+    <questaoRespondida rdf:resource="http://www.ontolearn.com/ontologia#QUEST-0003"/>
+    <respostaAprendiz>Permite que uma classe herde atributos e métodos de outra classe</respostaAprendiz>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Formativo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Desempenho 0003</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#DEMP-0004">
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Desempenho 0004</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#DEMP-0005">
+    <aprendizAvaliado rdf:resource="http://www.ontolearn.com/ontologia#APR-0001"/>
+    <idDesempenho>DEMP-0005</idDesempenho>
+    <proficienciaAtingida rdf:resource="http://www.ontolearn.com/ontologia#NP-Lembrar"/>
+    <questaoRespondida rdf:resource="http://www.ontolearn.com/ontologia#QUEST-0005"/>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Formativo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Registro da resposta de um aprendiz a uma questão, que associa o aprendiz avaliado, a questão respondida e o nível de proficiência atingido; é a unidade de evidência da qual se obtém o nível do aprendiz em cada competência.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Desempenho do Aprendiz</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b38"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Didatico">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Material didático.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Didático</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Entender">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Entender.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Entender</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Formativo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Registro de desempenho obtido em uma avaliação de caráter formativo.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Formativo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Habilidade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Componente prático de uma competência (saber fazer): capacidade de aplicar conhecimentos para executar tarefas ou resolver problemas, como implementar uma subclasse que sobrescreve um método.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Habilidade</rdfs:label>
+    <owl:disjointWith rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#INST-0001">
+    <avaliaDesempenho rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0003"/>
+    <ehResponsavelPor rdf:resource="http://www.ontolearn.com/ontologia#CUR-0001"/>
+    <elaboraAvaliacoes rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+    <idInstrutor>INST-0001</idInstrutor>
+    <insereRecursos rdf:resource="http://www.ontolearn.com/ontologia#REC-0004"/>
+    <nome>Maria Fernandes</nome>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Instrutor 0001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Instrutor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Professor ou tutor.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Instrutor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#UsuarioDoAva"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Interativo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Material interativo.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Interativo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#KNOW-001">
+    <descricao>Saber a definição de superclasse, subclasse e a sintaxe de herança.</descricao>
+    <idConhecimento>KNOW-001</idConhecimento>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Conhecimento 001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Lembrar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível Lembrar.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Lembrar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#MILE-0001">
+    <competenciasEnvolvidas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0001"/>
+    <competenciasEnvolvidas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+    <data rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T18:00:00+00:00</data>
+    <descricao>Conclusão do Curso Introdução à Programação com Python</descricao>
+    <idMilestone>MILE-0001</idMilestone>
+    <tipo>Conclusão de Curso</tipo>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Milestone 0001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Marco de progresso conquistado por um aprendiz, como a conclusão de um curso ou de uma trilha, registrado com data e associado às competências cuja conquista ele atesta.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Milestone de Aprendizagem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Multimidia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Material multimídia.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Multimídia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#NP-Aplicar">
+    <descricao>Nível 3 de Bloom: Usar informação em novas situações.</descricao>
+    <idNivel>NP-0003-Aplicar</idNivel>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Aplicar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Nível de Proficiência Aplicar</rdfs:comment>
+    <rdfs:label xml:lang="pt">Aplicar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#NP-Lembrar">
+    <idNivel>NP-0001-Lembrar</idNivel>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Lembrar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="pt">Lembrar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#NiveisDeProficiencia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Nível de domínio demonstrado ou exigido em uma competência, na escala dos seis níveis do domínio cognitivo da Taxonomia de Bloom revisada (Lembrar, Entender, Aplicar, Analisar, Avaliar e Criar), representados pelas subclasses. Cada instância é um nível da escala.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Nível de Proficiência</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Objetiva">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Questão de resposta fechada, com alternativas e resposta correta predefinidas.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Objetiva</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <owl:disjointWith rdf:resource="http://www.ontolearn.com/ontologia#Subjetiva"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ObjetivasAval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Prova objetiva.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Avaliação Objetiva</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#QUEST-0001">
+    <competenciasAvaliadas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0001"/>
+    <enunciado>O que é um objeto em POO?</enunciado>
+    <fazParteDaAvaliacao rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+    <idQuestao>QUEST-0001</idQuestao>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Objetiva"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#QUEST-0003">
+    <competenciasAvaliadas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+    <enunciado>Como funciona a herança em Python?</enunciado>
+    <exigeNivel rdf:resource="http://www.ontolearn.com/ontologia#NP-Aplicar"/>
+    <idQuestao>QUEST-0003</idQuestao>
+    <respostaCorreta>Permite que uma classe herde atributos e métodos de outra classe</respostaCorreta>
+    <tipo>Múltipla Escolha</tipo>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Objetiva"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Questão 0003</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#QUEST-0005">
+    <competenciasAvaliadas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+    <enunciado>Explique com suas palavras a vantagem da herança.</enunciado>
+    <fazParteDaAvaliacao rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+    <idQuestao>QUEST-0005</idQuestao>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Subjetiva"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Questao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Item de avaliação.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Questão</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b46"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#REC-0002">
+    <idRecurso>REC-0002</idRecurso>
+    <url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontolearn.com/aula1-poo</url>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Recurso 0002</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#REC-0004">
+    <abordaCompetencia rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+    <idRecurso>REC-0004</idRecurso>
+    <tipo>Vídeo</tipo>
+    <url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/heranca-python-video</url>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Video"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Recurso 0004</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#REC-0005">
+    <idRecurso>REC-0005</idRecurso>
+    <url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontolearn.com/exercicios-heranca</url>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Recurso 0005</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Entidade que representa qualquer material, ferramenta ou conteúdo (digital ou não) utilizado para dar suporte ao processo de ensino e aprendizagem.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Recurso de Aprendizagem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#SKILL-001">
+    <descricao>Capacidade de implementar uma subclasse que sobrescreve um método da superclasse.</descricao>
+    <idHabilidade>SKILL-001</idHabilidade>
+    <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="pt">Indivíduo Habilidade 001</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Subjetiva">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Questão de resposta aberta, redigida pelo aprendiz, cuja correção depende de critérios de avaliação ou do julgamento do instrutor.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Subjetiva</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Percurso de aprendizagem realizado por um aprendiz, descrito por uma sequência ordenada de etapas e associado às competências que ele desenvolve.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Trajetória de Aprendizagem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#UsuarioDoAva">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Classe base para todos os usuários do sistema.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Usuário do AVA</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Video">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="pt">Conteúdo em vídeo.</rdfs:comment>
+    <rdfs:label xml:lang="pt">Vídeo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Multimidia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#abordaCompetencia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona um recurso educacional à competência que ele visa desenvolver.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">aborda competência</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehAbordadaPor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#adquiridaPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Aprendiz que adquiriu esta conquista.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">adquirida por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#conquistasAdquiridas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#alternativas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Opções de resposta.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">alternativas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#aplicadaNoCurso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Curso ao qual a avaliação pertence.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdfs:label xml:lang="pt">aplicada no curso</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#avaliacoesAplicadas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#aprendizAvaliado">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica o aprendiz associado a este registro de desempenho.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">aprendiz avaliado</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#teveDesempenhoAvaliado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#aprendizesInscritos">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Lista os alunos matriculados no curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">aprendizes inscritos</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#estaInscritoEm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Área de conhecimento.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">área</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#avaliaDesempenho">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica que o instrutor realizou a avaliação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdfs:label xml:lang="pt">avalia desempenho</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#temDesempenhoAvaliadoPor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#avaliacoesAplicadas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Avaliações que compõem o curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">avaliações aplicadas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#avaliadaPelaQuestao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Questões usadas para avaliar a competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">avaliada pela questão</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#competenciasAvaliadas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#competenciaRelacionada">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Associa uma questão à competência abordada.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">competência relacionada</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#temQuestaoRelacionada"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#competenciasAvaliadas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Competências medidas por esta questão.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">competências avaliadas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#competenciasDoDesempenho">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona o registro de desempenho ao aprendiz que o produziu; inversa de desempenhoCompetencias.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">aprendiz do registro</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#desempenhoCompetencias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#competenciasEnvolvidas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona um marco ou uma trajetória de aprendizagem às competências a que se refere: no marco, as competências cuja conquista ele atesta; na trajetória, as competências que ela desenvolve.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b20"/>
+    <rdfs:label xml:lang="pt">competências envolvidas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehEnvolvidaEm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#compoeAtitudeEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Competência da qual a atitude faz parte.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdfs:label xml:lang="pt">compõe (atitude)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#ehComponenteKSADe"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehCompostoDeAtitude"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#compoeConhecimentoEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Competência da qual o conhecimento faz parte.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdfs:label xml:lang="pt">compõe (conhecimento)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#ehComponenteKSADe"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehCompostoDeConhecimento"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#compoeHabilidadeEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Competência da qual a habilidade faz parte.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdfs:label xml:lang="pt">compõe (habilidade)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#ehComponenteKSADe"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehCompostoDeHabilidade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#conquistasAdquiridas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Marcos alcançados pelo estudante.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">conquistas adquiridas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#data">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Data e hora do evento registrado: a conquista de um marco de aprendizagem ou a resposta de um registro de desempenho.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b19"/>
+    <rdfs:label xml:lang="pt">data</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#descricao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Texto descritivo.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b27"/>
+    <rdfs:label xml:lang="pt">descrição</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#desempenhoCompetencias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona o aprendiz a cada registro de desempenho que documenta uma de suas respostas. A relação aponta para o registro, e não para a competência: as competências evidenciadas são obtidas pela questão respondida e pelas competências que ela avalia.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">registros de desempenho</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehAbordadaPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica quais recursos educacionais cobrem esta competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é abordada por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehComponenteKSADe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona um componente CHA (conhecimento, habilidade ou atitude) à competência que ele compõe; inversa de temComponenteKSA, generaliza compoeConhecimentoEm, compoeHabilidadeEm e compoeAtitudeEm.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b54"/>
+    <rdfs:label xml:lang="pt">é componente KSA de</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehCompostoDeAtitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Atitudes que compõem a competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é composto de atitude</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#temComponenteKSA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehCompostoDeConhecimento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Conhecimentos teóricos que compõem a competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é composto de conhecimento</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#temComponenteKSA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehCompostoDeHabilidade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Habilidades práticas que compõem a competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é composto de habilidade</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontolearn.com/ontologia#temComponenteKSA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehEnvolvidaEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Milestones ou trajetórias que envolvem a competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é envolvida em</rdfs:label>
+    <rdfs:range rdf:nodeID="b33"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehExigidoPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Questões que exigem este nível.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+    <rdfs:label xml:lang="pt">é exigido por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#exigeNivel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehRequeridaPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:comment xml:lang="pt">Competências que exigem esta como pré-requisito.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">é requerida por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#requer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#ehResponsavelPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Cursos coordenados pelo instrutor.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdfs:label xml:lang="pt">é responsável por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#instrutoresResponsaveis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#elaboraAvaliacoes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica que o instrutor criou a avaliação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdfs:label xml:lang="pt">elabora avaliações</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#elaboradaPor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#elaboradaPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Instrutor responsável pela criação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdfs:label xml:lang="pt">elaborada por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#enunciado">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Pergunta da questão.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">enunciado</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#estaInscritoEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Cursos nos quais o aprendiz está matriculado.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">está inscrito em</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#etapas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Etapas da trajetória.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">etapas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#exigeNivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Nível de proficiência necessário.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">exige nível</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#fazParteDaAvaliacao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica a qual avaliação a questão pertence.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">faz parte da avaliação</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#questoesIncluidas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#foiAtingidaEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Registros onde este nível foi atingido.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+    <rdfs:label xml:lang="pt">foi atingida em</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#proficienciaAtingida"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#historicoAprendizagem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona o aprendiz aos recursos de aprendizagem que ele acessou no AVA, tenha ou não concluído o seu uso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">histórico de aprendizagem</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#parteDoHistoricoDe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idAprendiz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador único do aprendiz.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">id do aprendiz</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idAtitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da atitude.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdfs:label xml:lang="pt">id da atitude</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idAvaliacao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da avaliação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdfs:label xml:lang="pt">id da avaliação</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idCompetencia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">id da competência</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idConhecimento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do conhecimento.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdfs:label xml:lang="pt">id do conhecimento</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idCurso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">id do curso</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idDesempenho">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do desempenho.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">id do desempenho</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idHabilidade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da habilidade.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdfs:label xml:lang="pt">id da habilidade</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idInstrutor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do instrutor.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdfs:label xml:lang="pt">id do instrutor</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idMilestone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do milestone.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">id do milestone</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idNivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do nível de proficiência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+    <rdfs:label xml:lang="pt">id do nível</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idQuestao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da questão.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">id da questão</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idRecurso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador do recurso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">id do recurso</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#idTrajetoria">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Identificador da trajetória.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">id da trajetória</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#insereRecursos">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Indica que o instrutor disponibilizou um recurso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    <rdfs:label xml:lang="pt">insere recursos</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#inseridoPor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#inseridoPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Instrutor que inseriu o recurso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">inserido por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#instrutoresResponsaveis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Instrutores que ministram o curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">instrutores responsáveis</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Nível educacional do curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">nível</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#nome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Nome ou designação da entidade.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b32"/>
+    <rdfs:label xml:lang="pt">nome</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#parteDoHistoricoDe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Aprendiz cujo histórico contém este recurso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">parte do histórico de</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#proficienciaAtingida">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Nível de proficiência demonstrado.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">proficiência atingida</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#questaoRespondida">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Questão à qual o desempenho se refere.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">questão respondida</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#teveRespostaEm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#questoesIncluidas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Questões que compõem a avaliação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdfs:label xml:lang="pt">questões incluídas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#realizadaPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Aprendiz que realizou a trajetória.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">realizada por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#trajetoriasRealizadas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#recursosUtilizados">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Recursos didáticos usados no curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">recursos utilizados</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#utilizadoEm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#requer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:comment xml:lang="pt">Prerrequisitos entre competências.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">requer</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#respostaAprendiz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Resposta fornecida pelo aluno.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">resposta do aprendiz</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#respostaCorreta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Gabarito da questão.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">resposta correta</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#temComponenteKSA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Relaciona uma competência a cada um de seus componentes CHA (conhecimento, habilidade ou atitude); generaliza ehCompostoDeConhecimento, ehCompostoDeHabilidade e ehCompostoDeAtitude.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">tem componente KSA</rdfs:label>
+    <rdfs:range rdf:nodeID="b53"/>
+    <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#ehComponenteKSADe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#temDesempenhoAvaliadoPor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Instrutor responsável pela avaliação.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdfs:label xml:lang="pt">tem desempenho avaliado por</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#temQuestaoRelacionada">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Questões relacionadas a esta competência.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdfs:label xml:lang="pt">tem questão relacionada</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#teveDesempenhoAvaliado">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Aponta para os registros de desempenho do aprendiz.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">teve desempenho avaliado</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#teveRespostaEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Desempenhos que respondem a esta questão.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdfs:label xml:lang="pt">teve resposta em</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#tipo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Categoria ou tipo do objeto.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b29"/>
+    <rdfs:label xml:lang="pt">tipo</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#titulo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Título do curso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdfs:label xml:lang="pt">título</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#trajetoriasRealizadas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Caminhos de aprendizagem seguidos pelo aluno.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    <rdfs:label xml:lang="pt">trajetórias realizadas</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#url">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="pt">Endereço web do recurso.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">URL</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#utilizadoEm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="pt">Cursos onde o recurso é utilizado.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdfs:label xml:lang="pt">utilizado em</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontolearn.com/ontologia">
+    <dcterms:description xml:lang="pt">Ontologia para análise de aprendizagem baseada em competências.</dcterms:description>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:title xml:lang="pt">Ontologia OntoLearn</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:lang="en">OntoLearn v2.1 - revision of v2.0 after the OOPS! diagnosis and the plausibility evaluation: labels, comments, domain and range of the KSA composition super-properties; Atitude added to the domain of descricao; data extended to performance records; Aprendiz/Instrutor disjointness and the existential restriction on RecursoDeAprendizagem removed; definitions rewritten. Generated by build_v2_1.py.</rdfs:comment>
+    <rdfs:comment xml:lang="pt">OntoLearn v2.1 - revisão da v2.0 após o diagnóstico do OOPS! e a avaliação de plausibilidade: rótulos, comentários, domínio e imagem das superpropriedades da composição CHA; Atitude no domínio de descricao; data aplicável também a registros de desempenho; retirada da disjunção entre Aprendiz e Instrutor e da restrição de que todo recurso aborda uma competência; definições reescritas. Gerada por build_v2_1.py.</rdfs:comment>
+    <rdfs:label xml:lang="pt">OntoLearn</rdfs:label>
+    <owl:versionInfo>2.1</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdf:rest rdf:nodeID="b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b10">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdf:rest rdf:nodeID="b31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b11">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdf:rest rdf:nodeID="b35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b12">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b13">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdf:rest rdf:nodeID="b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b14">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b15">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b16">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#UsuarioDoAva"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b17">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdf:rest rdf:nodeID="b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b18">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdf:rest rdf:nodeID="b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdf:rest rdf:nodeID="b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b21">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#UsuarioDoAva"/>
+    <rdf:rest rdf:nodeID="b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b22">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontolearn.com/ontologia#questoesIncluidas"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b24">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdf:rest rdf:nodeID="b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b25">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b26">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b28">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdf:rest rdf:nodeID="b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b30">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdf:rest rdf:nodeID="b45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b31">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdf:rest rdf:nodeID="b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b34">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b35">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdf:rest rdf:nodeID="b42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b36">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontolearn.com/ontologia#proficienciaAtingida"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b39">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdf:rest rdf:nodeID="b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    <rdf:rest rdf:nodeID="b44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b40">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    <rdf:rest rdf:nodeID="b36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b41">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    <rdf:rest rdf:nodeID="b30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b42">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b43">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+    <rdf:rest rdf:nodeID="b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b44">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#NiveisDeProficiencia"/>
+    <rdf:rest rdf:nodeID="b50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b45">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b46">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontolearn.com/ontologia#competenciasAvaliadas"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b47">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#RecursoDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b48">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="b21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Avaliacao"/>
+    <rdf:rest rdf:nodeID="b39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b50">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b51">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b52">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdf:rest rdf:nodeID="b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="b41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Competencia"/>
+    <rdf:rest rdf:nodeID="b47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem"/>
+    <rdf:rest rdf:nodeID="b25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#Questao"/>
+    <rdf:rest rdf:nodeID="b13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9">
+    <rdf:first rdf:resource="http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

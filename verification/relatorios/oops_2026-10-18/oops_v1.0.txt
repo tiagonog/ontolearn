@@ -1,0 +1,20 @@
+OOPS! (OntOlogy Pitfall Scanner!) - https://oops.linkeddata.es/ (formulário de entrada direta)
+Execução: 18/10/2026, 15h53 (horário de Recife; capturas de tela refeitas às 15h56, com o mesmo resultado), pelo navegador Chrome
+Arquivo submetido: ontolearn.owl (v1.0), lido de
+  https://raw.githubusercontent.com/tiagonog/ontolearn/v2.0.0/ontology/ontolearn.owl
+  68.253 bytes; SHA-256 248868a9c1043abfc9a7a97ccb22af7c5bdd8951e0ac03756251df22f17cc798
+  (mesmo arquivo do depósito; MD5 f7073ff44ef48887770ba26d7d3ef0e4)
+Opção "manter cópia da ontologia": desmarcada
+
+Evaluation results
+Pitfalls detected:
+Results for P04: Creating unconnected ontology elements. Minor - 1 case
+  Ontology elements (classes, object properties and datatype properties) are created isolated, with no relation to the rest of the ontology.
+  • This pitfall appears in the following elements:
+  › http://www.ontolearn.com/ontologia#Subjetiva
+Results for P08: Missing annotations. Minor - 1 case
+  This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. [...]
+  • The following elements have neither rdfs:label or rdfs:comment (nor skos:definition) defined:
+  › http://www.ontolearn.com/ontologia#Subjetiva
+Suggestions or warnings:
+  According to the highest importance level of pitfall found in your ontology the conformace bagde suggested is "Minor pitfalls".

@@ -1,0 +1,10 @@
+ciclo,data_hora,armadilhas,selo
+1,30/12/2025 15:29,"P04 (1 caso, menor); P08 (95, menor); P10 (geral, importante); P13 (35, menor); P22 (geral, menor)",Important pitfalls
+2,30/12/2025 15:49,"P04 (1, menor); P11 (32, importante); P13 (27, menor); P20 (26, menor); P22 (geral, menor)",Important pitfalls
+3,30/12/2025 15:57,"P04 (1, menor); P08 (102, menor); P11 (3, importante)",Important pitfalls
+4,30/12/2025 16:17,"P20 (1, menor)",Minor pitfalls
+5,31/12/2025 09:13,"P41 (geral, importante)",Important pitfalls
+6,31/12/2025 09:15,nenhuma,Free pitfalls
+7 (v1.0),18/10/2026 15:53,"P04 (1, menor); P08 (1, menor)",Minor pitfalls
+8 (v2.0),18/10/2026 15:55,"P08 (3, menor); P11 (2, importante)",Important pitfalls
+9 (v2.1),27/10/2026 17:38,nenhuma,Free pitfalls

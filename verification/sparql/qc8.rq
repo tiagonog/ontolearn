@@ -1,0 +1,45 @@
+# QC8 - Existe disparidade entre o nível de proficiência do aprendiz em
+# questões objetivas e subjetivas?
+# Para cada par (aprendiz, competência) com evidências dos dois tipos de
+# questão, compara o maior nível atingido em cada tipo.
+# A ordem dos níveis da Taxonomia de Bloom revisada não é axiomatizada na
+# OntoLearn; ela é explicitada aqui (VALUES) como conhecimento de
+# domínio (ANDERSON; KRATHWOHL, 2001). Disparidade > 0: objetivas acima.
+PREFIX : <http://www.ontolearn.com/ontologia#>
+
+SELECT ?aprendiz ?competencia ?nivel_objetiva ?nivel_subjetiva ?disparidade WHERE {
+  {
+    SELECT ?a ?comp (MAX(?o) AS ?oObj) WHERE {
+      ?a :desempenhoCompetencias ?d .
+      ?d :questaoRespondida ?q ;
+         :proficienciaAtingida ?niv .
+      ?q a :Objetiva ;
+         :competenciasAvaliadas ?comp .
+      ?niv a ?c .
+      VALUES (?c ?o) { (:Lembrar 1) (:Entender 2) (:Aplicar 3)
+                       (:Analisar 4) (:AvaliarBloom 5) (:Criar 6) }
+    } GROUP BY ?a ?comp
+  }
+  {
+    SELECT ?a ?comp (MAX(?o2) AS ?oSub) WHERE {
+      ?a :desempenhoCompetencias ?d2 .
+      ?d2 :questaoRespondida ?q2 ;
+          :proficienciaAtingida ?niv2 .
+      ?q2 a :Subjetiva ;
+          :competenciasAvaliadas ?comp .
+      ?niv2 a ?c2 .
+      VALUES (?c2 ?o2) { (:Lembrar 1) (:Entender 2) (:Aplicar 3)
+                         (:Analisar 4) (:AvaliarBloom 5) (:Criar 6) }
+    } GROUP BY ?a ?comp
+  }
+  VALUES (?oObj ?nivel_objetiva) { (1 "Lembrar") (2 "Entender") (3 "Aplicar")
+                                   (4 "Analisar") (5 "Avaliar") (6 "Criar") }
+  VALUES (?oSub ?nivel_subjetiva) { (1 "Lembrar") (2 "Entender") (3 "Aplicar")
+                                    (4 "Analisar") (5 "Avaliar") (6 "Criar") }
+  ?a :nome ?na .
+  ?comp :nome ?nc .
+  BIND (STR(?na) AS ?aprendiz)
+  BIND (STR(?nc) AS ?competencia)
+  BIND (?oObj - ?oSub AS ?disparidade)
+}
+ORDER BY ?aprendiz ?competencia
