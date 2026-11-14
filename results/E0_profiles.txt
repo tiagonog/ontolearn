@@ -1,0 +1,39 @@
+== Profile conformance of the released files (OWL API 5.1.9 profile checkers) ==
+  release                  OWL2DL                 OWL2EL                 OWL2QL                 OWL2RL
+  v1.0                 in profile outside (30 violations) outside (8 violations) outside (5 violations)
+  v2.0                 in profile outside (32 violations) outside (9 violations) outside (9 violations)
+  v2.1                 in profile outside (35 violations) outside (12 violations) outside (11 violations)
+  v2.2                 in profile outside (35 violations) outside (12 violations) outside (11 violations)
+
+== Axioms outside OWL 2 RL, by cause ==
+  v1.0: 5 axioms  4 union domain; 1 union range
+  v2.0: 9 axioms  4 existential restriction as superclass; 4 union domain; 1 union range
+  v2.1: 11 axioms  3 existential restriction as superclass; 6 union domain; 2 union range
+  v2.2: 11 axioms  3 existential restriction as superclass; 6 union domain; 2 union range
+
+== The axioms of v2.2 outside OWL 2 RL ==
+  [union domain] DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))
+  [union domain] DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))
+  [union domain] DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))
+  [union domain] DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))
+  [union domain] ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))
+  [union domain] ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))
+  [union range] ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))
+  [union range] ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))
+  [existential restriction as superclass] SubClassOf(<:Avaliacao> ObjectSomeValuesFrom(<:questoesIncluidas> <:Questao>))
+  [existential restriction as superclass] SubClassOf(<:DesempenhoDoAprendiz> ObjectSomeValuesFrom(<:proficienciaAtingida> <:NiveisDeProficiencia>))
+  [existential restriction as superclass] SubClassOf(<:Questao> ObjectSomeValuesFrom(<:competenciasAvaliadas> <:Competencia>))
+
+== v2.2 outside OWL2EL: violations by kind and axiom type ==
+    2  UseOfIllegalAxiom  FunctionalObjectProperty
+   25  UseOfIllegalAxiom  InverseObjectProperties
+    4  UseOfIllegalClassExpression  DataPropertyDomain
+    2  UseOfIllegalClassExpression  ObjectPropertyDomain
+    2  UseOfIllegalClassExpression  ObjectPropertyRange
+
+== v2.2 outside OWL2QL: violations by kind and axiom type ==
+    2  UseOfIllegalAxiom  FunctionalObjectProperty
+    2  UseOfIllegalAxiom  TransitiveObjectProperty
+    4  UseOfNonSuperClassExpression  DataPropertyDomain
+    2  UseOfNonSuperClassExpression  ObjectPropertyDomain
+    2  UseOfNonSuperClassExpression  ObjectPropertyRange

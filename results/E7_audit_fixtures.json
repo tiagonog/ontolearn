@@ -1,0 +1,475 @@
+{
+ "fixtures": [
+  {
+   "id": "FX01",
+   "assumption": "multiple inheritance and a chain of specializations: the closure reaches every ancestor",
+   "expected": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX02",
+   "assumption": "equivalent named classes are connected and interchangeable in a signature",
+   "expected": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX03",
+   "assumption": "a class defined or constrained by an anonymous expression is not a candidate",
+   "expected": {
+    "candidates": {
+     "A": "ROOT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX04",
+   "assumption": "named members of an intersection are superclasses; named members of a union are subclasses",
+   "expected": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {},
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX05",
+   "assumption": "the members of a disjoint union are subclasses and are pairwise disjoint",
+   "expected": {
+    "candidates": {},
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {},
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX06",
+   "assumption": "union signature with one alternative excluded: a mismatch, not a conflict",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX07",
+   "assumption": "union signature with every alternative excluded: a conflict",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX08",
+   "assumption": "intersection signature with one member missing and none excluded: a mismatch",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT"
+    },
+    "mismatches": {
+     "x": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT"
+    },
+    "mismatches": {
+     "x": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX09",
+   "assumption": "intersection signature with one required member excluded: a conflict",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX10",
+   "assumption": "a signature is inherited from a super-property",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX11",
+   "assumption": "a signature is obtained from the declared inverse",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {
+     "x": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX12",
+   "assumption": "a signature that is another kind of class expression is counted and not evaluated",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {},
+    "skipped": 1,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "C": "SUSPECT"
+    },
+    "mismatches": {},
+    "skipped": 1,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX13",
+   "assumption": "a position held by an untyped resource is not examined (the reasoner types it instead)",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "ROOT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX14",
+   "assumption": "the object position is examined even when the subject has no asserted type",
+   "expected": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "SUSPECT"
+    },
+    "mismatches": {
+     "y": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": false
+   },
+   "audit": {
+    "candidates": {
+     "A": "ROOT",
+     "B": "SUSPECT"
+    },
+    "mismatches": {
+     "y": "CONFLICT"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": true,
+   "dl_consistent": false,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX15",
+   "assumption": "imports are listed and not followed; a superclass in an unresolved import connects a class",
+   "expected": {
+    "candidates": {
+     "Z": "SUSPECT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 1,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "Z": "SUSPECT"
+    },
+    "mismatches": {},
+    "skipped": 0,
+    "imports": 1
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  },
+  {
+   "id": "FX16",
+   "assumption": "stage 2: manifest and usage evidence give Disconnected, unreferenced alone gives Suspect, none gives Root",
+   "expected": {
+    "candidates": {
+     "K": "DISCONNECTED",
+     "M": "DISCONNECTED",
+     "Z": "SUSPECT",
+     "R": "ROOT"
+    },
+    "mismatches": {
+     "k": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0,
+    "consistent": true
+   },
+   "audit": {
+    "candidates": {
+     "K": "DISCONNECTED",
+     "M": "DISCONNECTED",
+     "R": "ROOT",
+     "Z": "SUSPECT"
+    },
+    "mismatches": {
+     "k": "mismatch"
+    },
+    "skipped": 0,
+    "imports": 0
+   },
+   "audit_as_expected": true,
+   "audit_predicts_conflict": false,
+   "dl_consistent": true,
+   "dl_as_expected": true,
+   "prediction_agrees": true
+  }
+ ],
+ "n": 16,
+ "audit_as_expected": 16,
+ "dl_as_expected": 16,
+ "prediction_agrees": 16,
+ "inconsistent": 6
+}

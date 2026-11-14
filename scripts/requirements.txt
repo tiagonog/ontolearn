@@ -1,0 +1,4 @@
+rdflib==7.6.0
+owlrl==7.6.2
+pyshacl==0.40.2
+matplotlib>=3.8      # figures only (3.11.2 drew the published ones); no result depends on it

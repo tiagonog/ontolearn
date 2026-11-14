@@ -1,0 +1,69 @@
+== A. Consistency (HermiT 1.4.3.517 | Openllet 2.6.5) and unsatisfiable named classes ==
+  v1.0 (released file)                         consistent   | consistent    unsat: 0 | 0  
+  core = v2.2 minus F0..F6                     consistent   | consistent    unsat: 0 | 0  
+  core + F0                                    consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1                                 consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2                              consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2+F2b                          consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2+F2b+F3                       consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2+F2b+F3+F4                    consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2+F2b+F3+F4+F5                 consistent   | consistent    unsat: 0 | 0  
+  core + F0+F1+F2+F2b+F3+F4+F5+F6              consistent   | consistent    unsat: 0 | 0  
+  core + F2b only (pre-repair order)           inconsistent | inconsistent  unsat: n/a | n/a  
+  v2.2 - F0                                    inconsistent | inconsistent  unsat: n/a | n/a  
+  v2.2 - F1                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F2                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F2b                                   consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F3                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F4                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F5                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F6                                    consistent   | consistent    unsat: 0 | 0  
+  v2.2 - F0a (D2 repair only)                  inconsistent | inconsistent  unsat: n/a | n/a  
+  v2.2 - F0b (v2.1 domain extensions only)     consistent   | consistent    unsat: 0 | 0  
+  v2.0 (released file)                         consistent   | consistent    unsat: 0 | 0  
+  v2.1 (released file)                         consistent   | consistent    unsat: 0 | 0  
+  v2.2 (released file)                         consistent   | consistent    unsat: 0 | 0  
+
+== B/C. Entailed atomic assertions over the 20 named individuals (asserted layer identical in all rows) ==
+  configuration asserted | DL inferred  C(a) p(a,b) shared  new | RL inferred DL-RL | RL triples: asserted/entailed/domain-relevant
+  v1.0               53 |          41    12     29     41    0 |          41     0 | 699/1322/834 (= 41 atomic + 69 other individual-level + 724 schema-level)  | named subsumptions 15+1
+  v1.0 - T           53 |          41    12     29     41    0 |          41     0 | 697/1321/834 (= 41 atomic + 69 other individual-level + 724 schema-level)  | named subsumptions 15+1
+  v1.0 - I           53 |          12    12      0     12    0 |          12     0 | 675/1292/805 (= 12 atomic + 69 other individual-level + 724 schema-level)  | named subsumptions 15+1
+  core               53 |          41    12     29     41    0 |          41     0 | 702/1326/834 (= 41 atomic + 69 other individual-level + 724 schema-level)  | named subsumptions 15+1
+  v2.0               53 |          45    12     33     41    4 |          45     0 | 765/1450/922 (= 45 atomic + 80 other individual-level + 797 schema-level)  | named subsumptions 16+1
+  v2.1               53 |          45    12     33     41    4 |          45     0 | 791/1512/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2               53 |          45    12     33     41    4 |          45     0 | 805/1519/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - F1          53 |          45    12     33     41    4 |          45     0 | 804/1517/958 (= 45 atomic + 85 other individual-level + 828 schema-level)  | named subsumptions 15+1
+  v2.2 - F2          53 |          45    12     33     41    4 |          45     0 | 801/1519/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - F2b         53 |          45    12     33     41    4 |          45     0 | 777/1505/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - F3          53 |          45    12     33     41    4 |          45     0 | 793/1460/916 (= 45 atomic + 78 other individual-level + 793 schema-level)  | named subsumptions 16+1
+  v2.2 - F4          53 |          41    12     29     41    0 |          41     0 | 772/1453/914 (= 41 atomic + 81 other individual-level + 792 schema-level)  | named subsumptions 16+1
+  v2.2 - F5          53 |          45    12     33     41    4 |          45     0 | 804/1519/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - F6          53 |          45    12     33     41    4 |          45     0 | 791/1512/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - T           53 |          45    12     33     41    4 |          45     0 | 803/1518/960 (= 45 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+  v2.2 - I           53 |          14    12      2     12    2 |          14     0 | 780/1487/929 (= 14 atomic + 85 other individual-level + 830 schema-level)  | named subsumptions 16+1
+
+== Attribution: inferred assertions lost when one family is removed from v2.2 ==
+  v2.2 - F1  lost   0  gained  0   e.g. []
+  v2.2 - F2  lost   0  gained  0   e.g. []
+  v2.2 - F2b lost   0  gained  0   e.g. []
+  v2.2 - F3  lost   0  gained  0   e.g. []
+  v2.2 - F4  lost   4  gained  0   e.g. [':COMP-0002 :temComponenteKSA :KNOW-001', ':COMP-0002 :temComponenteKSA :SKILL-001']
+  v2.2 - F5  lost   0  gained  0   e.g. []
+  v2.2 - F6  lost   0  gained  0   e.g. []
+  v2.2 - T   lost   0  gained  0   e.g. []
+  v2.2 - I   lost  31  gained  0   e.g. [':APR-0001 :teveDesempenhoAvaliado :DEMP-0003', ':APR-0001 :teveDesempenhoAvaliado :DEMP-0005']
+
+== D. Same census on the extended fact base (released schema + 33-individual test ABox; 53 individuals) ==
+  configuration asserted | DL inferred  C(a) p(a,b) shared  new | RL inferred DL-RL | lost vs v2.2
+  v1.0 schema       162 |         145    36    109    145    0 |         145     0 | None
+  v2.2              162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F1         162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F2         162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F2b        162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F3         162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F4         162 |         145    36    109    145    0 |         145     0 | 12
+  v2.2 - F5         162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - F6         162 |         157    36    121    145   12 |         157     0 | 0
+  v2.2 - T          162 |         151    36    115    139   12 |         151     0 | 6
+  v2.2 - I          162 |          45    36      9     39    6 |          45     0 | 112

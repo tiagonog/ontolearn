@@ -1,0 +1,201 @@
+{
+ "file": "../ontology/ontolearn-v2.1.owl",
+ "sha256": "5576079e3fcc8f0f0f8fc365566edf45379fc49619d0488007a89b78bc5995c9",
+ "triples": 791,
+ "inventory": {
+  "rdfs:subClassOf": 19,
+  "rdfs:subPropertyOf": 6,
+  "owl:equivalentClass": 0,
+  "owl:equivalentProperty": 0,
+  "owl:someValuesFrom": 3,
+  "owl:allValuesFrom": 0,
+  "owl:hasValue": 0,
+  "owl:hasSelf": 0,
+  "owl:disjointWith": 5,
+  "owl:propertyDisjointWith": 0,
+  "owl:disjointUnionOf": 0,
+  "owl:inverseOf": 25,
+  "owl:unionOf": 8,
+  "owl:intersectionOf": 0,
+  "owl:complementOf": 0,
+  "owl:oneOf": 0,
+  "owl:propertyChainAxiom": 0,
+  "owl:hasKey": 0,
+  "owl:sameAs": 0,
+  "owl:differentFrom": 0,
+  "owl:imports": 0,
+  "owl:AllDisjointClasses": 1,
+  "owl:AllDifferent": 0,
+  "owl:TransitiveProperty": 2,
+  "owl:FunctionalProperty": 2,
+  "owl:InverseFunctionalProperty": 0,
+  "owl:SymmetricProperty": 0,
+  "owl:AsymmetricProperty": 0,
+  "owl:ReflexiveProperty": 0,
+  "owl:IrreflexiveProperty": 0,
+  "unqualified cardinality": 0,
+  "qualified cardinality": 0,
+  "datatype ranges": 27,
+  "classes": 29,
+  "object properties": 50,
+  "data properties": 27,
+  "individuals": 20,
+  "individuals incl. undeclared": 20,
+  "triples": 791
+ },
+ "expressivity": "SHIF(D)",
+ "expressivity_rules": [
+  "base S: transitive roles=2, full concept negation/union/existential used=True",
+  "H: 6 sub-property axioms",
+  "I: 25 inverse-property axioms",
+  "F: 2 functional object properties, no number restrictions",
+  "(D): 27 data properties"
+ ],
+ "imports": [],
+ "claims": [
+  {
+   "id": "C01",
+   "where": "Sec. 4.4; Fig. 1",
+   "claim": "DL expressivity is ALCHIF(D)",
+   "measured": "SHIF(D)",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "C02",
+   "where": "Sec. 4.4 (the H of the stated profile)",
+   "claim": "the artifact has a role hierarchy",
+   "measured": 6,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C03",
+   "where": "Sec. 4.3; Sec. 4.4, Eq. (1); Fig. 2",
+   "claim": "Knowledge, Skill and Attitude are pairwise disjoint",
+   "measured": "3 of 3 pairs",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C04",
+   "where": "Sec. 4.4, Eq. (2)",
+   "claim": "existential restrictions are applied",
+   "measured": 3,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C05",
+   "where": "Sec. 4.4",
+   "claim": "qualified cardinality restrictions are used",
+   "measured": 0,
+   "verdict": "UNREALIZED"
+  },
+  {
+   "id": "C06",
+   "where": "Sec. 4.4",
+   "claim": "a score-valued data property (hasScoreValue) grounds proficiency attribution",
+   "measured": "no matching term",
+   "verdict": "UNREALIZED"
+  },
+  {
+   "id": "C07",
+   "where": "Sec. 4.4 and its footnote 1",
+   "claim": "the prerequisite property is transitive and has a declared inverse",
+   "measured": "characteristics=True, inverse=True",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C08",
+   "where": "Sec. 4.4",
+   "claim": "functional properties are used",
+   "measured": 2,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C09",
+   "where": "Sec. 4.5; Table 3",
+   "claim": "29 classes",
+   "measured": 29,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C10",
+   "where": "Sec. 4.5; Table 3",
+   "claim": "48 object properties",
+   "measured": 50,
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "C11",
+   "where": "Table 3",
+   "claim": "27 data properties",
+   "measured": 27,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C12",
+   "where": "Sec. 4.5; Table 3",
+   "claim": "24 declared inverses",
+   "measured": 25,
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "C13",
+   "where": "Sec. 4.5; Table 3",
+   "claim": "2 transitive properties",
+   "measured": 2,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "C14",
+   "where": "Table 3; Sec. 5.3 (\"approximately 40\"); Sec. 6",
+   "claim": "test ABox of 40 named individuals",
+   "measured": 20,
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "C15",
+   "where": "Sec. 5.2, Listing 1; Fig. 2",
+   "claim": "Questao has the subclasses Objetiva and Subjetiva",
+   "measured": "2 of 2 edges",
+   "verdict": "REALIZED"
+  }
+ ],
+ "isolated": [
+  {
+   "class": "Atitude",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Competencia",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Conhecimento",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Curso",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Habilidade",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "MilestoneDeAprendizagem",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "TrajetoriasDeAprendizagem",
+   "verdict": "ROOT",
+   "evidence": []
+  }
+ ],
+ "mismatches": [],
+ "signatures_not_evaluated": 0
+}

@@ -1,0 +1,8 @@
+{
+ "platform": "A",
+ "machine": "aarch64",
+ "system": "Linux-6.8.0-138-generic-aarch64-with-glibc2.35",
+ "python": "3.10.12",
+ "cpus": 4,
+ "java": "openjdk version \"11.0.33\" 2026-10-20"
+}

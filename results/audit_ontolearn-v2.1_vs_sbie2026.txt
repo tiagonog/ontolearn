@@ -1,0 +1,77 @@
+AUDIT  ../ontology/ontolearn-v2.1.owl  (791 triples)
+       sha256 5576079e3fcc8f0f0f8fc365566edf45379fc49619d0488007a89b78bc5995c9
+
+I. Construct inventory
+   rdfs:subClassOf                  19
+   rdfs:subPropertyOf               6
+   owl:equivalentClass              0
+   owl:equivalentProperty           0
+   owl:someValuesFrom               3
+   owl:allValuesFrom                0
+   owl:hasValue                     0
+   owl:hasSelf                      0
+   owl:disjointWith                 5
+   owl:propertyDisjointWith         0
+   owl:disjointUnionOf              0
+   owl:inverseOf                    25
+   owl:unionOf                      8
+   owl:intersectionOf               0
+   owl:complementOf                 0
+   owl:oneOf                        0
+   owl:propertyChainAxiom           0
+   owl:hasKey                       0
+   owl:sameAs                       0
+   owl:differentFrom                0
+   owl:imports                      0
+   owl:AllDisjointClasses           1
+   owl:AllDifferent                 0
+   owl:TransitiveProperty           2
+   owl:FunctionalProperty           2
+   owl:InverseFunctionalProperty    0
+   owl:SymmetricProperty            0
+   owl:AsymmetricProperty           0
+   owl:ReflexiveProperty            0
+   owl:IrreflexiveProperty          0
+   unqualified cardinality          0
+   qualified cardinality            0
+   datatype ranges                  27
+   classes                          29
+   object properties                50
+   data properties                  27
+   individuals                      20
+   individuals incl. undeclared     20
+   triples                          791
+   derived DL expressivity          SHIF(D)
+      - base S: transitive roles=2, full concept negation/union/existential used=True
+      - H: 6 sub-property axioms
+      - I: 25 inverse-property axioms
+      - F: 2 functional object properties, no number restrictions
+      - (D): 27 data properties
+
+U. Claims of the accompanying report
+   C01 MISMATCH   DL expressivity is ALCHIF(D)  [Sec. 4.4; Fig. 1]  measured: SHIF(D)
+   C02 REALIZED   the artifact has a role hierarchy  [Sec. 4.4 (the H of the stated profile)]  measured: 6
+   C03 REALIZED   Knowledge, Skill and Attitude are pairwise disjoint  [Sec. 4.3; Sec. 4.4, Eq. (1); Fig. 2]  measured: 3 of 3 pairs
+   C04 REALIZED   existential restrictions are applied  [Sec. 4.4, Eq. (2)]  measured: 3
+   C05 UNREALIZED qualified cardinality restrictions are used  [Sec. 4.4]  measured: 0
+   C06 UNREALIZED a score-valued data property (hasScoreValue) grounds proficiency attribution  [Sec. 4.4]  measured: no matching term
+   C07 REALIZED   the prerequisite property is transitive and has a declared inverse  [Sec. 4.4 and its footnote 1]  measured: characteristics=True, inverse=True
+   C08 REALIZED   functional properties are used  [Sec. 4.4]  measured: 2
+   C09 REALIZED   29 classes  [Sec. 4.5; Table 3]  measured: 29
+   C10 MISMATCH   48 object properties  [Sec. 4.5; Table 3]  measured: 50
+   C11 REALIZED   27 data properties  [Table 3]  measured: 27
+   C12 MISMATCH   24 declared inverses  [Sec. 4.5; Table 3]  measured: 25
+   C13 REALIZED   2 transitive properties  [Sec. 4.5; Table 3]  measured: 2
+   C14 MISMATCH   test ABox of 40 named individuals  [Table 3; Sec. 5.3 ("approximately 40"); Sec. 6]  measured: 20
+   C15 REALIZED   Questao has the subclasses Objetiva and Subjetiva  [Sec. 5.2, Listing 1; Fig. 2]  measured: 2 of 2 edges
+
+K. Isolated classes: 7 stage-1 candidates
+   ROOT          Atitude                      
+   ROOT          Competencia                  
+   ROOT          Conhecimento                 
+   ROOT          Curso                        
+   ROOT          Habilidade                   
+   ROOT          MilestoneDeAprendizagem      
+   ROOT          TrajetoriasDeAprendizagem    
+
+M. Domain/range mismatches: 0  (signatures not evaluated: 0)

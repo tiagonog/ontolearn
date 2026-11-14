@@ -1,0 +1,17 @@
+locked inputs (digest of every input file)                     0 s
+E0 release equivalence                                         2 s
+E0 profile conformance                                         1 s
+audit of each release against the claims of the report         1 s
+E1 ablation                                                  148 s
+E2 semantic tests                                             11 s
+E3 competency questions                                      109 s
+E4 OWL vs SHACL                                               17 s
+E5 fault injection                                          1090 s
+external ontologies (download, digest check)                   0 s
+E7 audit selectivity                                          23 s
+E7 audit fixtures                                              3 s
+E7 audit run time                                              7 s
+E8 lineage                                                     0 s
+deterministic experiments, total                            1412 s
+tables and numbers of the paper                                8 s
+figures                                                        2 s

@@ -1,0 +1,25 @@
+\begin{table}[!t]
+\caption{Axiom families of the completion as they stand in v2.2. Ax.: logical axioms added and retained, counted by the OWL~API on the released files (OWL axioms, not RDF triples). ``Restores'' marks a commitment present in development states v2--v3 and lost afterwards (Section~\ref{sec:lineage}).}
+\label{tab:delta}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.65cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{0.6cm}p{0.4cm}>{\raggedright\arraybackslash}p{1.7cm}}
+\hline
+\textbf{Fam.} & \textbf{Content} & \textbf{Ver.} & \textbf{Ax.} & \textbf{Tie} \\
+\hline
+F0 & Union domain of \texttt{descricao} extended with \texttt{NiveisDe\allowbreak{}Proficiencia} (v2.0) and \texttt{Atitude} (v2.1); domain of \texttt{data} extended to performance records (v2.1) & 2.0, 2.1 & 0$^{*}$ & repairs D2, D3 \\
+F1 & \texttt{Subjetiva} $\sqsubseteq$ \texttt{Questao} & 2.0 & 1 & repairs D1; realizes C15 \\
+F2 & Pairwise disjointness of the KSA triad; \texttt{Objetiva}$\,\bot\,$\texttt{Subjetiva} & 2.0 & 4 & realizes C03; restores \\
+F2b & \texttt{owl:AllDisjointClasses} over the 13 root concepts & 2.0 & 1 & restores; detection \\
+F3 & Three existential participation axioms, e.g., \texttt{Questao} $\sqsubseteq \exists$\texttt{competencias\allowbreak{}Avaliadas}.\texttt{Competencia} & 2.0, 2.1 & 3 & realizes C04 \\
+F4 & KSA role hierarchy: six sub-property axioms, the inverse pairing, and the domains and ranges of two super-properties & 2.0, 2.1 & 11 & realizes C02 \\
+F5 & \texttt{proficienciaAtingida} functional & 2.0 & 1 & one level per record \\
+F6 & \texttt{owl:AllDisjointClasses} over the six Bloom categories & 2.2 & 1 & restores; lets F5 detect \\
+\hline
+\multicolumn{3}{l}{\textbf{Logical axioms added and retained}} & \textbf{22} & \\
+\multicolumn{5}{p{8.0cm}}{\footnotesize Withdrawn in v2.1: \texttt{Aprendiz}$\,\bot\,$\texttt{Instrutor} (inherited from v1.0) and a fourth F3 axiom, \texttt{RecursoDe\allowbreak{}Aprendizagem} $\sqsubseteq \exists$\texttt{aborda\allowbreak{}Competencia}.\texttt{Competencia} (added in v2.0).} \\
+\multicolumn{5}{p{8.0cm}}{\footnotesize $^{*}$F0 widens existing domain axioms rather than adding any.} \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,81 @@
+== A. Released versions: isolated-class analysis and domain/range mismatches ==
+  version facts     stage-1 flagged  TP  FP  FN   mismatches (C = contradicts a declared disjointness)
+  v1.0   reference       8       1   1   0   0   ['NP-Aplicar/descricao', 'QUEST-0005/questaoRespondida']
+  v1.0   extended        8       1   1   0   0   ['ATT-001/descricao', 'NP-Analisar/descricao', 'NP-Aplicar/descricao', 'NP-Avaliar/descricao', 'NP-Criar/descricao', 'NP-Entender/descricao', 'QUEST-0005/questaoRespondida', 'QUEST-0007/questaoRespondida', 'QUEST-0010/questaoRespondida']
+  v2.0   reference       7       0   0   0   0   []
+  v2.0   extended        7       0   0   0   0   ['ATT-001/descricao(C)']
+  v2.1   reference       7       0   0   0   0   []
+  v2.1   extended        7       0   0   0   0   []
+  v2.2   reference       7       0   0   0   0   []
+  v2.2   extended        7       0   0   0   0   []
+
+== B1. Mutation: one specialization link deleted (16 mutants x 2 fact bases), no manifest ==
+  deleted link                             | reference: stage-1  evidence            | extended: stage-1  evidence
+  Aprendiz < UsuarioDoAva                  | yes      mismatch only        | yes      mismatch only       
+  Instrutor < UsuarioDoAva                 | yes      mismatch only        | yes      mismatch only       
+  Lembrar < NiveisDeProficiencia           | yes      unreferenced,usage   | yes      unreferenced,usage  
+  Entender < NiveisDeProficiencia          | yes      unreferenced         | yes      unreferenced,usage  
+  Aplicar < NiveisDeProficiencia           | yes      unreferenced,usage   | yes      unreferenced,usage  
+  Analisar < NiveisDeProficiencia          | yes      unreferenced         | yes      unreferenced,usage  
+  AvaliarBloom < NiveisDeProficiencia      | yes      unreferenced         | yes      unreferenced,usage  
+  Criar < NiveisDeProficiencia             | yes      unreferenced         | yes      unreferenced,usage  
+  Didatico < RecursoDeAprendizagem         | yes      unreferenced         | yes      unreferenced,usage  
+  Interativo < RecursoDeAprendizagem       | yes      unreferenced         | yes      unreferenced,usage  
+  Multimidia < RecursoDeAprendizagem       | no       mismatch only        | no       mismatch only       
+  Video < Multimidia                       | yes      unreferenced,usage   | yes      unreferenced,usage  
+  Objetiva < Questao                       | yes      unreferenced,usage   | yes      unreferenced,usage  
+  Subjetiva < Questao                      | yes      unreferenced,usage   | yes      unreferenced,usage  
+  ObjetivasAval < Avaliacao                | yes      unreferenced,usage   | yes      unreferenced,usage  
+  Formativo < DesempenhoDoAprendiz         | yes      unreferenced,usage   | yes      unreferenced,usage  
+  reference: detected 16/16  (by unreferenced: 13; by usage: 10)
+  extended: detected 16/16  (by unreferenced: 13; by usage: 16)
+
+== B2. Mutation: one member deleted from a union domain/range; audit (no reasoner) vs the DL reasoners (HermiT and Openllet agree) ==
+  reference: 29 mutants; inconsistent under OWL 2 DL: 20; audit CONFLICT: 20; agree on 29/29 (both 20, neither 9, audit only 0, reasoners only 0)
+  extended: 29 mutants; inconsistent under OWL 2 DL: 26; audit CONFLICT: 26; agree on 29/29 (both 26, neither 3, audit only 0, reasoners only 0)
+
+== B3. Mutation: one axiom family deleted; claims of this paper re-checked ==
+  released v2.2: 19/19 claims REALIZED
+  v2.2 - F1 : 1 claim(s) no longer realized: ['P17']
+  v2.2 - F2 : 2 claim(s) no longer realized: ['P12', 'P15']
+  v2.2 - F2b: 1 claim(s) no longer realized: ['P11']
+  v2.2 - F3 : 1 claim(s) no longer realized: ['P07']
+  v2.2 - F4 : 4 claim(s) no longer realized: ['P02', 'P05', 'P06', 'P08']
+  v2.2 - F5 : 2 claim(s) no longer realized: ['P10', 'P19']
+  v2.2 - F6 : 2 claim(s) no longer realized: ['P11', 'P16']
+  v2.2 - T  : 3 claim(s) no longer realized: ['P05', 'P09', 'P18']
+  v2.2 - I  : 4 claim(s) no longer realized: ['P05', 'P08', 'P18', 'P19']
+
+== C1. Negative control: the 13 root classes are never flagged ==
+  false positives over 13 roots x 4 versions x 2 fact bases = 104 checks: 0
+== C2. Negative control: meaning-preserving mutants (one annotation triple removed) ==
+  100 mutants: 0 with a different audit result
+== C3. External ontologies (own-namespace classes only) ==
+  ontology triples classes  ind. stage-1 DISCONN. SUSPECT mism. not eval. imports
+  pizza      2332      99     5       0        0       0     0         0       0   
+  koala       153      20     6       2        0       0     0         0       0   
+  primer      304      17     3       2        0       1     0         0       0   SUSPECT: YoungChild
+  sosa        345      16     1      13        0      13     0         0       0   SUSPECT: ActuatableProperty, Actuation, Actuator, FeatureOfInterest ...  [40 schema:domainIncludes annotations]
+  ssn         520      11     1       0        0       0     0         0       1   
+  bfo         563      38     0       0        0       0     0         0       0   
+  iao        5210     266    21       0        0       0     0         0       0   
+  educor      476      29     0      19        0       0     0         0       0   
+  doap        741      13     0       1        0       0     0         0       1   
+  ecrm       5321      76     0       0        0       0     0         0       0   
+
+== D. DL name: audit derivation vs OWL API construct report ==
+  v1.0    audit SIF(D)     OWL API SIF(D)     (RRESTRCU+IF(D))  agree
+  v2.0    audit SHIF(D)    OWL API SHIF(D)    (RRESTRCUEH+IF(D))  agree
+  v2.1    audit SHIF(D)    OWL API SHIF(D)    (RRESTRCUEH+IF(D))  agree
+  v2.2    audit SHIF(D)    OWL API SHIF(D)    (RRESTRCUEH+IF(D))  agree
+  pizza   audit SHOIN      OWL API SHOIN      (RRESTRCUCINTUNIVRESTREH+OIN)  agree
+  koala   audit ALCON(D)   OWL API ALCON(D)   (RRESTRCUCINTUNIVRESTREON(D))  agree
+  primer  audit SROIQ(D)   OWL API SROIQ(D)   (RRESTRCUCINTUNIVRESTREROIQ(D))  agree
+  sosa    audit ALI(D)     OWL API ALI(D)     (RRESTRI(D))  agree
+  ssn     audit ALRIN      OWL API ALRIN      (UNIVRESTRRIN)  agree
+  bfo     audit ALC        OWL API ALC        (CU)  agree
+  iao     audit SROIN(D)   OWL API SROIN(D)   (RRESTRCUCINTUNIVRESTREROIN(D))  agree
+  educor  audit ALCH(D)    OWL API ALCH(D)    (RRESTRCH(D))  agree
+  doap    audit ALCHIF     OWL API ALHIF(D)   (RRESTRHIF(D))  DIFFER
+  ecrm    audit SHIN(D)    OWL API SHOIN(D)   (RRESTRCEH+OIN(D))  DIFFER
+  agreement: 12/14

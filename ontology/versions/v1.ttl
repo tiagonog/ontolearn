@@ -1,0 +1,267 @@
+@prefix : <http://www.ontolearn.com/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ontolearn.com/ontologia> a owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+# Classe mãe abstrata
+:Usuário_do_AVA a owl:Class .
+
+# [cite_start]Subclasses de Usuário_do_AVA [cite: 499-501]
+:Aprendiz a owl:Class ;
+          rdfs:subClassOf :Usuário_do_AVA .
+
+:Instrutor a owl:Class ;
+           rdfs:subClassOf :Usuário_do_AVA .
+
+# [cite_start]Demais classes principais [cite: 191]
+:Competência a owl:Class .
+:Recurso_de_Aprendizagem a owl:Class .
+:Desempenho_do_Aprendiz a owl:Class .
+:Curso a owl:Class .
+:Questão a owl:Class .
+:Avaliação a owl:Class .
+:Milestone_de_Aprendizagem a owl:Class .
+:Níveis_de_Proficiência a owl:Class .
+:Trajetórias_de_Aprendizagem a owl:Class .
+
+
+#################################################################
+#    Propriedades de Objeto (Object Properties)
+#    [cite_start]Definidas conforme Tabela 4.2 e Tabela 4.3 [cite: 538, 540, 556-569]
+#################################################################
+
+# Propriedades do Aprendiz
+:historicoAprendizagem a owl:ObjectProperty ;
+                        rdfs:domain :Aprendiz ;
+                        rdfs:range :Recurso_de_Aprendizagem .
+
+:desempenhoCompetencias a owl:ObjectProperty ;
+                         rdfs:domain :Aprendiz ;
+                         rdfs:range :Desempenho_do_Aprendiz .
+
+:conquistasAdquiridas a owl:ObjectProperty ;
+                       rdfs:domain :Aprendiz ;
+                       rdfs:range :Milestone_de_Aprendizagem .
+
+:trajetoriasRealizadas a owl:ObjectProperty ;
+                        rdfs:domain :Aprendiz ;
+                        rdfs:range :Trajetórias_de_Aprendizagem .
+
+# Propriedades do Instrutor
+:avaliaDesempenho a owl:ObjectProperty ;
+                   rdfs:domain :Instrutor ;
+                   rdfs:range :Desempenho_do_Aprendiz .
+
+:elaboraAvaliacoes a owl:ObjectProperty ;
+                    rdfs:domain :Instrutor ;
+                    rdfs:range :Avaliação .
+
+:insereRecursos a owl:ObjectProperty ;
+                 rdfs:domain :Instrutor ;
+                 rdfs:range :Recurso_de_Aprendizagem .
+
+# Propriedades do Curso
+:aprendizesInscritos a owl:ObjectProperty ;
+                      rdfs:domain :Curso ;
+                      rdfs:range :Aprendiz .
+
+:recursosUtilizados a owl:ObjectProperty ;
+                     rdfs:domain :Curso ;
+                     rdfs:range :Recurso_de_Aprendizagem .
+
+:instrutoresResponsaveis a owl:ObjectProperty ;
+                          rdfs:domain :Curso ;
+                          rdfs:range :Instrutor .
+
+:avaliacoesAplicadas a owl:ObjectProperty ;
+                       rdfs:domain :Curso ;
+                       rdfs:range :Avaliação .
+
+# Propriedades do Desempenho_do_Aprendiz
+:questaoRespondida a owl:ObjectProperty ;
+                     rdfs:domain :Desempenho_do_Aprendiz ;
+                     rdfs:range :Questão .
+
+:aprendizAvaliado a owl:ObjectProperty ;
+                   rdfs:domain :Desempenho_do_Aprendiz ;
+                   rdfs:range :Aprendiz .
+
+:proficienciaAtingida a owl:ObjectProperty ;
+                       rdfs:domain :Desempenho_do_Aprendiz ;
+                       rdfs:range :Níveis_de_Proficiência .
+
+# Propriedades da Avaliação
+:questoesIncluidas a owl:ObjectProperty ;
+                    rdfs:domain :Avaliação ;
+                    rdfs:range :Questão .
+
+# Propriedades do Milestone_de_Aprendizagem
+:competenciasEnvolvidas a owl:ObjectProperty ; # Note: Propriedade reutilizada abaixo
+                        rdfs:domain :Milestone_de_Aprendizagem ;
+                        rdfs:range :Competência .
+
+# Propriedades de Trajetórias_de_Aprendizagem
+:competenciasEnvolvidas a owl:ObjectProperty ; # [cite_start]Note: Mesmo nome, outro domínio [cite: 540, 565]
+                        rdfs:domain :Trajetórias_de_Aprendizagem ;
+                        rdfs:range :Competência .
+
+# Propriedades da Questão
+:competenciaRelacionada a owl:ObjectProperty ; # [cite_start]Baseado na Tabela 4.3 [cite: 565]
+                         rdfs:domain :Questão ;
+                         rdfs:range :Competência .
+
+:competenciasAvaliadas a owl:ObjectProperty ; # [cite_start]Baseado na Tabela 4.2 e 4.3 [cite: 540, 569]
+                         rdfs:domain :Questão ;
+                         rdfs:range :Competência .
+
+
+#################################################################
+#    Propriedades de Dados (Data Properties)
+#    [cite_start]Definidas conforme Tabela 4.1 e Tabela 4.3 [cite: 515, 521, 556-569]
+#################################################################
+
+# Propriedades do Aprendiz
+:idAprendiz a owl:DataProperty ;
+             rdfs:domain :Aprendiz ;
+             rdfs:range xsd:string .
+
+:nome a owl:DataProperty ; # Note: Propriedade reutilizada
+        rdfs:domain :Aprendiz ;
+        rdfs:range xsd:string .
+
+# Propriedades do Instrutor
+:idInstrutor a owl:DataProperty ;
+              rdfs:domain :Instrutor ;
+              rdfs:range xsd:string .
+
+:nome a owl:DataProperty ; # [cite_start]Note: Mesmo nome, outro domínio [cite: 515]
+        rdfs:domain :Instrutor ;
+        rdfs:range xsd:string .
+
+# Propriedades da Competência
+:idCompetencia a owl:DataProperty ;
+                rdfs:domain :Competência ;
+                rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ; # Note: Propriedade reutilizada
+            rdfs:domain :Competência ;
+            rdfs:range xsd:string .
+
+:area a owl:DataProperty ;
+         rdfs:domain :Competência ;
+         rdfs:range xsd:string .
+
+# Propriedades do Recurso_de_Aprendizagem
+:idRecurso a owl:DataProperty ;
+            rdfs:domain :Recurso_de_Aprendizagem ;
+            rdfs:range xsd:string .
+
+:tipo a owl:DataProperty ; # Note: Propriedade reutilizada
+        rdfs:domain :Recurso_de_Aprendizagem ;
+        rdfs:range xsd:string .
+
+:url a owl:DataProperty ;
+       rdfs:domain :Recurso_de_Aprendizagem ;
+       rdfs:range xsd:string . # [cite_start]Tabela 4.1 "Localização do recurso" [cite: 521]
+
+# Propriedades do Desempenho_do_Aprendiz
+:idDesempenho a owl:DataProperty ;
+               rdfs:domain :Desempenho_do_Aprendiz ;
+               rdfs:range xsd:string .
+
+:respostaAprendiz a owl:DataProperty ;
+                   rdfs:domain :Desempenho_do_Aprendiz ;
+                   rdfs:range xsd:string .
+
+# Propriedades do Curso
+:idCurso a owl:DataProperty ;
+           rdfs:domain :Curso ;
+           rdfs:range xsd:string .
+
+:titulo a owl:DataProperty ;
+          rdfs:domain :Curso ;
+          rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ; # Note: Propriedade reutilizada
+            rdfs:domain :Curso ;
+            rdfs:range xsd:string .
+
+:nível a owl:DataProperty ;
+         rdfs:domain :Curso ;
+         rdfs:range xsd:string .
+
+# Propriedades da Avaliação
+:idAvaliacao a owl:DataProperty ;
+              rdfs:domain :Avaliação ;
+              rdfs:range xsd:string .
+
+:tipo a owl:DataProperty ; # Note: Propriedade reutilizada
+        rdfs:domain :Avaliação ;
+        rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ; # Note: Propriedade reutilizada
+            rdfs:domain :Avaliação ;
+            rdfs:range xsd:string .
+
+# Propriedades do Milestone_de_Aprendizagem
+:idMilestone a owl:DataProperty ;
+              rdfs:domain :Milestone_de_Aprendizagem ;
+              rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ; # Note: Propriedade reutilizada
+            rdfs:domain :Milestone_de_Aprendizagem ;
+            rdfs:range xsd:string .
+
+:data a owl:DataProperty ;
+         rdfs:domain :Milestone_de_Aprendizagem ;
+         rdfs:range xsd:string . # [cite_start]Tabela 4.3 especifica String [cite: 565]
+
+:tipo a owl:DataProperty ; # Note: Propriedade reutilizada
+        rdfs:domain :Milestone_de_Aprendizagem ;
+        rdfs:range xsd:string .
+
+# Propriedades de Níveis_de_Proficiência
+:idNivel a owl:DataProperty ;
+            rdfs:domain :Níveis_de_Proficiência ;
+            rdfs:range xsd:string .
+
+:descricao a owl:DataProperty ; # Note: Propriedade reutilizada
+            rdfs:domain :Níveis_de_Proficiência ;
+            rdfs:range xsd:string .
+
+# Propriedades de Trajetórias_de_Aprendizagem
+:idTrajetoria a owl:DataProperty ;
+               rdfs:domain :Trajetórias_de_Aprendizagem ;
+               rdfs:range xsd:string .
+
+:etapas a owl:DataProperty ; # [cite_start]Tabela 4.3 "Lista de String" [cite: 565]
+         rdfs:domain :Trajetórias_de_Aprendizagem ;
+         rdfs:range xsd:string .
+
+# Propriedades da Questão
+:idQuestao a owl:DataProperty ;
+            rdfs:domain :Questão ;
+            rdfs:range xsd:string .
+
+:enunciado a owl:DataProperty ;
+             rdfs:domain :Questão ;
+             rdfs:range xsd:string .
+
+:tipo a owl:DataProperty ; # Note: Propriedade reutilizada
+        rdfs:domain :Questão ;
+        rdfs:range xsd:string .
+
+:respostaCorreta a owl:DataProperty ;
+                   rdfs:domain :Questão ;
+                   rdfs:range xsd:string .
+
+:alternativas a owl:DataProperty ; # [cite_start]Tabela 4.3 "Lista de String" [cite: 565]
+                rdfs:domain :Questão ;
+                rdfs:range xsd:string .

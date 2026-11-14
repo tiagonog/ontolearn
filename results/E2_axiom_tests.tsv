@@ -1,0 +1,169 @@
+version	reasoner	test	kind	family	description	expected	observed	match
+v1.0	HermiT	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v1.0	HermiT	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	not entailed	not entailed	yes
+v1.0	HermiT	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v1.0	HermiT	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v1.0	HermiT	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	not entailed	not entailed	yes
+v1.0	HermiT	S06	negative	F2	one individual typed Conhecimento and Habilidade	consistent	consistent	yes
+v1.0	HermiT	S07	negative	F2b	one individual typed Aprendiz and Competencia	consistent	consistent	yes
+v1.0	HermiT	S08	negative	F2	one question typed Objetiva and Subjetiva	consistent	consistent	yes
+v1.0	HermiT	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	consistent; Competencia(QUEST-0001) entailed	consistent; Competencia(QUEST-0001) entailed	yes
+v1.0	HermiT	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar not entailed	consistent; NP-Aplicar = NP-Lembrar not entailed	yes
+v1.0	HermiT	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb not entailed	consistent; TLa = TLb not entailed	yes
+v1.0	HermiT	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; not entailed	consistent; not entailed	yes
+v1.0	HermiT	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v1.0	HermiT	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) entailed	yes
+v1.0	HermiT	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	inconsistent	inconsistent	yes
+v1.0	HermiT	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v1.0	HermiT	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v1.0	HermiT	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	consistent	consistent	yes
+v1.0	HermiT	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	consistent	consistent	yes
+v1.0	HermiT	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v1.0	HermiT	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	1 of 78 inconsistent	1 of 78 inconsistent	yes
+v1.0	Openllet	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v1.0	Openllet	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	not entailed	not entailed	yes
+v1.0	Openllet	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v1.0	Openllet	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v1.0	Openllet	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	not entailed	not entailed	yes
+v1.0	Openllet	S06	negative	F2	one individual typed Conhecimento and Habilidade	consistent	consistent	yes
+v1.0	Openllet	S07	negative	F2b	one individual typed Aprendiz and Competencia	consistent	consistent	yes
+v1.0	Openllet	S08	negative	F2	one question typed Objetiva and Subjetiva	consistent	consistent	yes
+v1.0	Openllet	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	consistent; Competencia(QUEST-0001) entailed	consistent; Competencia(QUEST-0001) entailed	yes
+v1.0	Openllet	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar not entailed	consistent; NP-Aplicar = NP-Lembrar not entailed	yes
+v1.0	Openllet	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb not entailed	consistent; TLa = TLb not entailed	yes
+v1.0	Openllet	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; not entailed	consistent; not entailed	yes
+v1.0	Openllet	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v1.0	Openllet	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) entailed	yes
+v1.0	Openllet	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	inconsistent	inconsistent	yes
+v1.0	Openllet	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v1.0	Openllet	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v1.0	Openllet	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	consistent	consistent	yes
+v1.0	Openllet	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	consistent	consistent	yes
+v1.0	Openllet	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v1.0	Openllet	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	1 of 78 inconsistent	1 of 78 inconsistent	yes
+v2.0	HermiT	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.0	HermiT	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.0	HermiT	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.0	HermiT	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.0	HermiT	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.0	HermiT	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.0	HermiT	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.0	HermiT	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.0	HermiT	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.0	HermiT	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar entailed	consistent; NP-Aplicar = NP-Lembrar entailed	yes
+v2.0	HermiT	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.0	HermiT	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.0	HermiT	S15	control	F0b	legitimate data: an Atitude described with :descricao	inconsistent	inconsistent	yes
+v2.0	HermiT	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	inconsistent	inconsistent	yes
+v2.0	HermiT	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	inconsistent	inconsistent	yes
+v2.0	HermiT	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; entailed	consistent; entailed	yes
+v2.0	HermiT	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.0	HermiT	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.0	HermiT	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.0	HermiT	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v2.0	HermiT	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes
+v2.0	Openllet	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.0	Openllet	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.0	Openllet	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.0	Openllet	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.0	Openllet	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.0	Openllet	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.0	Openllet	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.0	Openllet	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.0	Openllet	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.0	Openllet	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar entailed	consistent; NP-Aplicar = NP-Lembrar entailed	yes
+v2.0	Openllet	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.0	Openllet	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.0	Openllet	S15	control	F0b	legitimate data: an Atitude described with :descricao	inconsistent	inconsistent	yes
+v2.0	Openllet	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	inconsistent	inconsistent	yes
+v2.0	Openllet	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	inconsistent	inconsistent	yes
+v2.0	Openllet	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; entailed	consistent; entailed	yes
+v2.0	Openllet	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.0	Openllet	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.0	Openllet	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.0	Openllet	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v2.0	Openllet	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes
+v2.1	HermiT	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.1	HermiT	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.1	HermiT	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.1	HermiT	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.1	HermiT	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.1	HermiT	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.1	HermiT	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.1	HermiT	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.1	HermiT	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.1	HermiT	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar entailed	consistent; NP-Aplicar = NP-Lembrar entailed	yes
+v2.1	HermiT	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.1	HermiT	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.1	HermiT	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v2.1	HermiT	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	yes
+v2.1	HermiT	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	consistent; Aprendiz(INST-0001) entailed	consistent; Aprendiz(INST-0001) entailed	yes
+v2.1	HermiT	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v2.1	HermiT	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.1	HermiT	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.1	HermiT	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.1	HermiT	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v2.1	HermiT	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes
+v2.1	Openllet	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.1	Openllet	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.1	Openllet	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.1	Openllet	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.1	Openllet	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.1	Openllet	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.1	Openllet	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.1	Openllet	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.1	Openllet	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.1	Openllet	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	consistent; NP-Aplicar = NP-Lembrar entailed	consistent; NP-Aplicar = NP-Lembrar entailed	yes
+v2.1	Openllet	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.1	Openllet	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.1	Openllet	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v2.1	Openllet	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	yes
+v2.1	Openllet	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	consistent; Aprendiz(INST-0001) entailed	consistent; Aprendiz(INST-0001) entailed	yes
+v2.1	Openllet	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v2.1	Openllet	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.1	Openllet	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.1	Openllet	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.1	Openllet	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	0 of 15 inconsistent	0 of 15 inconsistent	yes
+v2.1	Openllet	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes
+v2.2	HermiT	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.2	HermiT	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.2	HermiT	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.2	HermiT	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.2	HermiT	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.2	HermiT	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.2	HermiT	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.2	HermiT	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.2	HermiT	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.2	HermiT	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	inconsistent	inconsistent	yes
+v2.2	HermiT	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.2	HermiT	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.2	HermiT	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v2.2	HermiT	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	yes
+v2.2	HermiT	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	consistent; Aprendiz(INST-0001) entailed	consistent; Aprendiz(INST-0001) entailed	yes
+v2.2	HermiT	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v2.2	HermiT	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.2	HermiT	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.2	HermiT	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.2	HermiT	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	15 of 15 inconsistent	15 of 15 inconsistent	yes
+v2.2	HermiT	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes
+v2.2	Openllet	S01	positive	-	released file, no added fact	consistent	consistent	yes
+v2.2	Openllet	S02	positive	F1	individual typed only Subjetiva: is it a Questao?	entailed	entailed	yes
+v2.2	Openllet	S03	positive	T	chain T3 -> COMP-0002 -> COMP-0001 -> T4: does T3 require T4?	entailed	entailed	yes
+v2.2	Openllet	S04	positive	I	performance recorded only as record -> learner: retrievable from the learner?	entailed	entailed	yes
+v2.2	Openllet	S05	positive	F4	COMP-0002 ehCompostoDeConhecimento KNOW-001: temComponenteKSA?	entailed	entailed	yes
+v2.2	Openllet	S06	negative	F2	one individual typed Conhecimento and Habilidade	inconsistent	inconsistent	yes
+v2.2	Openllet	S07	negative	F2b	one individual typed Aprendiz and Competencia	inconsistent	inconsistent	yes
+v2.2	Openllet	S08	negative	F2	one question typed Objetiva and Subjetiva	inconsistent	inconsistent	yes
+v2.2	Openllet	S09	negative	F2b + domain	misuse: QUEST-0001 requer COMP-0001 (domain of requer is Competencia)	inconsistent	inconsistent	yes
+v2.2	Openllet	S10	negative	F5 + F6	contradictory record: DEMP-0003 (level NP-Aplicar) also receives NP-Lembrar	inconsistent	inconsistent	yes
+v2.2	Openllet	S11	control	F5 + F6	record with two level individuals of the SAME tier (TLa, TLb : Aplicar)	consistent; TLa = TLb entailed	consistent; TLa = TLb entailed	yes
+v2.2	Openllet	S14	positive	F3	DEMP-0004 has no recorded level: is 'some level' entailed?	consistent; entailed	consistent; entailed	yes
+v2.2	Openllet	S15	control	F0b	legitimate data: an Atitude described with :descricao	consistent	consistent	yes
+v2.2	Openllet	S16	control	F0b	legitimate data: performance record DEMP-0003 dated with :data	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	consistent; MilestoneDeAprendizagem(DEMP-0003) not entailed	yes
+v2.2	Openllet	S17	control	v2.1 revision	legitimate data: instructor INST-0001 enrolled as a learner in another course	consistent; Aprendiz(INST-0001) entailed	consistent; Aprendiz(INST-0001) entailed	yes
+v2.2	Openllet	S18	control	v2.1 revision	a learning resource with no competency: is 'addresses some competency' entailed?	consistent; not entailed	consistent; not entailed	yes
+v2.2	Openllet	S19	control	F2b	an individual typed Aprendiz and its superclass UsuarioDoAva	consistent	consistent	yes
+v2.2	Openllet	S20	scope probe	F2b	contested pair: an assessment reused as a learning resource (Avaliacao and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.2	Openllet	S21	scope probe	F2b	contested pair: a course catalogued as a learning resource (Curso and RecursoDeAprendizagem)	inconsistent	inconsistent	yes
+v2.2	Openllet	S12	negative sweep	F5 + F6	one record carrying two levels of different tiers, all 15 tier pairs	15 of 15 inconsistent	15 of 15 inconsistent	yes
+v2.2	Openllet	S13	negative sweep	F2b	one individual typed with two root classes, all 78 root pairs	78 of 78 inconsistent	78 of 78 inconsistent	yes

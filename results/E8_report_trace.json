@@ -1,0 +1,135 @@
+[
+ {
+  "state": "v0",
+  "metric": "classes",
+  "reported": 82,
+  "measured": 82,
+  "agree": true
+ },
+ {
+  "state": "v2",
+  "metric": "classes",
+  "reported": 55,
+  "measured": 50,
+  "agree": false
+ },
+ {
+  "state": "v2",
+  "metric": "object properties",
+  "reported": 26,
+  "measured": 26,
+  "agree": true
+ },
+ {
+  "state": "v2",
+  "metric": "data properties",
+  "reported": 0,
+  "measured": 0,
+  "agree": true
+ },
+ {
+  "state": "v2",
+  "metric": "owl:inverseOf",
+  "reported": 4,
+  "measured": 4,
+  "agree": true
+ },
+ {
+  "state": "v2",
+  "metric": "owl:TransitiveProperty",
+  "reported": 1,
+  "measured": 1,
+  "agree": true
+ },
+ {
+  "state": "v2",
+  "metric": "individuals",
+  "reported": 0,
+  "measured": 0,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "classes",
+  "reported": 28,
+  "measured": 28,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "object properties",
+  "reported": 48,
+  "measured": 48,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "data properties",
+  "reported": 27,
+  "measured": 27,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "owl:inverseOf",
+  "reported": 24,
+  "measured": 24,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "owl:TransitiveProperty",
+  "reported": 2,
+  "measured": 2,
+  "agree": true
+ },
+ {
+  "state": "v6",
+  "metric": "individuals",
+  "reported": 32,
+  "measured": 16,
+  "agree": false
+ },
+ {
+  "state": "v10",
+  "metric": "classes",
+  "reported": 29,
+  "measured": 29,
+  "agree": true
+ },
+ {
+  "state": "v10",
+  "metric": "object properties",
+  "reported": 48,
+  "measured": 48,
+  "agree": true
+ },
+ {
+  "state": "v10",
+  "metric": "data properties",
+  "reported": 27,
+  "measured": 27,
+  "agree": true
+ },
+ {
+  "state": "v10",
+  "metric": "owl:inverseOf",
+  "reported": 24,
+  "measured": 24,
+  "agree": true
+ },
+ {
+  "state": "v10",
+  "metric": "owl:TransitiveProperty",
+  "reported": 2,
+  "measured": 2,
+  "agree": true
+ },
+ {
+  "state": "v10",
+  "metric": "individuals",
+  "reported": 40,
+  "measured": 20,
+  "agree": false
+ }
+]

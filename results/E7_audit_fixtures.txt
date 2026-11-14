@@ -1,0 +1,19 @@
+== F. Fixtures: one stated assumption of the audit per fixture (expected outcomes fixed by construction) ==
+  id    audit    DL verdict    conflict <=> inconsistent  assumption exercised
+  FX01  as exp.  consistent    agree                      multiple inheritance and a chain of specializations: the closure reaches every ancestor
+  FX02  as exp.  consistent    agree                      equivalent named classes are connected and interchangeable in a signature
+  FX03  as exp.  consistent    agree                      a class defined or constrained by an anonymous expression is not a candidate
+  FX04  as exp.  consistent    agree                      named members of an intersection are superclasses; named members of a union are subclasses
+  FX05  as exp.  INCONSISTENT  agree                      the members of a disjoint union are subclasses and are pairwise disjoint
+  FX06  as exp.  consistent    agree                      union signature with one alternative excluded: a mismatch, not a conflict
+  FX07  as exp.  INCONSISTENT  agree                      union signature with every alternative excluded: a conflict
+  FX08  as exp.  consistent    agree                      intersection signature with one member missing and none excluded: a mismatch
+  FX09  as exp.  INCONSISTENT  agree                      intersection signature with one required member excluded: a conflict
+  FX10  as exp.  INCONSISTENT  agree                      a signature is inherited from a super-property
+  FX11  as exp.  INCONSISTENT  agree                      a signature is obtained from the declared inverse
+  FX12  as exp.  consistent    agree                      a signature that is another kind of class expression is counted and not evaluated
+  FX13  as exp.  consistent    agree                      a position held by an untyped resource is not examined (the reasoner types it instead)
+  FX14  as exp.  INCONSISTENT  agree                      the object position is examined even when the subject has no asserted type
+  FX15  as exp.  consistent    agree                      imports are listed and not followed; a superclass in an unresolved import connects a class
+  FX16  as exp.  consistent    agree                      stage 2: manifest and usage evidence give Disconnected, unreferenced alone gives Suspect, none gives Root
+  audit outcome as expected: 16/16; DL verdict as expected: 16/16 (6 inconsistent); audit CONFLICT prediction equals the DL verdict: 16/16

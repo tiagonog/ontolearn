@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\caption{The eight queries deposited with the original report (\texttt{sparql/cq1.rq}--\texttt{cq8.rq}), executed as deposited. Solutions: number of results on each of the four releases, over the asserted graph, under OWL~2~DL materialization and under OWL~2~RL closure (twelve executions per query, all equal). Causes are those reported by the automatic diagnosis of \texttt{scripts/cq\_suite.py} on v1.0.}
+\label{tab:cqdep}
+\centering
+\footnotesize
+\begin{tabular}{p{0.75cm}p{0.5cm}>{\raggedright\arraybackslash}p{6.0cm}}
+\hline
+\textbf{Query} & \textbf{Sol.} & \textbf{Why nothing can match} \\
+\hline
+CQ1 & 0 & binds the learner by \texttt{rdfs:label} (names are held in \texttt{:nome}); literal without diacritics; undeclared property \texttt{:competenciaAvaliada} \\
+CQ2 & 0 & as CQ1, for the learner and for the competency \\
+CQ3 & 0 & binds the competency by \texttt{rdfs:label}; undeclared property \texttt{:temQuestao} \\
+CQ4 & 0 & binds the competency by \texttt{rdfs:label}; literal without diacritics \\
+CQ5 & 0 & binds the competency by \texttt{rdfs:label}; literal without diacritics \\
+CQ6 & 0 & undeclared property \texttt{:competenciaAvaliada}; the class \texttt{:Aplicar} used where a level individual is required; no \texttt{:area} value equal to the literal \\
+CQ7 & 0 & binds the learner by \texttt{rdfs:label}; literal without diacritics; undeclared property \texttt{:acessouRecurso} \\
+CQ8 & 0 & binds the learner by \texttt{rdfs:label}; literal without diacritics \\
+\hline
+\end{tabular}
+\end{table}

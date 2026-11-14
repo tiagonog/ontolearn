@@ -1,0 +1,25 @@
+{
+  "report": "Nogueira, Lima, Nogueira. Closing the Report-Artifact Gap in an Ontology for Competency-Based Learning Analytics (revised manuscript).",
+  "note": "The structural claims THIS paper makes about OntoLearn v2.2. The audit is run on the released v2.2 file against this list, so that the paper is held to the standard it applies to its predecessor. Every claim below must come out REALIZED.",
+  "claims": [
+    {"id": "P01", "where": "Table: structural metrics", "text": "29 classes", "check": "count", "metric": "classes", "value": 29},
+    {"id": "P02", "where": "Table: structural metrics", "text": "50 object properties", "check": "count", "metric": "object properties", "value": 50},
+    {"id": "P03", "where": "Table: structural metrics", "text": "27 data properties", "check": "count", "metric": "data properties", "value": 27},
+    {"id": "P04", "where": "Table: structural metrics", "text": "20 individuals", "check": "count", "metric": "individuals", "value": 20},
+    {"id": "P05", "where": "Sec. VI", "text": "DL expressivity is SHIF(D)", "check": "expressivity", "value": "SHIF(D)"},
+    {"id": "P06", "where": "F4", "text": "six sub-property axioms", "check": "count", "metric": "rdfs:subPropertyOf", "value": 6},
+    {"id": "P07", "where": "F3", "text": "three existential restrictions", "check": "count", "metric": "owl:someValuesFrom", "value": 3},
+    {"id": "P08", "where": "F4", "text": "25 inverse-property axioms", "check": "count", "metric": "owl:inverseOf", "value": 25},
+    {"id": "P09", "where": "Sec. III", "text": "two transitive properties", "check": "count", "metric": "owl:TransitiveProperty", "value": 2},
+    {"id": "P10", "where": "F5", "text": "two functional properties", "check": "count", "metric": "owl:FunctionalProperty", "value": 2},
+    {"id": "P11", "where": "F2b, F6", "text": "two n-ary disjointness axioms (13 roots; 6 tiers)", "check": "count", "metric": "owl:AllDisjointClasses", "value": 2},
+    {"id": "P12", "where": "F2", "text": "five binary disjointness axioms", "check": "count", "metric": "owl:disjointWith", "value": 5},
+    {"id": "P13", "where": "Sec. VI", "text": "no cardinality restriction of any kind", "check": "absent", "construct": "unqualified cardinality"},
+    {"id": "P14", "where": "Sec. VI", "text": "no qualified cardinality restriction", "check": "absent", "construct": "qualified cardinality"},
+    {"id": "P15", "where": "F2", "text": "Knowledge, Skill and Attitude are pairwise disjoint; Objetiva and Subjetiva are disjoint", "check": "disjoint", "pairs": [["Conhecimento", "Habilidade"], ["Conhecimento", "Atitude"], ["Habilidade", "Atitude"], ["Objetiva", "Subjetiva"]]},
+    {"id": "P16", "where": "F6", "text": "the six Bloom tiers are pairwise disjoint (15 pairs)", "check": "disjoint", "pairs": [["Lembrar","Entender"],["Lembrar","Aplicar"],["Lembrar","Analisar"],["Lembrar","AvaliarBloom"],["Lembrar","Criar"],["Entender","Aplicar"],["Entender","Analisar"],["Entender","AvaliarBloom"],["Entender","Criar"],["Aplicar","Analisar"],["Aplicar","AvaliarBloom"],["Aplicar","Criar"],["Analisar","AvaliarBloom"],["Analisar","Criar"],["AvaliarBloom","Criar"]]},
+    {"id": "P17", "where": "F1; Table: classes", "text": "the 16 specializations of the class table", "check": "taxonomy", "edges": [["Aprendiz","UsuarioDoAva"],["Instrutor","UsuarioDoAva"],["Lembrar","NiveisDeProficiencia"],["Entender","NiveisDeProficiencia"],["Aplicar","NiveisDeProficiencia"],["Analisar","NiveisDeProficiencia"],["AvaliarBloom","NiveisDeProficiencia"],["Criar","NiveisDeProficiencia"],["Didatico","RecursoDeAprendizagem"],["Interativo","RecursoDeAprendizagem"],["Multimidia","RecursoDeAprendizagem"],["Video","Multimidia"],["Objetiva","Questao"],["Subjetiva","Questao"],["ObjetivasAval","Avaliacao"],["Formativo","DesempenhoDoAprendiz"]]},
+    {"id": "P18", "where": "Sec. III", "text": "requer is transitive, with declared inverse ehRequeridaPor", "check": "characteristic", "property": "requer", "types": ["owl:TransitiveProperty"], "inverse": "ehRequeridaPor"},
+    {"id": "P19", "where": "F5", "text": "proficienciaAtingida is functional", "check": "characteristic", "property": "proficienciaAtingida", "types": ["owl:FunctionalProperty"], "inverse": "foiAtingidaEm"}
+  ]
+}

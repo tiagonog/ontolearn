@@ -1,0 +1,81 @@
+AUDIT  ../ontology/ontolearn-v2.2.owl  (805 triples)
+       sha256 2a6223ca283f8cacc37df6f4c5762e3e2c792c9f4bef39f45d7cdfdab2219594
+
+I. Construct inventory
+   rdfs:subClassOf                  19
+   rdfs:subPropertyOf               6
+   owl:equivalentClass              0
+   owl:equivalentProperty           0
+   owl:someValuesFrom               3
+   owl:allValuesFrom                0
+   owl:hasValue                     0
+   owl:hasSelf                      0
+   owl:disjointWith                 5
+   owl:propertyDisjointWith         0
+   owl:disjointUnionOf              0
+   owl:inverseOf                    25
+   owl:unionOf                      8
+   owl:intersectionOf               0
+   owl:complementOf                 0
+   owl:oneOf                        0
+   owl:propertyChainAxiom           0
+   owl:hasKey                       0
+   owl:sameAs                       0
+   owl:differentFrom                0
+   owl:imports                      0
+   owl:AllDisjointClasses           2
+   owl:AllDifferent                 0
+   owl:TransitiveProperty           2
+   owl:FunctionalProperty           2
+   owl:InverseFunctionalProperty    0
+   owl:SymmetricProperty            0
+   owl:AsymmetricProperty           0
+   owl:ReflexiveProperty            0
+   owl:IrreflexiveProperty          0
+   unqualified cardinality          0
+   qualified cardinality            0
+   datatype ranges                  27
+   classes                          29
+   object properties                50
+   data properties                  27
+   individuals                      20
+   individuals incl. undeclared     20
+   triples                          805
+   derived DL expressivity          SHIF(D)
+      - base S: transitive roles=2, full concept negation/union/existential used=True
+      - H: 6 sub-property axioms
+      - I: 25 inverse-property axioms
+      - F: 2 functional object properties, no number restrictions
+      - (D): 27 data properties
+
+U. Claims of the accompanying report
+   P01 REALIZED   29 classes  [Table: structural metrics]  measured: 29
+   P02 REALIZED   50 object properties  [Table: structural metrics]  measured: 50
+   P03 REALIZED   27 data properties  [Table: structural metrics]  measured: 27
+   P04 REALIZED   20 individuals  [Table: structural metrics]  measured: 20
+   P05 REALIZED   DL expressivity is SHIF(D)  [Sec. VI]  measured: SHIF(D)
+   P06 REALIZED   six sub-property axioms  [F4]  measured: 6
+   P07 REALIZED   three existential restrictions  [F3]  measured: 3
+   P08 REALIZED   25 inverse-property axioms  [F4]  measured: 25
+   P09 REALIZED   two transitive properties  [Sec. III]  measured: 2
+   P10 REALIZED   two functional properties  [F5]  measured: 2
+   P11 REALIZED   two n-ary disjointness axioms (13 roots; 6 tiers)  [F2b, F6]  measured: 2
+   P12 REALIZED   five binary disjointness axioms  [F2]  measured: 5
+   P13 REALIZED   no cardinality restriction of any kind  [Sec. VI]  measured: 0
+   P14 REALIZED   no qualified cardinality restriction  [Sec. VI]  measured: 0
+   P15 REALIZED   Knowledge, Skill and Attitude are pairwise disjoint; Objetiva and Subjetiva are disjoint  [F2]  measured: 4 of 4 pairs
+   P16 REALIZED   the six Bloom tiers are pairwise disjoint (15 pairs)  [F6]  measured: 15 of 15 pairs
+   P17 REALIZED   the 16 specializations of the class table  [F1; Table: classes]  measured: 16 of 16 edges
+   P18 REALIZED   requer is transitive, with declared inverse ehRequeridaPor  [Sec. III]  measured: characteristics=True, inverse=True
+   P19 REALIZED   proficienciaAtingida is functional  [F5]  measured: characteristics=True, inverse=True
+
+K. Isolated classes: 7 stage-1 candidates
+   ROOT          Atitude                      
+   ROOT          Competencia                  
+   ROOT          Conhecimento                 
+   ROOT          Curso                        
+   ROOT          Habilidade                   
+   ROOT          MilestoneDeAprendizagem      
+   ROOT          TrajetoriasDeAprendizagem    
+
+M. Domain/range mismatches: 0  (signatures not evaluated: 0)

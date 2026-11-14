@@ -1,0 +1,799 @@
+{
+ "A": {
+  "v1.0/reference": {
+   "stage1": 8,
+   "flagged": [
+    "Subjetiva"
+   ],
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {
+    "Subjetiva": [
+     "usage",
+     "unreferenced"
+    ]
+   },
+   "mismatches": [
+    "NP-Aplicar/descricao",
+    "QUEST-0005/questaoRespondida"
+   ]
+  },
+  "v1.0/extended": {
+   "stage1": 8,
+   "flagged": [
+    "Subjetiva"
+   ],
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {
+    "Subjetiva": [
+     "usage",
+     "unreferenced"
+    ]
+   },
+   "mismatches": [
+    "ATT-001/descricao",
+    "NP-Analisar/descricao",
+    "NP-Aplicar/descricao",
+    "NP-Avaliar/descricao",
+    "NP-Criar/descricao",
+    "NP-Entender/descricao",
+    "QUEST-0005/questaoRespondida",
+    "QUEST-0007/questaoRespondida",
+    "QUEST-0010/questaoRespondida"
+   ]
+  },
+  "v2.0/reference": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": []
+  },
+  "v2.0/extended": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": [
+    "ATT-001/descricao(C)"
+   ]
+  },
+  "v2.1/reference": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": []
+  },
+  "v2.1/extended": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": []
+  },
+  "v2.2/reference": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": []
+  },
+  "v2.2/extended": {
+   "stage1": 7,
+   "flagged": [],
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "evidence": {},
+   "mismatches": []
+  }
+ },
+ "B1": [
+  {
+   "edge": "Aprendiz < UsuarioDoAva",
+   "reference": {
+    "stage1": true,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Instrutor < UsuarioDoAva",
+   "reference": {
+    "stage1": true,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Lembrar < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Entender < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Aplicar < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Analisar < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "AvaliarBloom < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Criar < NiveisDeProficiencia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Didatico < RecursoDeAprendizagem",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Interativo < RecursoDeAprendizagem",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced"
+    ],
+    "mismatch": false,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Multimidia < RecursoDeAprendizagem",
+   "reference": {
+    "stage1": false,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": false,
+    "evidence": [],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Video < Multimidia",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Objetiva < Questao",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Subjetiva < Questao",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "ObjetivasAval < Avaliacao",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  },
+  {
+   "edge": "Formativo < DesempenhoDoAprendiz",
+   "reference": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   },
+   "extended": {
+    "stage1": true,
+    "evidence": [
+     "unreferenced",
+     "usage"
+    ],
+    "mismatch": true,
+    "detected": true
+   }
+  }
+ ],
+ "B1_summary_reference": {
+  "mutants": 16,
+  "detected": 16,
+  "by_unreferenced": 13,
+  "by_usage": 10
+ },
+ "B1_summary_extended": {
+  "mutants": 16,
+  "detected": 16,
+  "by_unreferenced": 13,
+  "by_usage": 16
+ },
+ "B2": {
+  "reference": {
+   "mutants": 29,
+   "dl_inconsistent": 20,
+   "audit_conflict": 20,
+   "both": 20,
+   "neither": 9,
+   "audit_only": 0,
+   "dl_only": 0
+  },
+  "extended": {
+   "mutants": 29,
+   "dl_inconsistent": 26,
+   "audit_conflict": 26,
+   "both": 26,
+   "neither": 3,
+   "audit_only": 0,
+   "dl_only": 0
+  }
+ },
+ "B3": {
+  "F1": [
+   "P17"
+  ],
+  "F2": [
+   "P12",
+   "P15"
+  ],
+  "F2b": [
+   "P11"
+  ],
+  "F3": [
+   "P07"
+  ],
+  "F4": [
+   "P02",
+   "P05",
+   "P06",
+   "P08"
+  ],
+  "F5": [
+   "P10",
+   "P19"
+  ],
+  "F6": [
+   "P11",
+   "P16"
+  ],
+  "T": [
+   "P05",
+   "P09",
+   "P18"
+  ],
+  "I": [
+   "P05",
+   "P08",
+   "P18",
+   "P19"
+  ]
+ },
+ "C1": {
+  "checks": 104,
+  "false_positives": 0
+ },
+ "C2": {
+  "mutants": 100,
+  "changed": 0
+ },
+ "C3": [
+  {
+   "name": "pizza",
+   "source": "owlcs/pizza-ontology/4922ecbdf5535a00a6515276324c3aa7f5e4407a/pizza.owl",
+   "triples": 2332,
+   "classes": 99,
+   "individuals": 5,
+   "stage1": 0,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "SHOIN"
+  },
+  {
+   "name": "koala",
+   "source": "owlcs/owlapi/dee53400f3da0fe009bd50af1285b28095fa5178/contract/src/test/resources/koala.owl",
+   "triples": 153,
+   "classes": 20,
+   "individuals": 6,
+   "stage1": 2,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "ALCON(D)"
+  },
+  {
+   "name": "primer",
+   "source": "owlcs/owlapi/dee53400f3da0fe009bd50af1285b28095fa5178/contract/src/test/resources/primer.rdfxml.xml",
+   "triples": 304,
+   "classes": 17,
+   "individuals": 3,
+   "stage1": 2,
+   "disconnected": [],
+   "suspect": [
+    "YoungChild"
+   ],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "SROIQ(D)"
+  },
+  {
+   "name": "sosa",
+   "source": "w3c/sdw/f3171647f6437b73e1caf871f056d233feb4a9da/ssn/integrated/sosa.ttl",
+   "triples": 345,
+   "classes": 16,
+   "individuals": 1,
+   "stage1": 13,
+   "disconnected": [],
+   "suspect": [
+    "ActuatableProperty",
+    "Actuation",
+    "Actuator",
+    "FeatureOfInterest",
+    "ObservableProperty",
+    "Observation",
+    "Platform",
+    "Procedure",
+    "Result",
+    "Sample",
+    "Sampler",
+    "Sampling",
+    "Sensor"
+   ],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 40,
+   "expressivity": "ALI(D)"
+  },
+  {
+   "name": "ssn",
+   "source": "w3c/sdw/f3171647f6437b73e1caf871f056d233feb4a9da/ssn/integrated/ssn.ttl",
+   "triples": 520,
+   "classes": 11,
+   "individuals": 1,
+   "stage1": 0,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 1,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "ALRIN"
+  },
+  {
+   "name": "bfo",
+   "source": "BFO-ontology/BFO/857be9f15100531c7202ef0eb73142f95b70f3a7/bfo.owl",
+   "triples": 563,
+   "classes": 38,
+   "individuals": 0,
+   "stage1": 0,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "ALC"
+  },
+  {
+   "name": "iao",
+   "source": "information-artifact-ontology/IAO/3006aedacbf813ffd1d2ac15cda10766ca9ed388/iao.owl",
+   "triples": 5210,
+   "classes": 266,
+   "individuals": 21,
+   "stage1": 0,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "SROIN(D)"
+  },
+  {
+   "name": "educor",
+   "source": "tibonto/educor/76a08b44d54ddfab1e7fcd9fb6ec92b0f3174683/educor.ttl",
+   "triples": 476,
+   "classes": 29,
+   "individuals": 0,
+   "stage1": 19,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "ALCH(D)"
+  },
+  {
+   "name": "doap",
+   "source": "ewilderj/doap/a0683cbd8b18cfc23963615d3df7f79d9640d7c3/schema/doap.rdf",
+   "triples": 741,
+   "classes": 13,
+   "individuals": 0,
+   "stage1": 1,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 1,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "ALCHIF"
+  },
+  {
+   "name": "ecrm",
+   "source": "erlangen-crm/ecrm/8f44be0426f60a48fa4a4b39007c43f0ef1eb464/ecrm_current.owl",
+   "triples": 5321,
+   "classes": 76,
+   "individuals": 0,
+   "stage1": 0,
+   "disconnected": [],
+   "suspect": [],
+   "mismatches": 0,
+   "not_evaluated": 0,
+   "imports": 0,
+   "schema_domainIncludes_triples": 0,
+   "expressivity": "SHIN(D)"
+  }
+ ],
+ "D": [
+  {
+   "ontology": "v1.0",
+   "audit": "SIF(D)",
+   "owlapi_constructs": "RRESTRCU+IF(D)",
+   "owlapi_name": "SIF(D)",
+   "agree": true,
+   "axioms": 645,
+   "logical_axioms": 294
+  },
+  {
+   "ontology": "v2.0",
+   "audit": "SHIF(D)",
+   "owlapi_constructs": "RRESTRCUEH+IF(D)",
+   "owlapi_name": "SHIF(D)",
+   "agree": true,
+   "axioms": 668,
+   "logical_axioms": 313
+  },
+  {
+   "ontology": "v2.1",
+   "audit": "SHIF(D)",
+   "owlapi_constructs": "RRESTRCUEH+IF(D)",
+   "owlapi_name": "SHIF(D)",
+   "agree": true,
+   "axioms": 673,
+   "logical_axioms": 314
+  },
+  {
+   "ontology": "v2.2",
+   "audit": "SHIF(D)",
+   "owlapi_constructs": "RRESTRCUEH+IF(D)",
+   "owlapi_name": "SHIF(D)",
+   "agree": true,
+   "axioms": 674,
+   "logical_axioms": 315
+  },
+  {
+   "ontology": "pizza",
+   "audit": "SHOIN",
+   "owlapi_constructs": "RRESTRCUCINTUNIVRESTREH+OIN",
+   "owlapi_name": "SHOIN",
+   "agree": true,
+   "axioms": 939,
+   "logical_axioms": 712
+  },
+  {
+   "ontology": "koala",
+   "audit": "ALCON(D)",
+   "owlapi_constructs": "RRESTRCUCINTUNIVRESTREON(D)",
+   "owlapi_name": "ALCON(D)",
+   "agree": true,
+   "axioms": 70,
+   "logical_axioms": 42
+  },
+  {
+   "ontology": "primer",
+   "audit": "SROIQ(D)",
+   "owlapi_constructs": "RRESTRCUCINTUNIVRESTREROIQ(D)",
+   "owlapi_name": "SROIQ(D)",
+   "agree": true,
+   "axioms": 93,
+   "logical_axioms": 63
+  },
+  {
+   "ontology": "sosa",
+   "audit": "ALI(D)",
+   "owlapi_constructs": "RRESTRI(D)",
+   "owlapi_name": "ALI(D)",
+   "agree": true,
+   "axioms": 313,
+   "logical_axioms": 12
+  },
+  {
+   "ontology": "ssn",
+   "audit": "ALRIN",
+   "owlapi_constructs": "UNIVRESTRRIN",
+   "owlapi_name": "ALRIN",
+   "agree": true,
+   "axioms": 275,
+   "logical_axioms": 93
+  },
+  {
+   "ontology": "bfo",
+   "audit": "ALC",
+   "owlapi_constructs": "CU",
+   "owlapi_name": "ALC",
+   "agree": true,
+   "axioms": 411,
+   "logical_axioms": 91
+  },
+  {
+   "ontology": "iao",
+   "audit": "SROIN(D)",
+   "owlapi_constructs": "RRESTRCUCINTUNIVRESTREROIN(D)",
+   "owlapi_name": "SROIN(D)",
+   "agree": true,
+   "axioms": 3916,
+   "logical_axioms": 526
+  },
+  {
+   "ontology": "educor",
+   "audit": "ALCH(D)",
+   "owlapi_constructs": "RRESTRCH(D)",
+   "owlapi_name": "ALCH(D)",
+   "agree": true,
+   "axioms": 459,
+   "logical_axioms": 189
+  },
+  {
+   "ontology": "doap",
+   "audit": "ALCHIF",
+   "owlapi_constructs": "RRESTRHIF(D)",
+   "owlapi_name": "ALHIF(D)",
+   "agree": false,
+   "axioms": 675,
+   "logical_axioms": 76
+  },
+  {
+   "ontology": "ecrm",
+   "audit": "SHIN(D)",
+   "owlapi_constructs": "RRESTRCEH+OIN(D)",
+   "owlapi_name": "SHOIN(D)",
+   "agree": false,
+   "axioms": 4951,
+   "logical_axioms": 1501
+  }
+ ],
+ "D_agreement": [
+  12,
+  14
+ ]
+}

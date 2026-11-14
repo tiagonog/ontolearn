@@ -1,0 +1,8 @@
+external/
+jars
+jars/
+robot.jar
+__pycache__/
+*.pyc
+.venv/
+.jars_tmp/

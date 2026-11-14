@@ -1,0 +1,35 @@
+12 preserved files, 10 distinct states; identical: [['v5', 'v7'], ['v9', 'v11']]
+state       Cls ObjP DatP  Inv  Ind (+undecl.)   rho subP restr card disj  DL        isolated: flagged/candidates  mismatches
+v0         (LaTeX export of the class tree; not an RDF document)
+v1           12   18    0    0    0          0  1.50    0     0    0    0  AL        0/9 []  []
+v2           50   26    0    4    0          0  0.52    0     0    0    7  SIF       0/7 []  []
+v3           50   27    0    4    0          0  0.54    0     0    0    7  SIF       0/7 []  []
+v4           41   27   27    3    0         13  1.32    0     0    0    0  SIF(D)    0/7 []  []
+v5=v7        41   41   27    3   16         16  1.66    0     0    0    0  SIF(D)    0/7 []  []
+v6           28   48   27   24   16         16  2.68    0     0    0    2  SIF(D)    0/7 []  ['NP-Aplicar/descricao']
+v8           28   48   27   24   16         16  2.68    0     0    0    2  SIF(D)    0/7 []  ['NP-Aplicar/descricao']
+v9=v11       28   48   27   24   16         19  2.68    0     0    0    2  SIF(D)    0/7 []  ['QUEST-0005/questaoRespondida', 'NP-Aplicar/descricao']
+v10          29   48   27   24   20         20  2.59    0     0    0    2  SIF(D)    1/8 ['Subjetiva']  ['QUEST-0005/questaoRespondida', 'NP-Aplicar/descricao']
+
+The report's table of the evolution (Table 3 (metrics from the ontology editor); Fig. 1) against the preserved files:
+  state metric                   reported measured
+  v0    classes                        82       82  
+  v2    classes                        55       50  DIFFERS
+  v2    object properties              26       26  
+  v2    data properties                 0        0  
+  v2    owl:inverseOf                   4        4  
+  v2    owl:TransitiveProperty          1        1  
+  v2    individuals                     0        0  
+  v6    classes                        28       28  
+  v6    object properties              48       48  
+  v6    data properties                27       27  
+  v6    owl:inverseOf                  24       24  
+  v6    owl:TransitiveProperty          2        2  
+  v6    individuals                    32       16  DIFFERS
+  v10   classes                        29       29  
+  v10   object properties              48       48  
+  v10   data properties                27       27  
+  v10   owl:inverseOf                  24       24  
+  v10   owl:TransitiveProperty          2        2  
+  v10   individuals                    40       20  DIFFERS
+  earlier milestones (v0, v2, v6): 11 of 13 values agree; final version (v10 = v1.0, claims C09-C14): 5 of 6

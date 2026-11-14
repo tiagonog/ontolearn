@@ -1,0 +1,183 @@
+{
+ "v1.0/reference": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v1.0/extended": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v1.0/probe-F3": {
+  "owl": "consistent",
+  "shacl_violations": 3,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004",
+    ":PD"
+   ],
+   "S2": [
+    ":PA"
+   ]
+  }
+ },
+ "v1.0/probe-F5": {
+  "owl": "consistent",
+  "shacl_violations": 2,
+  "by_shape": {
+   "S4": [
+    ":DEMP-0003"
+   ],
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.0/reference": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.0/extended": {
+  "owl": "inconsistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.0/probe-F3": {
+  "owl": "consistent",
+  "shacl_violations": 4,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004",
+    ":PD"
+   ],
+   "S2": [
+    ":PA"
+   ],
+   "S1": [
+    ":PQ"
+   ]
+  }
+ },
+ "v2.0/probe-F5": {
+  "owl": "consistent",
+  "shacl_violations": 2,
+  "by_shape": {
+   "S4": [
+    ":DEMP-0003"
+   ],
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.1/reference": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.1/extended": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.1/probe-F3": {
+  "owl": "consistent",
+  "shacl_violations": 4,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004",
+    ":PD"
+   ],
+   "S2": [
+    ":PA"
+   ],
+   "S1": [
+    ":PQ"
+   ]
+  }
+ },
+ "v2.1/probe-F5": {
+  "owl": "consistent",
+  "shacl_violations": 2,
+  "by_shape": {
+   "S4": [
+    ":DEMP-0003"
+   ],
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.2/reference": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.2/extended": {
+  "owl": "consistent",
+  "shacl_violations": 1,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ },
+ "v2.2/probe-F3": {
+  "owl": "consistent",
+  "shacl_violations": 4,
+  "by_shape": {
+   "S3": [
+    ":DEMP-0004",
+    ":PD"
+   ],
+   "S2": [
+    ":PA"
+   ],
+   "S1": [
+    ":PQ"
+   ]
+  }
+ },
+ "v2.2/probe-F5": {
+  "owl": "inconsistent",
+  "shacl_violations": 2,
+  "by_shape": {
+   "S4": [
+    ":DEMP-0003"
+   ],
+   "S3": [
+    ":DEMP-0004"
+   ]
+  }
+ }
+}

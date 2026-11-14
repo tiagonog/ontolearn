@@ -1,0 +1,1185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontolearn.com/ontologia#"
+     xml:base="http://www.ontolearn.com/ontologia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.ontolearn.com/ontologia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#abordaCompetencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#abordaCompetencia">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#aprendizAvaliado -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#aprendizAvaliado">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#aprendizesInscritos -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#aprendizesInscritos">
+        <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#estaInscritoEm"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#avaliaDesempenho -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#avaliaDesempenho">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#avaliacoesAplicadas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#avaliacoesAplicadas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#competenciaRelacionada -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#competenciaRelacionada">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#competenciasAvaliadas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#competenciasAvaliadas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#competenciasEnvolvidas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#competenciasEnvolvidas">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#conquistasAdquiridas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#conquistasAdquiridas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#desempenhoCompetencias -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#desempenhoCompetencias">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#elaboraAvaliacoes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#elaboraAvaliacoes">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#estaInscritoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#estaInscritoEm">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#exigeNivel -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#exigeNivel">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#fazParteDaAvaliação -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#fazParteDaAvaliação">
+        <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#questoesIncluidas"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#historicoAprendizagem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#historicoAprendizagem">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAprendiz -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idAprendiz">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAtitude -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idAtitude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAvaliacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idAvaliacao">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idCompetencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idCompetencia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idConhecimento -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idConhecimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idCurso -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idCurso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idDesempenho -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idDesempenho">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idHabilidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idHabilidade">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idInstrutor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idInstrutor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idMilestone -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idMilestone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idNivel -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idNivel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idQuestao -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idQuestao">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idRecurso -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idRecurso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idTrajetoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#idTrajetoria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#insereRecursos -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#insereRecursos">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#instrutoresResponsaveis -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#instrutoresResponsaveis">
+        <owl:inverseOf rdf:resource="http://www.ontolearn.com/ontologia#éResponsavelPor"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#proficienciaAtingida -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#proficienciaAtingida">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#questaoRespondida -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#questaoRespondida">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#questoesIncluidas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#questoesIncluidas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#recursosUtilizados -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#recursosUtilizados">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#requer -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#requer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#trajetoriasRealizadas -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#trajetoriasRealizadas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#éCompostoDeAtitude -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#éCompostoDeAtitude">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Atitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#éCompostoDeConhecimento -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#éCompostoDeConhecimento">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#éCompostoDeHabilidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#éCompostoDeHabilidade">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#éResponsavelPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontolearn.com/ontologia#éResponsavelPor">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+        <rdfs:range rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#alternativas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#alternativas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#area -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#area">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#data">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#descricao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#descricao">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Atitude"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Avaliação"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Competência"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Conhecimento"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Curso"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Habilidade"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#enunciado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#enunciado">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#etapas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#etapas">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAprendiz -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idAprendiz">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAtitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idAtitude">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idAvaliacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idAvaliacao">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idCompetencia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idCompetencia">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idConhecimento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idConhecimento">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idCurso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idCurso">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idDesempenho -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idDesempenho">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idHabilidade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idHabilidade">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idInstrutor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idInstrutor">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idMilestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idMilestone">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idNivel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idNivel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idQuestao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idQuestao">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idRecurso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idRecurso">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#idTrajetoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#idTrajetoria">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#nome">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Aprendiz"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Competência"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Instrutor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#nível -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#nível">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#respostaAprendiz -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#respostaAprendiz">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#respostaCorreta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#respostaCorreta">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#tipo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#tipo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Avaliação"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Questão"/>
+                    <rdf:Description rdf:about="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#titulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#titulo">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontolearn.com/ontologia#url">
+        <rdfs:domain rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Analisar -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Analisar">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Aplicar -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Aplicar">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Apostila -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Apostila">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Didático"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Aprendiz -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Aprendiz">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Usuário_do_AVA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Atitude -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Atitude"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Audio -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Multimidia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Avaliar_Bloom -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Avaliar_Bloom">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Avaliação -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Avaliação"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Competência -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Competência"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Conhecimento -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Conhecimento"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Criar -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Criar">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Curso -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Curso"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Diagnóstico -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Diagnóstico">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Didático -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Didático">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Entender -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Entender">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Formativo -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Formativo">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Habilidade -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Habilidade"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Infográfico -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Infográfico">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Multimidia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Instrutor -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Instrutor">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Usuário_do_AVA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Interativo -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Interativo">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Jogo -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Jogo">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Interativo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Lembrar -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Lembrar">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Livro -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Livro">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Didático"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Mistas -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Mistas">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Multimidia -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Multimidia">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Níveis_de_Proficiência -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Níveis_de_Proficiência"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Objetiva -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Objetiva">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Objetivas_Aval -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Objetivas_Aval">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Página_Web -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Página_Web">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Multimidia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Questão -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Questão"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Recurso_de_Aprendizagem"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Simulador -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Simulador">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Interativo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Somativo -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Somativo">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Desempenho_do_Aprendiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Subjetiva -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Subjetiva">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Questão"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Subjetivas_Aval -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Subjetivas_Aval">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Avaliação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Texto -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Texto">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Didático"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Trajetórias_de_Aprendizagem"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Usuário_do_AVA -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Usuário_do_AVA"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#Video -->
+
+    <owl:Class rdf:about="http://www.ontolearn.com/ontologia#Video">
+        <rdfs:subClassOf rdf:resource="http://www.ontolearn.com/ontologia#Multimidia"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#APR-0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#APR-0001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Aprendiz"/>
+        <conquistasAdquiridas rdf:resource="http://www.ontolearn.com/ontologia#MILE-0001"/>
+        <desempenhoCompetencias rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0003"/>
+        <desempenhoCompetencias rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0004"/>
+        <estaInscritoEm rdf:resource="http://www.ontolearn.com/ontologia#CUR-0001"/>
+        <historicoAprendizagem rdf:resource="http://www.ontolearn.com/ontologia#REC-0002"/>
+        <historicoAprendizagem rdf:resource="http://www.ontolearn.com/ontologia#REC-0005"/>
+        <idAprendiz>APR-0001</idAprendiz>
+        <nome>João Silva</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#AVAL-0002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#AVAL-0002">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Objetivas_Aval"/>
+        <questoesIncluidas rdf:resource="http://www.ontolearn.com/ontologia#QUEST-0003"/>
+        <descricao>Avaliação focada no conceito de herança...</descricao>
+        <idAvaliacao>AVAL-0002</idAvaliacao>
+        <tipo>Objetiva</tipo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#COMP-0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#COMP-0001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <area>Programação de Computadores</area>
+        <idCompetencia>COMP-0001</idCompetencia>
+        <nome>Classes e Objetos em POO</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#COMP-0002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#COMP-0002">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Competência"/>
+        <requer rdf:resource="http://www.ontolearn.com/ontologia#COMP-0001"/>
+        <éCompostoDeConhecimento rdf:resource="http://www.ontolearn.com/ontologia#KNOW-001"/>
+        <éCompostoDeHabilidade rdf:resource="http://www.ontolearn.com/ontologia#SKILL-001"/>
+        <area>Programação de Computadores</area>
+        <descricao>Capacidade de utilizar herança para reutilizar e estender o código...</descricao>
+        <idCompetencia>COMP-0002</idCompetencia>
+        <nome>Herança em Python</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#CUR-0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#CUR-0001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Curso"/>
+        <aprendizesInscritos rdf:resource="http://www.ontolearn.com/ontologia#APR-0001"/>
+        <avaliacoesAplicadas rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+        <instrutoresResponsaveis rdf:resource="http://www.ontolearn.com/ontologia#INST-0001"/>
+        <descricao>Curso básico para aprender Python.</descricao>
+        <idCurso>CUR-0001</idCurso>
+        <nível>Educação Terciária de Ciclo Curto</nível>
+        <titulo>Introdução à Programação com Python</titulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#DEMP-0003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#DEMP-0003">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Formativo"/>
+        <aprendizAvaliado rdf:resource="http://www.ontolearn.com/ontologia#APR-0001"/>
+        <proficienciaAtingida rdf:resource="http://www.ontolearn.com/ontologia#NP-Aplicar"/>
+        <questaoRespondida rdf:resource="http://www.ontolearn.com/ontologia#QUEST-0003"/>
+        <idDesempenho>DEMP-0003</idDesempenho>
+        <respostaAprendiz>Permite que uma classe herde atributos e métodos de outra classe</respostaAprendiz>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#DEMP-0004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#DEMP-0004"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#INST-0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#INST-0001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Instrutor"/>
+        <avaliaDesempenho rdf:resource="http://www.ontolearn.com/ontologia#DEMP-0003"/>
+        <elaboraAvaliacoes rdf:resource="http://www.ontolearn.com/ontologia#AVAL-0002"/>
+        <insereRecursos rdf:resource="http://www.ontolearn.com/ontologia#REC-0004"/>
+        <éResponsavelPor rdf:resource="http://www.ontolearn.com/ontologia#CUR-0001"/>
+        <idInstrutor>INST-0001</idInstrutor>
+        <nome>Maria Fernandes</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#KNOW-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#KNOW-001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Conhecimento"/>
+        <descricao>Saber a definição de superclasse, subclasse e a sintaxe de herança.</descricao>
+        <idConhecimento>KNOW-001</idConhecimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#MILE-0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#MILE-0001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Milestone_de_Aprendizagem"/>
+        <competenciasEnvolvidas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0001"/>
+        <competenciasEnvolvidas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+        <data rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T18:00:00Z</data>
+        <descricao>Conclusão do Curso Introdução à Programação com Python</descricao>
+        <idMilestone>MILE-0001</idMilestone>
+        <tipo>Conclusão de Curso</tipo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#NP-Aplicar -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#NP-Aplicar">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Aplicar"/>
+        <descricao>Nível 3 de Bloom: Usar informação em novas situações.</descricao>
+        <idNivel>NP-0003-Aplicar</idNivel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#QUEST-0003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#QUEST-0003">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Objetiva"/>
+        <competenciasAvaliadas rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+        <exigeNivel rdf:resource="http://www.ontolearn.com/ontologia#NP-Aplicar"/>
+        <enunciado>Como funciona a herança em Python?</enunciado>
+        <idQuestao>QUEST-0003</idQuestao>
+        <respostaCorreta>Permite que uma classe herde atributos e métodos de outra classe</respostaCorreta>
+        <tipo>Múltipla Escolha</tipo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#REC-0002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#REC-0002"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#REC-0004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#REC-0004">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Video"/>
+        <abordaCompetencia rdf:resource="http://www.ontolearn.com/ontologia#COMP-0002"/>
+        <idRecurso>REC-0004</idRecurso>
+        <tipo>Vídeo</tipo>
+        <url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/heranca-python-video</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#REC-0005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#REC-0005"/>
+    
+
+
+    <!-- http://www.ontolearn.com/ontologia#SKILL-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontolearn.com/ontologia#SKILL-001">
+        <rdf:type rdf:resource="http://www.ontolearn.com/ontologia#Habilidade"/>
+        <descricao>Capacidade de implementar uma subclasse que sobrescreve um método da superclasse.</descricao>
+        <idHabilidade>SKILL-001</idHabilidade>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

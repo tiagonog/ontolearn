@@ -1,0 +1,35 @@
+\begin{table}[!t]
+\caption{The four releases studied: entity counts and construct inventory, measured on the released RDF/XML files (inventory: \texttt{scripts/audit.py}; axiom counts and profile conformance: OWL~API~5.1.9). The complete digests are in \texttt{scripts/LOCK.sha256}.}
+\label{tab:releases}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.55cm}cccc}
+\hline
+\textbf{Measure} & \textbf{v1.0} & \textbf{v2.0} & \textbf{v2.1} & \textbf{v2.2} \\
+\hline
+RDF triples & 699 & 765 & 791 & 805 \\
+Axioms (OWL API) & 645 & 668 & 673 & 674 \\
+Logical axioms & 294 & 313 & 314 & 315 \\
+Classes & 29 & 29 & 29 & 29 \\
+Object properties & 48 & 50 & 50 & 50 \\
+Data properties & 27 & 27 & 27 & 27 \\
+Named individuals & 20 & 20 & 20 & 20 \\
+\hline
+Sub-property axioms & 0 & 6 & 6 & 6 \\
+Existential restrictions & 0 & 4 & 3 & 3 \\
+Universal restrictions & 0 & 0 & 0 & 0 \\
+Cardinality restrictions & 0 & 0 & 0 & 0 \\
+Disjointness, binary / $n$-ary & 2 / 0 & 6 / 1 & 5 / 1 & 5 / 2 \\
+Inverse-property axioms & 24 & 25 & 25 & 25 \\
+Transitive properties & 2 & 2 & 2 & 2 \\
+Functional properties & 1 & 2 & 2 & 2 \\
+Datatype ranges & 27 & 27 & 27 & 27 \\
+DL name (derived) & \ensuremath{\mathcal{SIF}(\mathcal{D})} & \ensuremath{\mathcal{SHIF}(\mathcal{D})} & \ensuremath{\mathcal{SHIF}(\mathcal{D})} & \ensuremath{\mathcal{SHIF}(\mathcal{D})} \\
+In the OWL~2~DL profile & yes & yes & yes & yes \\
+Axioms outside OWL~2~RL & 5 & 9 & 11 & 11 \\
+\hline
+SHA-256 (first 8 hex) & {\scriptsize\texttt{248868a9}} & {\scriptsize\texttt{1394c03c}} & {\scriptsize\texttt{5576079e}} & {\scriptsize\texttt{2a6223ca}} \\
+\hline
+\end{tabular}
+\end{table}

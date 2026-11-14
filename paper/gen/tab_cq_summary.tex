@@ -1,0 +1,24 @@
+\begin{table*}[!t]
+\caption{The eight competency questions and their re-execution with the corrected suite (20 cases, answer key fixed before execution). Tuples: expected answer tuples, with those that are not in the asserted graph in parentheses. Each version cell gives the number of cases whose result equals the expected set over the asserted graph / after OWL~2~DL materialization; the OWL~2~RL closure gives the same results as the DL column throughout. Depends on: axiom families whose removal from v2.2 changes the answer of at least one case (I: inverse-property axioms; T: transitivity); no case changes when any of F1--F6 is removed. The per-case results are in \texttt{results/E3\_cq\_suite.txt}.}
+\label{tab:cqsuite}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5.5pt}
+\begin{tabular}{llccccccl}
+\hline
+\textbf{ID} & \textbf{Question (abridged)} & \textbf{Cases} & \textbf{Tuples} & \textbf{v1.0} & \textbf{v2.0} & \textbf{v2.1} & \textbf{v2.2} & \textbf{Depends on} \\
+\hline
+CQ1 & Which competencies has a given learner demonstrated? & 3 & 3 (1) & 3 / 3 & 3 / 1$^{\dagger}$ & 3 / 3 & 3 / 3 & I \\
+CQ2 & Which Bloom level did a learner reach in a competency? & 2 & 4 (0) & 2 / 2 & 2 / 1$^{\dagger}$ & 2 / 2 & 2 / 2 & --- \\
+CQ3 & Which assessments are mapped to competency X? & 3 & 6 (2) & 3 / 3 & 3 / 2$^{\dagger}$ & 3 / 3 & 3 / 3 & I \\
+CQ4 & What are the direct and indirect prerequisites of Y? & 3 & 7 (2) & 3 / 3 & 3 / 1$^{\dagger}$ & 3 / 3 & 3 / 3 & T$^{*}$ \\
+CQ5 & Which learning resources address competency Z? & 2 & 3 (1) & 2 / 2 & 2 / 1$^{\dagger}$ & 2 / 2 & 2 / 2 & I \\
+CQ6 & Which learners reached ``Apply'' in programming? & 2 & 4 (1) & 2 / 2 & 2 / 1$^{\dagger}$ & 2 / 2 & 2 / 2 & I \\
+CQ7 & Which resource URLs are in a learner's history for a competency? & 3 & 2 (1) & 3 / 3 & 3 / 1$^{\dagger}$ & 3 / 3 & 3 / 3 & I \\
+CQ8 & Is there a disparity between objective and subjective questions? & 2 & 3 (0) & 2 / 2 & 2 / 1$^{\dagger}$ & 2 / 2 & 2 / 2 & --- \\
+\hline
+\multicolumn{2}{l}{All questions} & 20 & 32 (8) & 20 / 20 & 20 / 9$^{\dagger}$ & 20 / 20 & 20 / 20 & \\
+\hline
+\multicolumn{9}{p{15.5cm}}{\footnotesize $^{\dagger}$The extended fact base is inconsistent under v2.0 (defect D3), so its cases cannot be answered under inference. $^{*}$Only when the query is a plain triple pattern; with a property path (\texttt{:requer+}) the answer depends on no axiom.} \\
+\end{tabular}
+\end{table*}

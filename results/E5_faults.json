@@ -1,0 +1,587 @@
+{
+ "X01": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 20,
+   "n": 20
+  },
+  "description": "contradictory record: a second level, of a different tier"
+ },
+ "X02": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "incomplete: a performance record loses its level"
+ },
+ "X03": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 10,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "incomplete: a question loses every competency link"
+ },
+ "X03s": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "incomplete: a SUBJECTIVE question loses every competency link"
+ },
+ "X04": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 20,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "incomplete: an assessment with no question"
+ },
+ "X05": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 20,
+   "n": 20
+  },
+  "description": "unexpected relation: a question is made to require a competency"
+ },
+ "X06": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 20,
+   "n": 20
+  },
+  "description": "type clash: a learner also typed as a competency"
+ },
+ "X07": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 20,
+   "n": 20
+  },
+  "description": "type clash: a knowledge component also typed as a skill"
+ },
+ "X08": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 20,
+   "n": 20
+  },
+  "description": "type clash: a question typed objective and subjective"
+ },
+ "X09": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "unexpected relation: a competency requires an undeclared, untyped resource"
+ },
+ "X10": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 20,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 20,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 20,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 20,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "prerequisite cycle: an edge closing a loop"
+ },
+ "X11": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "unexpected attribute: a learner carries a :descricao (its domain is a union that excludes users)"
+ },
+ "L01": {
+  "v1.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "legitimate: an instructor enrolled as a learner in a course"
+ },
+ "L02": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "legitimate: an attitude carrying a description"
+ },
+ "L03": {
+  "v1.0": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.0": {
+   "owl": 20,
+   "shacl": 0,
+   "audit_conflict": 20,
+   "audit_mismatch": 20,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.1": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "v2.2": {
+   "owl": 0,
+   "shacl": 0,
+   "audit_conflict": 0,
+   "audit_mismatch": 0,
+   "cycle_query": 0,
+   "rl": 0,
+   "n": 20
+  },
+  "description": "legitimate: a performance record carrying a date"
+ }
+}

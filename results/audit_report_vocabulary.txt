@@ -1,0 +1,18 @@
+Vocabulary named by the original report (Fig. 2 and Fig. 3 (classes, object properties, individuals, subclass links, assertions); Listing 1 and Sec. 4.3 (signatures); footnote 1 and Sec. 5.3.1),
+checked on each release: statements that hold / statements made.
+
+  kind                   v1.0     v2.0     v2.1     v2.2
+  classes             24/24    24/24    24/24    24/24  
+  object properties   18/18    18/18    18/18    18/18  
+  individuals          7/7      7/7      7/7      7/7   
+  signatures           6/6      6/6      6/6      6/6   
+  subclass links      13/14    14/14    14/14    14/14  
+  assertions           7/7      7/7      7/7      7/7   
+
+  v1.0: 75 of 76 statements hold; not holding: subclass links: Subjetiva < Questao
+
+  v2.0: 76 of 76 statements hold
+
+  v2.1: 76 of 76 statements hold
+
+  v2.2: 76 of 76 statements hold

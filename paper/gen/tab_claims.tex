@@ -1,0 +1,28 @@
+\begin{table*}[!t]
+\caption{The 15 structural claims of the original report \cite{nogueira_sbie} that can be decided on a single file, checked against the released v1.0 and v2.2 (\texttt{claims/sbie2026.json} locates each claim in the report). The column \emph{Realized} is \emph{yes} when the file satisfies the claim, \emph{no} when the construct or link is absent, and \emph{differs} when a stated value does not match.}
+\label{tab:claims}
+\centering
+\footnotesize
+\begin{tabular}{llllll}
+\hline
+& & \multicolumn{2}{c}{\textbf{v1.0 (the file the report describes)}} & \multicolumn{2}{c}{\textbf{v2.2}} \\
+\textbf{ID} & \textbf{Claim of the report} & \textbf{Measured} & \textbf{Realized} & \textbf{Measured} & \textbf{Realized} \\
+\hline
+C01 & Expressivity is \ensuremath{\mathcal{ALCHIF}(\mathcal{D})} & \ensuremath{\mathcal{SIF}(\mathcal{D})} & \textbf{differs} & \ensuremath{\mathcal{SHIF}(\mathcal{D})} & \textbf{differs} \\
+C02 & Role hierarchy (the $\mathcal{H}$ of the profile) & 0 & \textbf{no} & 6 & yes \\
+C03 & KSA triad pairwise disjoint & 0 of 3 pairs & \textbf{no} & 3 of 3 pairs & yes \\
+C04 & Existential restrictions & 0 & \textbf{no} & 3 & yes \\
+C05 & Qualified cardinality restrictions & 0 & \textbf{no} & 0 & \textbf{no} \\
+C06 & Score-valued data property & none & \textbf{no} & none & \textbf{no} \\
+C07 & Transitive prerequisite property with declared inverse & present & yes & present & yes \\
+C08 & Functional properties & 1 & yes & 2 & yes \\
+C09 & 29 classes & 29 & yes & 29 & yes \\
+C10 & 48 object properties & 48 & yes & 50 & \textbf{differs} \\
+C11 & 27 data properties & 27 & yes & 27 & yes \\
+C12 & 24 inverse-property axioms & 24 & yes & 25 & \textbf{differs} \\
+C13 & 2 transitive properties & 2 & yes & 2 & yes \\
+C14 & ABox of 40 named individuals & 20 & \textbf{differs} & 20 & \textbf{differs} \\
+C15 & \texttt{Questao} specialized into \texttt{Objetiva} and \texttt{Subjetiva} & 1 of 2 edges & \textbf{no} & 2 of 2 edges & yes \\
+\hline
+\end{tabular}
+\end{table*}

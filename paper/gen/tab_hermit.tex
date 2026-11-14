@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\caption{Consistency ablation over the axiom families on the 20-individual ABox. Every configuration is the released v2.2 file minus the triples of the named families. HermiT~1.4.3 and Openllet~2.6.5 agree on every row. The number of unsatisfiable named classes is not applicable (n/a) to an inconsistent ontology.}
+\label{tab:hermit}
+\centering
+\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{1.75cm}p{0.85cm}}
+\hline
+\textbf{Configuration} & \textbf{Verdict} & \textbf{Unsat.} \\
+\hline
+v1.0 (released file) & consistent & 0 \\
+v2.2 without F0--F6 & consistent & 0 \\
+\quad + F2b only (order in which D2 was found) & \textbf{inconsistent} & n/a \\
+\quad + F0, then F1, \dots, F6 (8 cumulative steps) & consistent (all) & 0 (all) \\
+v2.2 $-$ F0 & \textbf{inconsistent} & n/a \\
+\quad v2.2 $-$ F0a (repair of D2 alone) & \textbf{inconsistent} & n/a \\
+\quad v2.2 $-$ F0b (v2.1 domain extensions alone) & consistent & 0 \\
+v2.2 $-$ each of F1, F2, F2b, F3, F4, F5, F6 & consistent (all) & 0 (all) \\
+v2.0, v2.1, v2.2 (released files) & consistent (all) & 0 (all) \\
+\hline
+\end{tabular}
+\end{table}

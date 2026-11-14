@@ -1,0 +1,26 @@
+\begin{table}[!t]
+\caption{The 13 root concepts of OntoLearn, grouped by the kind of thing they denote, and their specializations (29 OWL classes in total; read from the released v2.2 file). In v1.0 the class \texttt{Subjetiva} is declared but not linked to \texttt{Questao}.}
+\label{tab:classes}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.35cm}}
+\hline
+\textbf{Kind} & \textbf{Root concept} & \textbf{Gloss} & \textbf{Subclasses} \\
+\hline
+Agent & \texttt{Usuario\allowbreak{}Do\allowbreak{}Ava} & VLE user & \texttt{Aprendiz}, \texttt{Instrutor} \\
+Competency & \texttt{Competencia} & Competency & --- \\
+Competency component & \texttt{Conhecimento} & Knowledge & --- \\
+ & \texttt{Habilidade} & Skill & --- \\
+ & \texttt{Atitude} & Attitude & --- \\
+Instructional artifact & \texttt{Curso} & Course & --- \\
+ & \texttt{Recurso\allowbreak{}De\allowbreak{}Aprendizagem} & Learning resource & \texttt{Didatico}, \texttt{Interativo}, \texttt{Multimidia} ($\rightarrow$ \texttt{Video}) \\
+Assessment instrument & \texttt{Avaliacao} & Assessment & \texttt{Objetivas\allowbreak{}Aval} \\
+ & \texttt{Questao} & Question item & \texttt{Objetiva}, \texttt{Subjetiva} \\
+Evidence record & \texttt{Desempenho\allowbreak{}Do\allowbreak{}Aprendiz} & Performance record & \texttt{Formativo} \\
+Scale value & \texttt{Niveis\allowbreak{}De\allowbreak{}Proficiencia} & Proficiency level & \texttt{Lembrar}, \texttt{Entender}, \texttt{Aplicar}, \texttt{Analisar}, \texttt{Avaliar\allowbreak{}Bloom}, \texttt{Criar} \\
+Progress record & \texttt{Milestone\allowbreak{}De\allowbreak{}Aprendizagem} & Learning milestone & --- \\
+ & \texttt{Trajetorias\allowbreak{}De\allowbreak{}Aprendizagem} & Learning trajectory & --- \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,79 @@
+AUDIT  ../ontology/ontolearn.owl  (699 triples)
+       sha256 248868a9c1043abfc9a7a97ccb22af7c5bdd8951e0ac03756251df22f17cc798
+
+I. Construct inventory
+   rdfs:subClassOf                  15
+   rdfs:subPropertyOf               0
+   owl:equivalentClass              0
+   owl:equivalentProperty           0
+   owl:someValuesFrom               0
+   owl:allValuesFrom                0
+   owl:hasValue                     0
+   owl:hasSelf                      0
+   owl:disjointWith                 2
+   owl:propertyDisjointWith         0
+   owl:disjointUnionOf              0
+   owl:inverseOf                    24
+   owl:unionOf                      5
+   owl:intersectionOf               0
+   owl:complementOf                 0
+   owl:oneOf                        0
+   owl:propertyChainAxiom           0
+   owl:hasKey                       0
+   owl:sameAs                       0
+   owl:differentFrom                0
+   owl:imports                      0
+   owl:AllDisjointClasses           0
+   owl:AllDifferent                 0
+   owl:TransitiveProperty           2
+   owl:FunctionalProperty           1
+   owl:InverseFunctionalProperty    0
+   owl:SymmetricProperty            0
+   owl:AsymmetricProperty           0
+   owl:ReflexiveProperty            0
+   owl:IrreflexiveProperty          0
+   unqualified cardinality          0
+   qualified cardinality            0
+   datatype ranges                  27
+   classes                          29
+   object properties                48
+   data properties                  27
+   individuals                      20
+   individuals incl. undeclared     20
+   triples                          699
+   derived DL expressivity          SIF(D)
+      - base S: transitive roles=2, full concept negation/union/existential used=True
+      - I: 24 inverse-property axioms
+      - F: 1 functional object properties, no number restrictions
+      - (D): 27 data properties
+
+U. Claims of the accompanying report
+   C01 MISMATCH   DL expressivity is ALCHIF(D)  [Sec. 4.4; Fig. 1]  measured: SIF(D)
+   C02 UNREALIZED the artifact has a role hierarchy  [Sec. 4.4 (the H of the stated profile)]  measured: 0
+   C03 UNREALIZED Knowledge, Skill and Attitude are pairwise disjoint  [Sec. 4.3; Sec. 4.4, Eq. (1); Fig. 2]  measured: 0 of 3 pairs
+   C04 UNREALIZED existential restrictions are applied  [Sec. 4.4, Eq. (2)]  measured: 0
+   C05 UNREALIZED qualified cardinality restrictions are used  [Sec. 4.4]  measured: 0
+   C06 UNREALIZED a score-valued data property (hasScoreValue) grounds proficiency attribution  [Sec. 4.4]  measured: no matching term
+   C07 REALIZED   the prerequisite property is transitive and has a declared inverse  [Sec. 4.4 and its footnote 1]  measured: characteristics=True, inverse=True
+   C08 REALIZED   functional properties are used  [Sec. 4.4]  measured: 1
+   C09 REALIZED   29 classes  [Sec. 4.5; Table 3]  measured: 29
+   C10 REALIZED   48 object properties  [Sec. 4.5; Table 3]  measured: 48
+   C11 REALIZED   27 data properties  [Table 3]  measured: 27
+   C12 REALIZED   24 declared inverses  [Sec. 4.5; Table 3]  measured: 24
+   C13 REALIZED   2 transitive properties  [Sec. 4.5; Table 3]  measured: 2
+   C14 MISMATCH   test ABox of 40 named individuals  [Table 3; Sec. 5.3 ("approximately 40"); Sec. 6]  measured: 20
+   C15 UNREALIZED Questao has the subclasses Objetiva and Subjetiva  [Sec. 5.2, Listing 1; Fig. 2]  measured: 1 of 2 edges
+
+K. Isolated classes: 8 stage-1 candidates
+   ROOT          Atitude                      
+   ROOT          Competencia                  
+   ROOT          Conhecimento                 
+   ROOT          Curso                        
+   ROOT          Habilidade                   
+   ROOT          MilestoneDeAprendizagem      
+   DISCONNECTED  Subjetiva                    manifest -> subClassOf Questao; usage -> subClassOf Questao (via QUEST-0005); unreferenced
+   ROOT          TrajetoriasDeAprendizagem    
+
+M. Domain/range mismatches: 2  (signatures not evaluated: 0)
+   mismatch  QUEST-0005 (types ['Subjetiva']) used with questaoRespondida: declared range on questaoRespondida expects one of ['Questao']
+   mismatch  NP-Aplicar (types ['Aplicar']) used with descricao: declared domain on descricao expects one of ['Avaliacao', 'Competencia', 'Conhecimento', 'Curso', 'Habilidade', 'MilestoneDeAprendizagem', 'RecursoDeAprendizagem']

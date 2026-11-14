@@ -1,0 +1,34 @@
+\begin{table*}[!t]
+\caption{Semantic test cases (\texttt{scripts/java/AxiomTests.java}). Each test adds a few facts to a released file and asks one question of an OWL~2~DL reasoner. Expected outcomes were registered per version before execution; all 168 runs (21 tests, four versions, HermiT and Openllet) matched them, and the two reasoners agree on every run. pos.: an intended consequence; neg.: a fault that should be rejected; ctrl.: data that should not be rejected; scope: a contested exclusion. cons.: consistent; \textbf{inc.}: inconsistent; yes/no: the stated axiom is/is not entailed.}
+\label{tab:tests}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ll>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{7.3cm}llll}
+\hline
+\textbf{Test} & \textbf{Kind} & \textbf{Family} & \textbf{Added facts and question} & \textbf{v1.0} & \textbf{v2.0} & \textbf{v2.1} & \textbf{v2.2} \\
+\hline
+S01 & pos. & --- & Released file, no added fact: verdict & cons. & cons. & cons. & cons. \\
+S02 & pos. & F1 & Individual typed only \texttt{Subjetiva}: is it a \texttt{Questao}? & no & yes & yes & yes \\
+S03 & pos. & T & Chain of three \texttt{requer} links: is the end-to-end link entailed? & yes & yes & yes & yes \\
+S04 & pos. & I & Record linked to a learner in one direction only: is the inverse link entailed? & yes & yes & yes & yes \\
+S05 & pos. & F4 & Competency with a knowledge component: is \texttt{temComponenteKSA} entailed? & no & yes & yes & yes \\
+S06 & neg. & F2 & One individual typed \texttt{Conhecimento} and \texttt{Habilidade} & cons. & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+S07 & neg. & F2b & One individual typed \texttt{Aprendiz} and \texttt{Competencia} & cons. & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+S08 & neg. & F2 & One question typed \texttt{Objetiva} and \texttt{Subjetiva} & cons. & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+S09 & neg. & F2b & A question used as subject of \texttt{requer} (domain \texttt{Competencia}) & cons.; yes & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+S10 & neg. & F5, F6 & Contradictory record: a second level of a \emph{different} category; are the two levels entailed equal? & cons.; no & cons.; yes & cons.; yes & \textbf{inc.} \\
+S11 & ctrl. & F5, F6 & Record with two level individuals of the \emph{same} category; are they entailed equal? & cons.; no & cons.; yes & cons.; yes & cons.; yes \\
+S12 & neg. & F5, F6 & Sweep: two levels of different categories on one record, all 15 pairs & 0/15 inc. & 0/15 inc. & 0/15 inc. & 15/15 inc. \\
+S13 & neg. & F2b & Sweep: one individual typed with two root classes, all 78 pairs & 1/78 inc. & 78/78 inc. & 78/78 inc. & 78/78 inc. \\
+S14 & pos. & F3 & Record with no recorded level: is ``some level'' entailed? & cons.; no & cons.; yes & cons.; yes & cons.; yes \\
+S15 & ctrl. & F0b & Legitimate: an attitude carrying a description & cons. & \textbf{inc.} & cons. & cons. \\
+S16 & ctrl. & F0b & Legitimate: a performance record carrying a date; is it entailed to be a milestone? & cons.; yes & \textbf{inc.} & cons.; no & cons.; no \\
+S17 & ctrl. & v2.1 & Legitimate: an instructor enrolled as a learner; is it entailed to be a learner? & \textbf{inc.} & \textbf{inc.} & cons.; yes & cons.; yes \\
+S18 & ctrl. & v2.1 & A resource with no competency: is ``addresses some competency'' entailed? & cons.; no & cons.; yes & cons.; no & cons.; no \\
+S19 & ctrl. & F2b & An individual typed with a class and its superclass & cons. & cons. & cons. & cons. \\
+S20 & scope & F2b & Contested: one individual typed \texttt{Avaliacao} and \texttt{RecursoDeAprendizagem} & cons. & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+S21 & scope & F2b & Contested: one individual typed \texttt{Curso} and \texttt{RecursoDeAprendizagem} & cons. & \textbf{inc.} & \textbf{inc.} & \textbf{inc.} \\
+\hline
+\end{tabular}
+\end{table*}

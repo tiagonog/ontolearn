@@ -1,0 +1,38 @@
+\begin{table}[!t]
+\caption{Entailment census: atomic assertions over the named individuals that are entailed but not asserted. The asserted facts are identical within each block, so differences are due to the schema alone. DL: complete OWL~2~DL entailment (HermiT and Openllet return the same set); RL: OWL~2~RL rule closure (\texttt{owlrl}). New: inferred assertions that use a term absent from v1.0. A leading $-$ removes one family from the configuration above it.}
+\label{tab:census}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\hline
+& & \multicolumn{4}{c}{\textbf{Inferred (DL)}} & \\
+\textbf{Configuration} & \textbf{Asserted} & $C(a)$ & $p(a,b)$ & \textbf{Total} & \textbf{New} & \textbf{RL} \\
+\hline
+\multicolumn{7}{l}{\emph{20-individual ABox}} \\
+v1.0 & 53 & 12 & 29 & 41 & 0 & 41 \\
+\quad $-$ transitivity & 53 & 12 & 29 & 41 & 0 & 41 \\
+\quad $-$ inverses & 53 & 12 & 0 & 12 & 0 & 12 \\
+v2.0 & 53 & 12 & 33 & 45 & 4 & 45 \\
+v2.1 & 53 & 12 & 33 & 45 & 4 & 45 \\
+v2.2 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F1 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F2 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F2b & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F3 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F4 & 53 & 12 & 29 & 41 & 0 & 41 \\
+\quad $-$ F5 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ F6 & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ transitivity & 53 & 12 & 33 & 45 & 4 & 45 \\
+\quad $-$ inverses & 53 & 12 & 2 & 14 & 2 & 14 \\
+\hline
+\multicolumn{7}{l}{\emph{Extended fact base (53 individuals)}} \\
+v1.0 schema & 162 & 36 & 109 & 145 & 0 & 145 \\
+v2.2 & 162 & 36 & 121 & 157 & 12 & 157 \\
+\quad $-$ F4 & 162 & 36 & 109 & 145 & 0 & 145 \\
+\quad $-$ transitivity & 162 & 36 & 115 & 151 & 12 & 151 \\
+\quad $-$ inverses & 162 & 36 & 9 & 45 & 6 & 45 \\
+\multicolumn{7}{l}{\quad $-$ each of F1, F2, F2b, F3, F5, F6: identical to v2.2} \\
+\hline
+\end{tabular}
+\end{table}

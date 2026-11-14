@@ -1,0 +1,60 @@
+@prefix :     <http://www.ontolearn.com/ontologia#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =====================================================================
+#  OntoLearn - SHACL shapes for closed-world data completeness (v2.2)
+#
+#  Why this file exists. The existential axioms of family F3, e.g.
+#      Questao subClassOf (competenciasAvaliadas some Competencia),
+#  are OWL axioms and are read under the open-world assumption: for a
+#  question with no recorded competency, a reasoner concludes that an
+#  unnamed competency exists. It does NOT report the missing link.
+#  The shapes below state the corresponding DATA requirement - the link
+#  must be recorded, to a named resource - and are checked by a SHACL
+#  processor against the asserted graph. Each shape accepts the link in
+#  either direction of the inverse pair, because sources record it in
+#  either direction.
+#
+#  S1-S3 mirror the three F3 axioms of v2.2. S4 is the closed-world
+#  counterpart of F5 + F6: exactly one recorded level per record.
+# =====================================================================
+
+<http://www.ontolearn.com/ontologia/shapes> a owl:Ontology ;
+    rdfs:label "OntoLearn - SHACL shapes for data completeness"@en ;
+    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "2.2" .
+
+:S1_QuestionTargetsCompetency a sh:NodeShape ;
+    sh:targetClass :Questao ;
+    sh:property [
+        sh:path [ sh:alternativePath ( :competenciasAvaliadas [ sh:inversePath :avaliadaPelaQuestao ] ) ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "S1: a question must be linked to at least one recorded competency." ] .
+
+:S2_AssessmentIncludesQuestion a sh:NodeShape ;
+    sh:targetClass :Avaliacao ;
+    sh:property [
+        sh:path [ sh:alternativePath ( :questoesIncluidas [ sh:inversePath :fazParteDaAvaliacao ] ) ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "S2: an assessment must include at least one recorded question." ] .
+
+:S3_PerformanceHasLevel a sh:NodeShape ;
+    sh:targetClass :DesempenhoDoAprendiz ;
+    sh:property [
+        sh:path [ sh:alternativePath ( :proficienciaAtingida [ sh:inversePath :foiAtingidaEm ] ) ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "S3: a performance record must carry a recorded proficiency level." ] .
+
+:S4_PerformanceHasOneLevel a sh:NodeShape ;
+    sh:targetClass :DesempenhoDoAprendiz ;
+    sh:property [
+        sh:path [ sh:alternativePath ( :proficienciaAtingida [ sh:inversePath :foiAtingidaEm ] ) ] ;
+        sh:maxCount 1 ;
+        sh:message "S4: a performance record must not carry more than one proficiency level." ] .

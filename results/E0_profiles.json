@@ -1,0 +1,1178 @@
+{
+ "v1.0": {
+  "OWL2DL": {
+   "in_profile": true,
+   "violations": 0,
+   "by_kind": {},
+   "axioms": []
+  },
+  "OWL2EL": {
+   "in_profile": false,
+   "violations": 30,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:abordaCompetencia> <:ehAbordadaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:adquiridaPor> <:conquistasAdquiridas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aplicadaNoCurso> <:avaliacoesAplicadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizAvaliado> <:teveDesempenhoAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizesInscritos> <:estaInscritoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliaDesempenho> <:temDesempenhoAvaliadoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliadaPelaQuestao> <:competenciasAvaliadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciaRelacionada> <:temQuestaoRelacionada>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasDoDesempenho> <:desempenhoCompetencias>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasEnvolvidas> <:ehEnvolvidaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeAtitudeEm> <:ehCompostoDeAtitude>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeConhecimentoEm> <:ehCompostoDeConhecimento>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeHabilidadeEm> <:ehCompostoDeHabilidade>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehExigidoPor> <:exigeNivel>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehRequeridaPor> <:requer>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehResponsavelPor> <:instrutoresResponsaveis>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:elaboraAvaliacoes> <:elaboradaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:fazParteDaAvaliacao> <:questoesIncluidas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:foiAtingidaEm> <:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:historicoAprendizagem> <:parteDoHistoricoDe>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:insereRecursos> <:inseridoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:questaoRespondida> <:teveRespostaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:realizadaPor> <:trajetoriasRealizadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:recursosUtilizados> <:utilizadoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    }
+   ]
+  },
+  "OWL2QL": {
+   "in_profile": false,
+   "violations": 8,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:ehRequeridaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:requer>)"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    }
+   ]
+  },
+  "OWL2RL": {
+   "in_profile": false,
+   "violations": 5,
+   "by_kind": {
+    "union domain": 4,
+    "union range": 1
+   },
+   "axioms": [
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    }
+   ]
+  }
+ },
+ "v2.0": {
+  "OWL2DL": {
+   "in_profile": true,
+   "violations": 0,
+   "by_kind": {},
+   "axioms": []
+  },
+  "OWL2EL": {
+   "in_profile": false,
+   "violations": 32,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:abordaCompetencia> <:ehAbordadaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:adquiridaPor> <:conquistasAdquiridas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aplicadaNoCurso> <:avaliacoesAplicadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizAvaliado> <:teveDesempenhoAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizesInscritos> <:estaInscritoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliaDesempenho> <:temDesempenhoAvaliadoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliadaPelaQuestao> <:competenciasAvaliadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciaRelacionada> <:temQuestaoRelacionada>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasDoDesempenho> <:desempenhoCompetencias>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasEnvolvidas> <:ehEnvolvidaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeAtitudeEm> <:ehCompostoDeAtitude>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeConhecimentoEm> <:ehCompostoDeConhecimento>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeHabilidadeEm> <:ehCompostoDeHabilidade>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehExigidoPor> <:exigeNivel>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehRequeridaPor> <:requer>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehResponsavelPor> <:instrutoresResponsaveis>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:elaboraAvaliacoes> <:elaboradaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:fazParteDaAvaliacao> <:questoesIncluidas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:foiAtingidaEm> <:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:historicoAprendizagem> <:parteDoHistoricoDe>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:insereRecursos> <:inseridoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:questaoRespondida> <:teveRespostaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:realizadaPor> <:trajetoriasRealizadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:recursosUtilizados> <:utilizadoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:temComponenteKSA> <:ehComponenteKSADe>)"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    }
+   ]
+  },
+  "OWL2QL": {
+   "in_profile": false,
+   "violations": 9,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:ehRequeridaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:requer>)"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    }
+   ]
+  },
+  "OWL2RL": {
+   "in_profile": false,
+   "violations": 9,
+   "by_kind": {
+    "existential restriction as superclass": 4,
+    "union domain": 4,
+    "union range": 1
+   },
+   "axioms": [
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Avaliacao> ObjectSomeValuesFrom(<:questoesIncluidas> <:Questao>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:DesempenhoDoAprendiz> ObjectSomeValuesFrom(<:proficienciaAtingida> <:NiveisDeProficiencia>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Questao> ObjectSomeValuesFrom(<:competenciasAvaliadas> <:Competencia>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:RecursoDeAprendizagem> ObjectSomeValuesFrom(<:abordaCompetencia> <:Competencia>))"
+    }
+   ]
+  }
+ },
+ "v2.1": {
+  "OWL2DL": {
+   "in_profile": true,
+   "violations": 0,
+   "by_kind": {},
+   "axioms": []
+  },
+  "OWL2EL": {
+   "in_profile": false,
+   "violations": 35,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:abordaCompetencia> <:ehAbordadaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:adquiridaPor> <:conquistasAdquiridas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aplicadaNoCurso> <:avaliacoesAplicadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizAvaliado> <:teveDesempenhoAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizesInscritos> <:estaInscritoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliaDesempenho> <:temDesempenhoAvaliadoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliadaPelaQuestao> <:competenciasAvaliadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciaRelacionada> <:temQuestaoRelacionada>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasDoDesempenho> <:desempenhoCompetencias>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasEnvolvidas> <:ehEnvolvidaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeAtitudeEm> <:ehCompostoDeAtitude>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeConhecimentoEm> <:ehCompostoDeConhecimento>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeHabilidadeEm> <:ehCompostoDeHabilidade>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehExigidoPor> <:exigeNivel>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehRequeridaPor> <:requer>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehResponsavelPor> <:instrutoresResponsaveis>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:elaboraAvaliacoes> <:elaboradaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:fazParteDaAvaliacao> <:questoesIncluidas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:foiAtingidaEm> <:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:historicoAprendizagem> <:parteDoHistoricoDe>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:insereRecursos> <:inseridoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:questaoRespondida> <:teveRespostaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:realizadaPor> <:trajetoriasRealizadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:recursosUtilizados> <:utilizadoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:temComponenteKSA> <:ehComponenteKSADe>)"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    }
+   ]
+  },
+  "OWL2QL": {
+   "in_profile": false,
+   "violations": 12,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:ehRequeridaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:requer>)"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    }
+   ]
+  },
+  "OWL2RL": {
+   "in_profile": false,
+   "violations": 11,
+   "by_kind": {
+    "existential restriction as superclass": 3,
+    "union domain": 6,
+    "union range": 2
+   },
+   "axioms": [
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Avaliacao> ObjectSomeValuesFrom(<:questoesIncluidas> <:Questao>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:DesempenhoDoAprendiz> ObjectSomeValuesFrom(<:proficienciaAtingida> <:NiveisDeProficiencia>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Questao> ObjectSomeValuesFrom(<:competenciasAvaliadas> <:Competencia>))"
+    }
+   ]
+  }
+ },
+ "v2.2": {
+  "OWL2DL": {
+   "in_profile": true,
+   "violations": 0,
+   "by_kind": {},
+   "axioms": []
+  },
+  "OWL2EL": {
+   "in_profile": false,
+   "violations": 35,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:abordaCompetencia> <:ehAbordadaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:adquiridaPor> <:conquistasAdquiridas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aplicadaNoCurso> <:avaliacoesAplicadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizAvaliado> <:teveDesempenhoAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:aprendizesInscritos> <:estaInscritoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliaDesempenho> <:temDesempenhoAvaliadoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:avaliadaPelaQuestao> <:competenciasAvaliadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciaRelacionada> <:temQuestaoRelacionada>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasDoDesempenho> <:desempenhoCompetencias>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:competenciasEnvolvidas> <:ehEnvolvidaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeAtitudeEm> <:ehCompostoDeAtitude>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeConhecimentoEm> <:ehCompostoDeConhecimento>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:compoeHabilidadeEm> <:ehCompostoDeHabilidade>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehExigidoPor> <:exigeNivel>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehRequeridaPor> <:requer>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:ehResponsavelPor> <:instrutoresResponsaveis>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:elaboraAvaliacoes> <:elaboradaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:fazParteDaAvaliacao> <:questoesIncluidas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:foiAtingidaEm> <:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:historicoAprendizagem> <:parteDoHistoricoDe>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:insereRecursos> <:inseridoPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:questaoRespondida> <:teveRespostaEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:realizadaPor> <:trajetoriasRealizadas>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:recursosUtilizados> <:utilizadoEm>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "InverseObjectProperties",
+     "axiom": "InverseObjectProperties(<:temComponenteKSA> <:ehComponenteKSADe>)"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfIllegalClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    }
+   ]
+  },
+  "OWL2QL": {
+   "in_profile": false,
+   "violations": 12,
+   "by_kind": {},
+   "axioms": [
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:aprendizAvaliado>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "FunctionalObjectProperty",
+     "axiom": "FunctionalObjectProperty(<:proficienciaAtingida>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:ehRequeridaPor>)"
+    },
+    {
+     "violation": "UseOfIllegalAxiom",
+     "axiom_type": "TransitiveObjectProperty",
+     "axiom": "TransitiveObjectProperty(<:requer>)"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    }
+   ]
+  },
+  "OWL2RL": {
+   "in_profile": false,
+   "violations": 11,
+   "by_kind": {
+    "existential restriction as superclass": 3,
+    "union domain": 6,
+    "union range": 2
+   },
+   "axioms": [
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:data> ObjectUnionOf(<:DesempenhoDoAprendiz> <:MilestoneDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:descricao> ObjectUnionOf(<:Atitude> <:Avaliacao> <:Competencia> <:Conhecimento> <:Curso> <:Habilidade> <:MilestoneDeAprendizagem> <:NiveisDeProficiencia> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:nome> ObjectUnionOf(<:Competencia> <:Curso> <:RecursoDeAprendizagem> <:UsuarioDoAva>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "DataPropertyDomain",
+     "axiom": "DataPropertyDomain(<:tipo> ObjectUnionOf(<:Avaliacao> <:MilestoneDeAprendizagem> <:Questao> <:RecursoDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:competenciasEnvolvidas> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyDomain",
+     "axiom": "ObjectPropertyDomain(<:ehComponenteKSADe> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:ehEnvolvidaEm> ObjectUnionOf(<:MilestoneDeAprendizagem> <:TrajetoriasDeAprendizagem>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "ObjectPropertyRange",
+     "axiom": "ObjectPropertyRange(<:temComponenteKSA> ObjectUnionOf(<:Atitude> <:Conhecimento> <:Habilidade>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Avaliacao> ObjectSomeValuesFrom(<:questoesIncluidas> <:Questao>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:DesempenhoDoAprendiz> ObjectSomeValuesFrom(<:proficienciaAtingida> <:NiveisDeProficiencia>))"
+    },
+    {
+     "violation": "UseOfNonSuperClassExpression",
+     "axiom_type": "SubClassOf",
+     "axiom": "SubClassOf(<:Questao> ObjectSomeValuesFrom(<:competenciasAvaliadas> <:Competencia>))"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,29 @@
+\begin{table*}[!t]
+\caption{Fault injection: one fault (X) or one legitimate variation (L) injected into each of 20 clean synthetic fact bases (four prerequisite topologies, five seeds; 337 individuals), laid under each release. Each cell shows three channels in the order OWL / SHACL / audit: an inconsistency reported by the DL reasoners (HermiT and Openllet agree), a SHACL violation that the clean base does not have, and a \vd{Conflict} reported by the reasoner-free audit. $\bullet$: noticed in all 20 bases; $\circ$: in none; a fraction otherwise. RL: an inconsistency raised by the OWL~2~RL rule engine on v2.2. For a legitimate variation, $\bullet$ under OWL means that valid data are rejected.}
+\label{tab:faults}
+\centering
+\footnotesize
+\begin{tabular}{llccccc}
+\hline
+& & \textbf{v1.0} & \textbf{v2.0} & \textbf{v2.1} & \textbf{v2.2} & \textbf{RL} \\
+\textbf{Case} & \textbf{Injected change} & \multicolumn{4}{c}{\footnotesize OWL\; SHACL\; audit} & \textbf{(v2.2)} \\
+\hline
+X01 & Contradictory record: a second level, of a different category & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\bullet$ $\bullet$ $\circ$ & $\bullet$ \\
+X02 & A performance record loses its level & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ \\
+X03 & A question loses every competency link & $\circ$ 10/20 $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ \\
+ & \quad the same, on a subjective question & $\circ$ $\circ$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ \\
+X04 & An assessment with no question & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ $\bullet$ $\circ$ & $\circ$ \\
+X05 & A question made the subject of \texttt{requer} & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\bullet$ & $\bullet$ $\circ$ $\bullet$ & $\bullet$ $\circ$ $\bullet$ & $\bullet$ \\
+X06 & A learner also typed as a competency & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ \\
+X07 & A knowledge component also typed as a skill & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ \\
+X08 & A question typed objective and subjective & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\circ$ & $\bullet$ \\
+X09 & A competency requires an undeclared, untyped resource & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ \\
+X10 & A prerequisite cycle & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ \\
+X11 & A learner carrying a \texttt{descricao} (union domain) & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\bullet$ & $\bullet$ $\circ$ $\bullet$ & $\bullet$ $\circ$ $\bullet$ & $\circ$ \\
+\hline
+L01 & Legitimate: an instructor enrolled as a learner & $\bullet$ $\circ$ $\bullet$ & $\bullet$ $\circ$ $\bullet$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ \\
+L02 & Legitimate: an attitude carrying a description & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\bullet$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ \\
+L03 & Legitimate: a performance record carrying a date & $\circ$ $\circ$ $\circ$ & $\bullet$ $\circ$ $\bullet$ & $\circ$ $\circ$ $\circ$ & $\circ$ $\circ$ $\circ$ & $\circ$ \\
+\hline
+\end{tabular}
+\end{table*}

@@ -1,0 +1,349 @@
+@prefix : <http://www.ontolearn.com/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontolearn.com/ontologia> .
+
+<http://www.ontolearn.com/ontologia> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes e Hierarquia
+#################################################################
+
+:Atitude rdf:type owl:Class .
+:Avaliação rdf:type owl:Class .
+:Mistas rdf:type owl:Class ; rdfs:subClassOf :Avaliação .
+:Objetivas_Aval rdf:type owl:Class ; rdfs:subClassOf :Avaliação .
+:Subjetivas_Aval rdf:type owl:Class ; rdfs:subClassOf :Avaliação .
+
+:Competência rdf:type owl:Class .
+:Conhecimento rdf:type owl:Class .
+:Curso rdf:type owl:Class .
+
+:Desempenho_do_Aprendiz rdf:type owl:Class .
+:Diagnóstico rdf:type owl:Class ; rdfs:subClassOf :Desempenho_do_Aprendiz .
+:Formativo rdf:type owl:Class ; rdfs:subClassOf :Desempenho_do_Aprendiz .
+:Somativo rdf:type owl:Class ; rdfs:subClassOf :Desempenho_do_Aprendiz .
+
+:Habilidade rdf:type owl:Class .
+:Milestone_de_Aprendizagem rdf:type owl:Class .
+
+:Níveis_de_Proficiência rdf:type owl:Class .
+:Analisar rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+:Aplicar rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+:Avaliar_Bloom rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+:Criar rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+:Entender rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+:Lembrar rdf:type owl:Class ; rdfs:subClassOf :Níveis_de_Proficiência .
+
+:Questão rdf:type owl:Class .
+:Objetiva rdf:type owl:Class ; rdfs:subClassOf :Questão .
+:Subjetiva rdf:type owl:Class ; rdfs:subClassOf :Questão .
+
+:Recurso_de_Aprendizagem rdf:type owl:Class .
+:Didático rdf:type owl:Class ; rdfs:subClassOf :Recurso_de_Aprendizagem .
+:Apostila rdf:type owl:Class ; rdfs:subClassOf :Didático .
+:Livro rdf:type owl:Class ; rdfs:subClassOf :Didático .
+:Texto rdf:type owl:Class ; rdfs:subClassOf :Didático .
+
+:Interativo rdf:type owl:Class ; rdfs:subClassOf :Recurso_de_Aprendizagem .
+:Jogo rdf:type owl:Class ; rdfs:subClassOf :Interativo .
+:Simulador rdf:type owl:Class ; rdfs:subClassOf :Interativo .
+
+:Multimidia rdf:type owl:Class ; rdfs:subClassOf :Recurso_de_Aprendizagem .
+:Audio rdf:type owl:Class ; rdfs:subClassOf :Multimidia .
+:Infográfico rdf:type owl:Class ; rdfs:subClassOf :Multimidia .
+:Página_Web rdf:type owl:Class ; rdfs:subClassOf :Multimidia .
+:Video rdf:type owl:Class ; rdfs:subClassOf :Multimidia .
+
+:Trajetórias_de_Aprendizagem rdf:type owl:Class .
+
+:Usuário_do_AVA rdf:type owl:Class .
+:Aprendiz rdf:type owl:Class ; rdfs:subClassOf :Usuário_do_AVA .
+:Instrutor rdf:type owl:Class ; rdfs:subClassOf :Usuário_do_AVA .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:requer rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+        rdfs:domain :Competência ; rdfs:range :Competência .
+
+:éCompostoDeConhecimento rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Competência ; rdfs:range :Conhecimento .
+
+:éCompostoDeHabilidade rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Competência ; rdfs:range :Habilidade .
+
+:éCompostoDeAtitude rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Competência ; rdfs:range :Atitude .
+
+:abordaCompetencia rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Recurso_de_Aprendizagem ; rdfs:range :Competência .
+
+:exigeNivel rdf:type owl:ObjectProperty ;
+            rdfs:domain :Questão ; rdfs:range :Níveis_de_Proficiência .
+
+:desempenhoCompetencias rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Aprendiz ; rdfs:range :Desempenho_do_Aprendiz .
+
+:conquistasAdquiridas rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Aprendiz ; rdfs:range :Milestone_de_Aprendizagem .
+
+:trajetoriasRealizadas rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Aprendiz ; rdfs:range :Trajetórias_de_Aprendizagem .
+
+:historicoAprendizagem rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Aprendiz ; rdfs:range :Recurso_de_Aprendizagem .
+
+:estaInscritoEm rdf:type owl:ObjectProperty ;
+                owl:inverseOf :aprendizesInscritos ;
+                rdfs:domain :Aprendiz ; rdfs:range :Curso .
+
+:aprendizesInscritos rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Curso ; rdfs:range :Aprendiz .
+
+:avaliaDesempenho rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Instrutor ; rdfs:range :Desempenho_do_Aprendiz .
+
+:elaboraAvaliacoes rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Instrutor ; rdfs:range :Avaliação .
+
+:insereRecursos rdf:type owl:ObjectProperty ;
+                rdfs:domain :Instrutor ; rdfs:range :Recurso_de_Aprendizagem .
+
+:éResponsavelPor rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :instrutoresResponsaveis ;
+                 rdfs:domain :Instrutor ; rdfs:range :Curso .
+
+:instrutoresResponsaveis rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Curso ; rdfs:range :Instrutor .
+
+:recursosUtilizados rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Curso ; rdfs:range :Recurso_de_Aprendizagem .
+
+:avaliacoesAplicadas rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Curso ; rdfs:range :Avaliação .
+
+:questaoRespondida rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Desempenho_do_Aprendiz ; rdfs:range :Questão .
+
+:aprendizAvaliado rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+                  rdfs:domain :Desempenho_do_Aprendiz ; rdfs:range :Aprendiz .
+
+:proficienciaAtingida rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Desempenho_do_Aprendiz ; rdfs:range :Níveis_de_Proficiência .
+
+:questoesIncluidas rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Avaliação ; rdfs:range :Questão .
+
+:fazParteDaAvaliação rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :questoesIncluidas ;
+                     rdfs:domain :Questão ; rdfs:range :Avaliação .
+
+:competenciasAvaliadas rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Questão ; rdfs:range :Competência .
+
+:competenciaRelacionada rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Questão ; rdfs:range :Competência .
+
+:competenciasEnvolvidas rdf:type owl:ObjectProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Milestone_de_Aprendizagem :Trajetórias_de_Aprendizagem )
+                                    ] ;
+                        rdfs:range :Competência .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:idAprendiz rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+            rdfs:domain :Aprendiz ; rdfs:range xsd:string .
+
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ; owl:unionOf ( :Aprendiz :Instrutor :Competência ) ] ;
+      rdfs:range xsd:string .
+
+:idInstrutor rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+             rdfs:domain :Instrutor ; rdfs:range xsd:string .
+
+:idCompetencia rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+               rdfs:domain :Competência ; rdfs:range xsd:string .
+
+:descricao rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ; 
+                         owl:unionOf ( :Competência :Curso :Avaliação :Milestone_de_Aprendizagem :Níveis_de_Proficiência :Conhecimento :Habilidade :Atitude ) 
+                       ] ;
+           rdfs:range xsd:string .
+
+:area rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Competência ; rdfs:range xsd:string .
+
+:idRecurso rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+           rdfs:domain :Recurso_de_Aprendizagem ; rdfs:range xsd:string .
+
+:tipo rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ; owl:unionOf ( :Recurso_de_Aprendizagem :Avaliação :Milestone_de_Aprendizagem :Questão ) ] ;
+      rdfs:range xsd:string .
+
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Recurso_de_Aprendizagem ; rdfs:range xsd:anyURI .
+
+:idDesempenho rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+              rdfs:domain :Desempenho_do_Aprendiz ; rdfs:range xsd:string .
+
+:respostaAprendiz rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Desempenho_do_Aprendiz ; rdfs:range xsd:string .
+
+:idCurso rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+         rdfs:domain :Curso ; rdfs:range xsd:string .
+
+:titulo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Curso ; rdfs:range xsd:string .
+
+:nível rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Curso ; rdfs:range xsd:string .
+
+:idAvaliacao rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+             rdfs:domain :Avaliação ; rdfs:range xsd:string .
+
+:idMilestone rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+             rdfs:domain :Milestone_de_Aprendizagem ; rdfs:range xsd:string .
+
+:data rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Milestone_de_Aprendizagem ; rdfs:range xsd:dateTime .
+
+:idNivel rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+         rdfs:domain :Níveis_de_Proficiência ; rdfs:range xsd:string .
+
+:idTrajetoria rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+              rdfs:domain :Trajetórias_de_Aprendizagem ; rdfs:range xsd:string .
+
+:etapas rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Trajetórias_de_Aprendizagem ; rdfs:range xsd:string .
+
+:idQuestao rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+           rdfs:domain :Questão ; rdfs:range xsd:string .
+
+:enunciado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Questão ; rdfs:range xsd:string .
+
+:respostaCorreta rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Questão ; rdfs:range xsd:string .
+
+:alternativas rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Questão ; rdfs:range xsd:string .
+
+:idConhecimento rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+                rdfs:domain :Conhecimento ; rdfs:range xsd:string .
+
+:idHabilidade rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+              rdfs:domain :Habilidade ; rdfs:range xsd:string .
+
+:idAtitude rdf:type owl:DatatypeProperty , owl:InverseFunctionalProperty ;
+           rdfs:domain :Atitude ; rdfs:range xsd:string .
+
+
+#################################################################
+#    Instâncias (Indivíduos de Exemplo)
+#################################################################
+
+### Aprendiz: João Silva [cite: 392-402]
+:APR-0001 rdf:type :Aprendiz ;
+          :idAprendiz "APR-0001" ;
+          :nome "João Silva" ;
+          :historicoAprendizagem :REC-0002 , :REC-0005 ;
+          :desempenhoCompetencias :DEMP-0003 , :DEMP-0004 ;
+          :conquistasAdquiridas :MILE-0001 ;
+          :estaInscritoEm :CUR-0001 .
+
+### Instrutor: Maria Fernandes [cite: 403-411]
+:INST-0001 rdf:type :Instrutor ;
+           :idInstrutor "INST-0001" ;
+           :nome "Maria Fernandes" ;
+           :avaliaDesempenho :DEMP-0003 ;
+           :elaboraAvaliacoes :AVAL-0002 ;
+           :insereRecursos :REC-0004 ;
+           :éResponsavelPor :CUR-0001 .
+
+### Curso: Introdução à Programação com Python [cite: 412-423]
+:CUR-0001 rdf:type :Curso ;
+          :idCurso "CUR-0001" ;
+          :titulo "Introdução à Programação com Python" ;
+          :descricao "Curso básico para aprender Python." ;
+          :nível "Educação Terciária de Ciclo Curto" ;
+          :aprendizesInscritos :APR-0001 ;
+          :instrutoresResponsaveis :INST-0001 ;
+          :avaliacoesAplicadas :AVAL-0002 .
+
+### Competência: Classes e Objetos (Pré-requisito) [cite: 424-430]
+:COMP-0001 rdf:type :Competência ;
+           :idCompetencia "COMP-0001" ;
+           :nome "Classes e Objetos em POO" ;
+           :area "Programação de Computadores" .
+
+### Conhecimento: Definição de Superclasse [cite: 431-434]
+:KNOW-001 rdf:type :Conhecimento ;
+          :idConhecimento "KNOW-001" ;
+          :descricao "Saber a definição de superclasse, subclasse e a sintaxe de herança." .
+
+### Habilidade: Sobrescrever um método [cite: 435-438]
+:SKILL-001 rdf:type :Habilidade ;
+           :idHabilidade "SKILL-001" ;
+           :descricao "Capacidade de implementar uma subclasse que sobrescreve um método da superclasse." .
+
+### Competência: Herança em Python [cite: 439-448]
+:COMP-0002 rdf:type :Competência ;
+           :idCompetencia "COMP-0002" ;
+           :nome "Herança em Python" ;
+           :descricao "Capacidade de utilizar herança para reutilizar e estender o código..." ;
+           :area "Programação de Computadores" ;
+           :requer :COMP-0001 ;
+           :éCompostoDeConhecimento :KNOW-001 ;
+           :éCompostoDeHabilidade :SKILL-001 .
+
+### Recurso de Aprendizagem: Vídeo sobre Herança [cite: 449-457]
+:REC-0004 rdf:type :Video ;
+          :idRecurso "REC-0004" ;
+          :tipo "Vídeo" ;
+          :url "http://example.com/heranca-python-video"^^xsd:anyURI ;
+          :abordaCompetencia :COMP-0002 .
+
+### Nível de Proficiência (Bloom): Aplicar [cite: 458-462]
+:NP-Aplicar rdf:type :Aplicar ;
+            :idNivel "NP-0003-Aplicar" ;
+            :descricao "Nível 3 de Bloom: Usar informação em novas situações." .
+
+### Avaliação: Quiz sobre Herança [cite: 463-469]
+:AVAL-0002 rdf:type :Objetivas_Aval ;
+           :idAvaliacao "AVAL-0002" ;
+           :tipo "Objetiva" ;
+           :descricao "Avaliação focada no conceito de herança..." ;
+           :questoesIncluidas :QUEST-0003 .
+
+### Questão: Herança em Python [cite: 470-479]
+:QUEST-0003 rdf:type :Objetiva ;
+            :idQuestao "QUEST-0003" ;
+            :enunciado "Como funciona a herança em Python?" ;
+            :tipo "Múltipla Escolha" ;
+            :respostaCorreta "Permite que uma classe herde atributos e métodos de outra classe" ;
+            :competenciasAvaliadas :COMP-0002 ;
+            :exigeNivel :NP-Aplicar .
+
+### Desempenho do Aprendiz: Resposta do João [cite: 480-489]
+:DEMP-0003 rdf:type :Formativo ;
+           :idDesempenho "DEMP-0003" ;
+           :respostaAprendiz "Permite que uma classe herde atributos e métodos de outra classe" ;
+           :questaoRespondida :QUEST-0003 ;
+           :aprendizAvaliado :APR-0001 ;
+           :proficienciaAtingida :NP-Aplicar .
+
+### Milestone de Aprendizagem: Conclusão do Curso [cite: 490-498]
+:MILE-0001 rdf:type :Milestone_de_Aprendizagem ;
+           :idMilestone "MILE-0001" ;
+           :descricao "Conclusão do Curso Introdução à Programação com Python" ;
+           :data "2024-02-20T18:00:00Z"^^xsd:dateTime ;
+           :tipo "Conclusão de Curso" ;
+           :competenciasEnvolvidas :COMP-0001 , :COMP-0002 .

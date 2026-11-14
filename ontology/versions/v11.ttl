@@ -1,0 +1,1091 @@
+@prefix : <http://www.ontolearn.com/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.ontolearn.com/ontologia#> .
+
+<http://www.ontolearn.com/ontologia> rdf:type owl:Ontology ;
+                                      dcterms:description "Ontologia para análise de aprendizagem baseada em competências."@pt ;
+                                      dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                      dcterms:title "Ontologia OntoLearn"@pt ;
+                                      rdfs:comment "Ontologia OntoLearn - Versão Final (Com Licença). Correção de P04, P08, P11, P13, P20 e P41."@pt ;
+                                      rdfs:label "OntoLearn"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontolearn.com/ontologia#abordaCompetencia
+:abordaCompetencia rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :ehAbordadaPor ;
+                   rdfs:domain :RecursoDeAprendizagem ;
+                   rdfs:range :Competencia ;
+                   rdfs:comment "Relaciona um recurso educacional à competência que ele visa desenvolver."@pt ;
+                   rdfs:label "aborda competência"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#adquiridaPor
+:adquiridaPor rdf:type owl:ObjectProperty ;
+              owl:inverseOf :conquistasAdquiridas ;
+              rdfs:domain :MilestoneDeAprendizagem ;
+              rdfs:range :Aprendiz ;
+              rdfs:comment "Aprendiz que adquiriu esta conquista."@pt ;
+              rdfs:label "adquirida por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#aplicadaNoCurso
+:aplicadaNoCurso rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :avaliacoesAplicadas ;
+                 rdfs:domain :Avaliacao ;
+                 rdfs:range :Curso ;
+                 rdfs:comment "Curso ao qual a avaliação pertence."@pt ;
+                 rdfs:label "aplicada no curso"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#aprendizAvaliado
+:aprendizAvaliado rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :teveDesempenhoAvaliado ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :DesempenhoDoAprendiz ;
+                  rdfs:range :Aprendiz ;
+                  rdfs:comment "Indica o aprendiz associado a este registro de desempenho."@pt ;
+                  rdfs:label "aprendiz avaliado"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#aprendizesInscritos
+:aprendizesInscritos rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :estaInscritoEm ;
+                     rdfs:domain :Curso ;
+                     rdfs:range :Aprendiz ;
+                     rdfs:comment "Lista os alunos matriculados no curso."@pt ;
+                     rdfs:label "aprendizes inscritos"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#avaliaDesempenho
+:avaliaDesempenho rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :temDesempenhoAvaliadoPor ;
+                  rdfs:domain :Instrutor ;
+                  rdfs:range :DesempenhoDoAprendiz ;
+                  rdfs:comment "Indica que o instrutor realizou a avaliação."@pt ;
+                  rdfs:label "avalia desempenho"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#avaliacoesAplicadas
+:avaliacoesAplicadas rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Curso ;
+                     rdfs:range :Avaliacao ;
+                     rdfs:comment "Avaliações que compõem o curso."@pt ;
+                     rdfs:label "avaliações aplicadas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#avaliadaPelaQuestao
+:avaliadaPelaQuestao rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :competenciasAvaliadas ;
+                     rdfs:domain :Competencia ;
+                     rdfs:range :Questao ;
+                     rdfs:comment "Questões usadas para avaliar a competência."@pt ;
+                     rdfs:label "avaliada pela questão"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#competenciaRelacionada
+:competenciaRelacionada rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :temQuestaoRelacionada ;
+                        rdfs:domain :Questao ;
+                        rdfs:range :Competencia ;
+                        rdfs:comment "Associa uma questão à competência abordada."@pt ;
+                        rdfs:label "competência relacionada"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#competenciasAvaliadas
+:competenciasAvaliadas rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Questao ;
+                       rdfs:range :Competencia ;
+                       rdfs:comment "Competências medidas por esta questão."@pt ;
+                       rdfs:label "competências avaliadas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#competenciasDoDesempenho
+:competenciasDoDesempenho rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :desempenhoCompetencias ;
+                          rdfs:domain :DesempenhoDoAprendiz ;
+                          rdfs:range :Aprendiz ;
+                          rdfs:comment "Relaciona o registro de desempenho ao aprendiz."@pt ;
+                          rdfs:label "competências do desempenho"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#competenciasEnvolvidas
+:competenciasEnvolvidas rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :ehEnvolvidaEm ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :MilestoneDeAprendizagem
+                                                    :TrajetoriasDeAprendizagem
+                                                  )
+                                    ] ;
+                        rdfs:range :Competencia ;
+                        rdfs:comment "Competências trabalhadas em milestones ou trajetórias."@pt ;
+                        rdfs:label "competências envolvidas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#compoeAtitudeEm
+:compoeAtitudeEm rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :ehCompostoDeAtitude ;
+                 rdfs:domain :Atitude ;
+                 rdfs:range :Competencia ;
+                 rdfs:comment "Competência da qual a atitude faz parte."@pt ;
+                 rdfs:label "compõe (atitude)"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#compoeConhecimentoEm
+:compoeConhecimentoEm rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :ehCompostoDeConhecimento ;
+                      rdfs:domain :Conhecimento ;
+                      rdfs:range :Competencia ;
+                      rdfs:comment "Competência da qual o conhecimento faz parte."@pt ;
+                      rdfs:label "compõe (conhecimento)"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#compoeHabilidadeEm
+:compoeHabilidadeEm rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :ehCompostoDeHabilidade ;
+                    rdfs:domain :Habilidade ;
+                    rdfs:range :Competencia ;
+                    rdfs:comment "Competência da qual a habilidade faz parte."@pt ;
+                    rdfs:label "compõe (habilidade)"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#conquistasAdquiridas
+:conquistasAdquiridas rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Aprendiz ;
+                      rdfs:range :MilestoneDeAprendizagem ;
+                      rdfs:comment "Marcos alcançados pelo estudante."@pt ;
+                      rdfs:label "conquistas adquiridas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#desempenhoCompetencias
+:desempenhoCompetencias rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Aprendiz ;
+                        rdfs:range :DesempenhoDoAprendiz ;
+                        rdfs:comment "Relaciona o aprendiz aos registros de seu desempenho."@pt ;
+                        rdfs:label "desempenho em competências"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehAbordadaPor
+:ehAbordadaPor rdf:type owl:ObjectProperty ;
+               rdfs:domain :Competencia ;
+               rdfs:range :RecursoDeAprendizagem ;
+               rdfs:comment "Indica quais recursos educacionais cobrem esta competência."@pt ;
+               rdfs:label "é abordada por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehCompostoDeAtitude
+:ehCompostoDeAtitude rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Competencia ;
+                     rdfs:range :Atitude ;
+                     rdfs:comment "Atitudes que compõem a competência."@pt ;
+                     rdfs:label "é composto de atitude"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehCompostoDeConhecimento
+:ehCompostoDeConhecimento rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Competencia ;
+                          rdfs:range :Conhecimento ;
+                          rdfs:comment "Conhecimentos teóricos que compõem a competência."@pt ;
+                          rdfs:label "é composto de conhecimento"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehCompostoDeHabilidade
+:ehCompostoDeHabilidade rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Competencia ;
+                        rdfs:range :Habilidade ;
+                        rdfs:comment "Habilidades práticas que compõem a competência."@pt ;
+                        rdfs:label "é composto de habilidade"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehEnvolvidaEm
+:ehEnvolvidaEm rdf:type owl:ObjectProperty ;
+               rdfs:domain :Competencia ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :MilestoneDeAprendizagem
+                                          :TrajetoriasDeAprendizagem
+                                        )
+                          ] ;
+               rdfs:comment "Milestones ou trajetórias que envolvem a competência."@pt ;
+               rdfs:label "é envolvida em"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehExigidoPor
+:ehExigidoPor rdf:type owl:ObjectProperty ;
+              owl:inverseOf :exigeNivel ;
+              rdfs:domain :NiveisDeProficiencia ;
+              rdfs:range :Questao ;
+              rdfs:comment "Questões que exigem este nível."@pt ;
+              rdfs:label "é exigido por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehRequeridaPor
+:ehRequeridaPor rdf:type owl:ObjectProperty ;
+                owl:inverseOf :requer ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:domain :Competencia ;
+                rdfs:range :Competencia ;
+                rdfs:comment "Competências que exigem esta como pré-requisito."@pt ;
+                rdfs:label "é requerida por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ehResponsavelPor
+:ehResponsavelPor rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :instrutoresResponsaveis ;
+                  rdfs:domain :Instrutor ;
+                  rdfs:range :Curso ;
+                  rdfs:comment "Cursos coordenados pelo instrutor."@pt ;
+                  rdfs:label "é responsável por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#elaboraAvaliacoes
+:elaboraAvaliacoes rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :elaboradaPor ;
+                   rdfs:domain :Instrutor ;
+                   rdfs:range :Avaliacao ;
+                   rdfs:comment "Indica que o instrutor criou a avaliação."@pt ;
+                   rdfs:label "elabora avaliações"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#elaboradaPor
+:elaboradaPor rdf:type owl:ObjectProperty ;
+              rdfs:domain :Avaliacao ;
+              rdfs:range :Instrutor ;
+              rdfs:comment "Instrutor responsável pela criação."@pt ;
+              rdfs:label "elaborada por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#estaInscritoEm
+:estaInscritoEm rdf:type owl:ObjectProperty ;
+                rdfs:domain :Aprendiz ;
+                rdfs:range :Curso ;
+                rdfs:comment "Cursos nos quais o aprendiz está matriculado."@pt ;
+                rdfs:label "está inscrito em"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#exigeNivel
+:exigeNivel rdf:type owl:ObjectProperty ;
+            rdfs:domain :Questao ;
+            rdfs:range :NiveisDeProficiencia ;
+            rdfs:comment "Nível de proficiência necessário."@pt ;
+            rdfs:label "exige nível"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#fazParteDaAvaliacao
+:fazParteDaAvaliacao rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :questoesIncluidas ;
+                     rdfs:domain :Questao ;
+                     rdfs:range :Avaliacao ;
+                     rdfs:comment "Indica a qual avaliação a questão pertence."@pt ;
+                     rdfs:label "faz parte da avaliação"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#foiAtingidaEm
+:foiAtingidaEm rdf:type owl:ObjectProperty ;
+               owl:inverseOf :proficienciaAtingida ;
+               rdfs:domain :NiveisDeProficiencia ;
+               rdfs:range :DesempenhoDoAprendiz ;
+               rdfs:comment "Registros onde este nível foi atingido."@pt ;
+               rdfs:label "foi atingida em"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#historicoAprendizagem
+:historicoAprendizagem rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :parteDoHistoricoDe ;
+                       rdfs:domain :Aprendiz ;
+                       rdfs:range :RecursoDeAprendizagem ;
+                       rdfs:comment "Recursos consumidos pelo aprendiz."@pt ;
+                       rdfs:label "histórico de aprendizagem"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#insereRecursos
+:insereRecursos rdf:type owl:ObjectProperty ;
+                owl:inverseOf :inseridoPor ;
+                rdfs:domain :Instrutor ;
+                rdfs:range :RecursoDeAprendizagem ;
+                rdfs:comment "Indica que o instrutor disponibilizou um recurso."@pt ;
+                rdfs:label "insere recursos"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#inseridoPor
+:inseridoPor rdf:type owl:ObjectProperty ;
+             rdfs:domain :RecursoDeAprendizagem ;
+             rdfs:range :Instrutor ;
+             rdfs:comment "Instrutor que inseriu o recurso."@pt ;
+             rdfs:label "inserido por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#instrutoresResponsaveis
+:instrutoresResponsaveis rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Curso ;
+                         rdfs:range :Instrutor ;
+                         rdfs:comment "Instrutores que ministram o curso."@pt ;
+                         rdfs:label "instrutores responsáveis"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#parteDoHistoricoDe
+:parteDoHistoricoDe rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RecursoDeAprendizagem ;
+                    rdfs:range :Aprendiz ;
+                    rdfs:comment "Aprendiz cujo histórico contém este recurso."@pt ;
+                    rdfs:label "parte do histórico de"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#proficienciaAtingida
+:proficienciaAtingida rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DesempenhoDoAprendiz ;
+                      rdfs:range :NiveisDeProficiencia ;
+                      rdfs:comment "Nível de proficiência demonstrado."@pt ;
+                      rdfs:label "proficiência atingida"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#questaoRespondida
+:questaoRespondida rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :teveRespostaEm ;
+                   rdfs:domain :DesempenhoDoAprendiz ;
+                   rdfs:range :Questao ;
+                   rdfs:comment "Questão à qual o desempenho se refere."@pt ;
+                   rdfs:label "questão respondida"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#questoesIncluidas
+:questoesIncluidas rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Avaliacao ;
+                   rdfs:range :Questao ;
+                   rdfs:comment "Questões que compõem a avaliação."@pt ;
+                   rdfs:label "questões incluídas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#realizadaPor
+:realizadaPor rdf:type owl:ObjectProperty ;
+              owl:inverseOf :trajetoriasRealizadas ;
+              rdfs:domain :TrajetoriasDeAprendizagem ;
+              rdfs:range :Aprendiz ;
+              rdfs:comment "Aprendiz que realizou a trajetória."@pt ;
+              rdfs:label "realizada por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#recursosUtilizados
+:recursosUtilizados rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :utilizadoEm ;
+                    rdfs:domain :Curso ;
+                    rdfs:range :RecursoDeAprendizagem ;
+                    rdfs:comment "Recursos didáticos usados no curso."@pt ;
+                    rdfs:label "recursos utilizados"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#requer
+:requer rdf:type owl:ObjectProperty ,
+                 owl:TransitiveProperty ;
+        rdfs:domain :Competencia ;
+        rdfs:range :Competencia ;
+        rdfs:comment "Prerrequisitos entre competências."@pt ;
+        rdfs:label "requer"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#temDesempenhoAvaliadoPor
+:temDesempenhoAvaliadoPor rdf:type owl:ObjectProperty ;
+                          rdfs:domain :DesempenhoDoAprendiz ;
+                          rdfs:range :Instrutor ;
+                          rdfs:comment "Instrutor responsável pela avaliação."@pt ;
+                          rdfs:label "tem desempenho avaliado por"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#temQuestaoRelacionada
+:temQuestaoRelacionada rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Competencia ;
+                       rdfs:range :Questao ;
+                       rdfs:comment "Questões relacionadas a esta competência."@pt ;
+                       rdfs:label "tem questão relacionada"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#teveDesempenhoAvaliado
+:teveDesempenhoAvaliado rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Aprendiz ;
+                        rdfs:range :DesempenhoDoAprendiz ;
+                        rdfs:comment "Aponta para os registros de desempenho do aprendiz."@pt ;
+                        rdfs:label "teve desempenho avaliado"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#teveRespostaEm
+:teveRespostaEm rdf:type owl:ObjectProperty ;
+                rdfs:domain :Questao ;
+                rdfs:range :DesempenhoDoAprendiz ;
+                rdfs:comment "Desempenhos que respondem a esta questão."@pt ;
+                rdfs:label "teve resposta em"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#trajetoriasRealizadas
+:trajetoriasRealizadas rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Aprendiz ;
+                       rdfs:range :TrajetoriasDeAprendizagem ;
+                       rdfs:comment "Caminhos de aprendizagem seguidos pelo aluno."@pt ;
+                       rdfs:label "trajetórias realizadas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#utilizadoEm
+:utilizadoEm rdf:type owl:ObjectProperty ;
+             rdfs:domain :RecursoDeAprendizagem ;
+             rdfs:range :Curso ;
+             rdfs:comment "Cursos onde o recurso é utilizado."@pt ;
+             rdfs:label "utilizado em"@pt .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ontolearn.com/ontologia#alternativas
+:alternativas rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Questao ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Opções de resposta."@pt ;
+              rdfs:label "alternativas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#area
+:area rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Competencia ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Área de conhecimento."@pt ;
+      rdfs:label "área"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#data
+:data rdf:type owl:DatatypeProperty ;
+      rdfs:domain :MilestoneDeAprendizagem ;
+      rdfs:range xsd:dateTime ;
+      rdfs:comment "Data do evento."@pt ;
+      rdfs:label "data"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#descricao
+:descricao rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Avaliacao
+                                       :Competencia
+                                       :Conhecimento
+                                       :Curso
+                                       :Habilidade
+                                       :MilestoneDeAprendizagem
+                                       :RecursoDeAprendizagem
+                                     )
+                       ] ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Texto descritivo."@pt ;
+           rdfs:label "descrição"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#enunciado
+:enunciado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Questao ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Pergunta da questão."@pt ;
+           rdfs:label "enunciado"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#etapas
+:etapas rdf:type owl:DatatypeProperty ;
+        rdfs:domain :TrajetoriasDeAprendizagem ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Etapas da trajetória."@pt ;
+        rdfs:label "etapas"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idAprendiz
+:idAprendiz rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Aprendiz ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Identificador único do aprendiz."@pt ;
+            rdfs:label "id do aprendiz"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idAtitude
+:idAtitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Atitude ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identificador da atitude."@pt ;
+           rdfs:label "id da atitude"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idAvaliacao
+:idAvaliacao rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Avaliacao ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Identificador da avaliação."@pt ;
+             rdfs:label "id da avaliação"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idCompetencia
+:idCompetencia rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Competencia ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Identificador da competência."@pt ;
+               rdfs:label "id da competência"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idConhecimento
+:idConhecimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Conhecimento ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Identificador do conhecimento."@pt ;
+                rdfs:label "id do conhecimento"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idCurso
+:idCurso rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Curso ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Identificador do curso."@pt ;
+         rdfs:label "id do curso"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idDesempenho
+:idDesempenho rdf:type owl:DatatypeProperty ;
+              rdfs:domain :DesempenhoDoAprendiz ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Identificador do desempenho."@pt ;
+              rdfs:label "id do desempenho"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idHabilidade
+:idHabilidade rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Habilidade ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Identificador da habilidade."@pt ;
+              rdfs:label "id da habilidade"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idInstrutor
+:idInstrutor rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Instrutor ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Identificador do instrutor."@pt ;
+             rdfs:label "id do instrutor"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idMilestone
+:idMilestone rdf:type owl:DatatypeProperty ;
+             rdfs:domain :MilestoneDeAprendizagem ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Identificador do milestone."@pt ;
+             rdfs:label "id do milestone"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idNivel
+:idNivel rdf:type owl:DatatypeProperty ;
+         rdfs:domain :NiveisDeProficiencia ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Identificador do nível de proficiência."@pt ;
+         rdfs:label "id do nível"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idQuestao
+:idQuestao rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Questao ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identificador da questão."@pt ;
+           rdfs:label "id da questão"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idRecurso
+:idRecurso rdf:type owl:DatatypeProperty ;
+           rdfs:domain :RecursoDeAprendizagem ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identificador do recurso."@pt ;
+           rdfs:label "id do recurso"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#idTrajetoria
+:idTrajetoria rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TrajetoriasDeAprendizagem ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Identificador da trajetória."@pt ;
+              rdfs:label "id da trajetória"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#nivel
+:nivel rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Curso ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Nível educacional do curso."@pt ;
+       rdfs:label "nível"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Competencia
+                                  :Curso
+                                  :RecursoDeAprendizagem
+                                  :UsuarioDoAva
+                                )
+                  ] ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Nome ou designação da entidade."@pt ;
+      rdfs:label "nome"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#respostaAprendiz
+:respostaAprendiz rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :DesempenhoDoAprendiz ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Resposta fornecida pelo aluno."@pt ;
+                  rdfs:label "resposta do aprendiz"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#respostaCorreta
+:respostaCorreta rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Questao ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Gabarito da questão."@pt ;
+                 rdfs:label "resposta correta"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#tipo
+:tipo rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Avaliacao
+                                  :MilestoneDeAprendizagem
+                                  :Questao
+                                  :RecursoDeAprendizagem
+                                )
+                  ] ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Categoria ou tipo do objeto."@pt ;
+      rdfs:label "tipo"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#titulo
+:titulo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Curso ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Título do curso."@pt ;
+        rdfs:label "título"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :RecursoDeAprendizagem ;
+     rdfs:range xsd:anyURI ;
+     rdfs:comment "Endereço web do recurso."@pt ;
+     rdfs:label "URL"@pt .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontolearn.com/ontologia#Analisar
+:Analisar rdf:type owl:Class ;
+          rdfs:subClassOf :NiveisDeProficiencia ;
+          rdfs:comment "Nível Analisar."@pt ;
+          rdfs:label "Analisar"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Aplicar
+:Aplicar rdf:type owl:Class ;
+         rdfs:subClassOf :NiveisDeProficiencia ;
+         rdfs:comment "Nível Aplicar."@pt ;
+         rdfs:label "Aplicar"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Aprendiz
+:Aprendiz rdf:type owl:Class ;
+          rdfs:subClassOf :UsuarioDoAva ;
+          owl:disjointWith :Instrutor ;
+          rdfs:comment "Estudante ou aluno."@pt ;
+          rdfs:label "Aprendiz"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Atitude
+:Atitude rdf:type owl:Class ;
+         rdfs:comment "Saber comportamental."@pt ;
+         rdfs:label "Atitude"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Avaliacao
+:Avaliacao rdf:type owl:Class ;
+           rdfs:comment "Instrumento de avaliação."@pt ;
+           rdfs:label "Avaliação"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#AvaliarBloom
+:AvaliarBloom rdf:type owl:Class ;
+              rdfs:subClassOf :NiveisDeProficiencia ;
+              rdfs:comment "Nível Avaliar."@pt ;
+              rdfs:label "Avaliar (Bloom)"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Competencia
+:Competencia rdf:type owl:Class ;
+             owl:disjointWith :RecursoDeAprendizagem ;
+             rdfs:comment "Conjunto de conhecimentos, habilidades e atitudes."@pt ;
+             rdfs:label "Competência"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Conhecimento
+:Conhecimento rdf:type owl:Class ;
+              rdfs:comment "Saber teórico."@pt ;
+              rdfs:label "Conhecimento"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Criar
+:Criar rdf:type owl:Class ;
+       rdfs:subClassOf :NiveisDeProficiencia ;
+       rdfs:comment "Nível Criar."@pt ;
+       rdfs:label "Criar"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Curso
+:Curso rdf:type owl:Class ;
+       rdfs:comment "Unidade de ensino."@pt ;
+       rdfs:label "Curso"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#DesempenhoDoAprendiz
+:DesempenhoDoAprendiz rdf:type owl:Class ;
+                      rdfs:comment "Registro de performance."@pt ;
+                      rdfs:label "Desempenho do Aprendiz"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Didatico
+:Didatico rdf:type owl:Class ;
+          rdfs:subClassOf :RecursoDeAprendizagem ;
+          rdfs:comment "Material didático."@pt ;
+          rdfs:label "Didático"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Entender
+:Entender rdf:type owl:Class ;
+          rdfs:subClassOf :NiveisDeProficiencia ;
+          rdfs:comment "Nível Entender."@pt ;
+          rdfs:label "Entender"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Formativo
+:Formativo rdf:type owl:Class ;
+           rdfs:subClassOf :DesempenhoDoAprendiz ;
+           rdfs:comment "Avaliação formativa."@pt ;
+           rdfs:label "Formativo"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Habilidade
+:Habilidade rdf:type owl:Class ;
+            rdfs:comment "Saber prático."@pt ;
+            rdfs:label "Habilidade"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Instrutor
+:Instrutor rdf:type owl:Class ;
+           rdfs:subClassOf :UsuarioDoAva ;
+           rdfs:comment "Professor ou tutor."@pt ;
+           rdfs:label "Instrutor"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Interativo
+:Interativo rdf:type owl:Class ;
+            rdfs:subClassOf :RecursoDeAprendizagem ;
+            rdfs:comment "Material interativo."@pt ;
+            rdfs:label "Interativo"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Lembrar
+:Lembrar rdf:type owl:Class ;
+         rdfs:subClassOf :NiveisDeProficiencia ;
+         rdfs:comment "Nível Lembrar."@pt ;
+         rdfs:label "Lembrar"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#MilestoneDeAprendizagem
+:MilestoneDeAprendizagem rdf:type owl:Class ;
+                         rdfs:comment "Marco de progresso."@pt ;
+                         rdfs:label "Milestone de Aprendizagem"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Multimidia
+:Multimidia rdf:type owl:Class ;
+            rdfs:subClassOf :RecursoDeAprendizagem ;
+            rdfs:comment "Material multimídia."@pt ;
+            rdfs:label "Multimídia"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#NiveisDeProficiencia
+:NiveisDeProficiencia rdf:type owl:Class ;
+                      rdfs:comment "Escala de domínio."@pt ;
+                      rdfs:label "Níveis de Proficiência"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Objetiva
+:Objetiva rdf:type owl:Class ;
+          rdfs:subClassOf :Questao ;
+          rdfs:comment "Questão objetiva."@pt ;
+          rdfs:label "Objetiva"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#ObjetivasAval
+:ObjetivasAval rdf:type owl:Class ;
+               rdfs:subClassOf :Avaliacao ;
+               rdfs:comment "Prova objetiva."@pt ;
+               rdfs:label "Avaliação Objetiva"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Questao
+:Questao rdf:type owl:Class ;
+         rdfs:comment "Item de avaliação."@pt ;
+         rdfs:label "Questão"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#RecursoDeAprendizagem
+:RecursoDeAprendizagem rdf:type owl:Class ;
+                       rdfs:comment "Entidade que representa qualquer material, ferramenta ou conteúdo (digital ou não) utilizado para dar suporte ao processo de ensino e aprendizagem."@pt ;
+                       rdfs:label "Recurso de Aprendizagem"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#TrajetoriasDeAprendizagem
+:TrajetoriasDeAprendizagem rdf:type owl:Class ;
+                           rdfs:comment "Caminho de aprendizagem."@pt ;
+                           rdfs:label "Trajetórias de Aprendizagem"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#UsuarioDoAva
+:UsuarioDoAva rdf:type owl:Class ;
+              rdfs:comment "Classe base para todos os usuários do sistema."@pt ;
+              rdfs:label "Usuário do AVA"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :Multimidia ;
+       rdfs:comment "Conteúdo em vídeo."@pt ;
+       rdfs:label "Vídeo"@pt .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontolearn.com/ontologia#APR-0001
+:APR-0001 rdf:type owl:NamedIndividual ,
+                   :Aprendiz ;
+          :conquistasAdquiridas :MILE-0001 ;
+          :desempenhoCompetencias :DEMP-0003 ,
+                                  :DEMP-0004 ;
+          :estaInscritoEm :CUR-0001 ;
+          :historicoAprendizagem :REC-0002 ,
+                                 :REC-0005 ;
+          :idAprendiz "APR-0001" ;
+          :nome "João Silva" ;
+          rdfs:comment "Indivíduo Aprendiz 0001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#AVAL-0002
+:AVAL-0002 rdf:type owl:NamedIndividual ,
+                    :ObjetivasAval ;
+           :questoesIncluidas :QUEST-0003 ;
+           :descricao "Avaliação focada no conceito de herança..." ;
+           :idAvaliacao "AVAL-0002" ;
+           :tipo "Objetiva" ;
+           rdfs:comment "Indivíduo Avaliação 0002"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#COMP-0001
+:COMP-0001 rdf:type owl:NamedIndividual ,
+                    :Competencia ;
+           :area "Programação de Computadores" ;
+           :idCompetencia "COMP-0001" ;
+           :nome "Classes e Objetos em POO" ;
+           rdfs:comment "Indivíduo Competência 0001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#COMP-0002
+:COMP-0002 rdf:type owl:NamedIndividual ,
+                    :Competencia ;
+           :ehCompostoDeConhecimento :KNOW-001 ;
+           :ehCompostoDeHabilidade :SKILL-001 ;
+           :requer :COMP-0001 ;
+           :area "Programação de Computadores" ;
+           :descricao "Capacidade de utilizar herança para reutilizar e estender o código..." ;
+           :idCompetencia "COMP-0002" ;
+           :nome "Herança em Python" ;
+           rdfs:comment "Indivíduo Competência 0002"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#CUR-0001
+:CUR-0001 rdf:type owl:NamedIndividual ,
+                   :Curso ;
+          :aprendizesInscritos :APR-0001 ;
+          :avaliacoesAplicadas :AVAL-0002 ;
+          :instrutoresResponsaveis :INST-0001 ;
+          :descricao "Curso básico para aprender Python." ;
+          :idCurso "CUR-0001" ;
+          :nivel "Educação Terciária de Ciclo Curto" ;
+          :titulo "Introdução à Programação com Python" ;
+          rdfs:comment "Indivíduo Curso 0001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#DEMP-0003
+:DEMP-0003 rdf:type owl:NamedIndividual ,
+                    :Formativo ;
+           :aprendizAvaliado :APR-0001 ;
+           :proficienciaAtingida :NP-Aplicar ;
+           :questaoRespondida :QUEST-0003 ;
+           :idDesempenho "DEMP-0003" ;
+           :respostaAprendiz "Permite que uma classe herde atributos e métodos de outra classe" ;
+           rdfs:comment "Indivíduo Desempenho 0003"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#DEMP-0004
+:DEMP-0004 rdf:type owl:NamedIndividual ,
+                    :DesempenhoDoAprendiz ;
+           rdfs:comment "Indivíduo Desempenho 0004"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#INST-0001
+:INST-0001 rdf:type owl:NamedIndividual ,
+                    :Instrutor ;
+           :avaliaDesempenho :DEMP-0003 ;
+           :ehResponsavelPor :CUR-0001 ;
+           :elaboraAvaliacoes :AVAL-0002 ;
+           :insereRecursos :REC-0004 ;
+           :idInstrutor "INST-0001" ;
+           :nome "Maria Fernandes" ;
+           rdfs:comment "Indivíduo Instrutor 0001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#KNOW-001
+:KNOW-001 rdf:type owl:NamedIndividual ,
+                   :Conhecimento ;
+          :descricao "Saber a definição de superclasse, subclasse e a sintaxe de herança." ;
+          :idConhecimento "KNOW-001" ;
+          rdfs:comment "Indivíduo Conhecimento 001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#MILE-0001
+:MILE-0001 rdf:type owl:NamedIndividual ,
+                    :MilestoneDeAprendizagem ;
+           :competenciasEnvolvidas :COMP-0001 ,
+                                   :COMP-0002 ;
+           :data "2024-02-20T18:00:00Z"^^xsd:dateTime ;
+           :descricao "Conclusão do Curso Introdução à Programação com Python" ;
+           :idMilestone "MILE-0001" ;
+           :tipo "Conclusão de Curso" ;
+           rdfs:comment "Indivíduo Milestone 0001"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#NP-Aplicar
+:NP-Aplicar rdf:type owl:NamedIndividual ,
+                     :Aplicar ;
+            :descricao "Nível 3 de Bloom: Usar informação em novas situações." ;
+            :idNivel "NP-0003-Aplicar" ;
+            rdfs:comment "Indivíduo Nível de Proficiência Aplicar"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#QUEST-0003
+:QUEST-0003 rdf:type owl:NamedIndividual ,
+                     :Objetiva ;
+            :competenciasAvaliadas :COMP-0002 ;
+            :exigeNivel :NP-Aplicar ;
+            :enunciado "Como funciona a herança em Python?" ;
+            :idQuestao "QUEST-0003" ;
+            :respostaCorreta "Permite que uma classe herde atributos e métodos de outra classe" ;
+            :tipo "Múltipla Escolha" ;
+            rdfs:comment "Indivíduo Questão 0003"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#REC-0002
+:REC-0002 rdf:type owl:NamedIndividual ,
+                   :RecursoDeAprendizagem ;
+          rdfs:comment "Indivíduo Recurso 0002"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#REC-0004
+:REC-0004 rdf:type owl:NamedIndividual ,
+                   :Video ;
+          :abordaCompetencia :COMP-0002 ;
+          :idRecurso "REC-0004" ;
+          :tipo "Vídeo" ;
+          :url "http://example.com/heranca-python-video"^^xsd:anyURI ;
+          rdfs:comment "Indivíduo Recurso 0004"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#REC-0005
+:REC-0005 rdf:type owl:NamedIndividual ,
+                   :RecursoDeAprendizagem ;
+          rdfs:comment "Indivíduo Recurso 0005"@pt .
+
+
+###  http://www.ontolearn.com/ontologia#SKILL-001
+:SKILL-001 rdf:type owl:NamedIndividual ,
+                    :Habilidade ;
+           :descricao "Capacidade de implementar uma subclasse que sobrescreve um método da superclasse." ;
+           :idHabilidade "SKILL-001" ;
+           rdfs:comment "Indivíduo Habilidade 001"@pt .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+
+#################################################################
+#    INSTÂNCIAS ADICIONAIS PARA VALIDAR TODAS AS CQs
+#################################################################
+
+### 1. Adicionando rótulo ao Nível (Para corrigir CQ2)
+:NP-Aplicar rdfs:label "Aplicar"@pt .
+
+### 2. Criando uma Questão para a Competência 0001 (Para corrigir CQ3)
+:QUEST-0001 rdf:type :Objetiva ;
+            :competenciasAvaliadas :COMP-0001 ;
+            :fazParteDaAvaliacao :AVAL-0002 ;
+            :idQuestao "QUEST-0001" ;
+            :enunciado "O que é um objeto em POO?" .
+
+### 3. Adicionando URLs aos recursos do histórico (Para corrigir CQ7)
+:REC-0002 :url "http://ontolearn.com/aula1-poo"^^xsd:anyURI ;
+          :idRecurso "REC-0002" .
+:REC-0005 :url "http://ontolearn.com/exercicios-heranca"^^xsd:anyURI ;
+          :idRecurso "REC-0005" .
+
+### 4. Criando cenário de disparidade: Questão Subjetiva (Para corrigir CQ8)
+:QUEST-0005 rdf:type :Subjetiva ;
+            :competenciasAvaliadas :COMP-0002 ;
+            :fazParteDaAvaliacao :AVAL-0002 ;
+            :idQuestao "QUEST-0005" ;
+            :enunciado "Explique com suas palavras a vantagem da herança." .
+
+# Novo desempenho do João Silva (agora na questão subjetiva com nível menor)
+:DEMP-0005 rdf:type :Formativo ;
+           :aprendizAvaliado :APR-0001 ;
+           :proficienciaAtingida :NP-Lembrar ; # Nível menor que 'Aplicar'
+           :questaoRespondida :QUEST-0005 ;
+           :idDesempenho "DEMP-0005" .
+
+# Vinculando o novo desempenho ao aprendiz
+:APR-0001 :desempenhoCompetencias :DEMP-0005 .
+
+# Adicionando rótulo ao nível Lembrar
+:NP-Lembrar rdf:type :Lembrar ;
+            rdfs:label "Lembrar"@pt ;
+            :idNivel "NP-0001-Lembrar" .

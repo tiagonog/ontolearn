@@ -1,0 +1,18 @@
+\begin{table*}[!t]
+\caption{HermiT on synthetic fact bases laid under v2.2: 20 bases per size (four prerequisite topologies, five seeds). Seconds, mean [min--max]. \emph{Reasoning}: consistency, classification and realization, timed inside the JVM on warm repetitions. \emph{Whole process}: wall-clock of one process, including JVM start-up, parsing, and a check of consistency and class satisfiability. Counts of triples, individuals, prerequisite edges and closure pairs are identical on both platforms for all 100 bases.}
+\label{tab:scal}
+\centering
+\footnotesize
+\begin{tabular}{rrcccc}
+\hline
+& & \multicolumn{2}{c}{\textbf{Platform A}} & \multicolumn{2}{c}{\textbf{Platform B}} \\
+\textbf{Individuals} & \textbf{Triples} & \textbf{reasoning} & \textbf{whole process} & \textbf{reasoning} & \textbf{whole process} \\
+\hline
+67 & 983--1{,}003 & 0.03 [0.02--0.04] & 1.14 [0.79--1.32] & 0.05 [0.03--0.08] & 1.76 [1.54--2.01] \\
+337 & 2{,}133--2{,}297 & 0.06 [0.04--0.09] & 1.39 [1.26--1.77] & 0.07 [0.03--0.14] & 1.82 [1.56--2.02] \\
+1{,}274 & 6{,}117--6{,}760 & 0.14 [0.09--0.17] & 1.56 [1.20--1.73] & 0.16 [0.11--0.25] & 2.13 [1.88--2.73] \\
+4{,}529 & 20{,}256--21{,}909 & 0.40 [0.29--0.53] & 2.00 [1.53--2.21] & 0.56 [0.36--1.12] & 2.83 [2.51--3.30] \\
+12{,}874 & 57{,}507--60{,}699 & 1.01 [0.77--1.22] & 3.15 [2.74--3.37] & 1.79 [1.47--2.21] & 4.48 [3.81--5.21] \\
+\hline
+\end{tabular}
+\end{table*}

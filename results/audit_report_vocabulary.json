@@ -1,0 +1,120 @@
+{
+ "v1.0": {
+  "counts": {
+   "classes": [
+    24,
+    24
+   ],
+   "object properties": [
+    18,
+    18
+   ],
+   "individuals": [
+    7,
+    7
+   ],
+   "signatures": [
+    6,
+    6
+   ],
+   "subclass links": [
+    13,
+    14
+   ],
+   "assertions": [
+    7,
+    7
+   ]
+  },
+  "not_holding": [
+   "subclass links: Subjetiva < Questao"
+  ]
+ },
+ "v2.0": {
+  "counts": {
+   "classes": [
+    24,
+    24
+   ],
+   "object properties": [
+    18,
+    18
+   ],
+   "individuals": [
+    7,
+    7
+   ],
+   "signatures": [
+    6,
+    6
+   ],
+   "subclass links": [
+    14,
+    14
+   ],
+   "assertions": [
+    7,
+    7
+   ]
+  },
+  "not_holding": []
+ },
+ "v2.1": {
+  "counts": {
+   "classes": [
+    24,
+    24
+   ],
+   "object properties": [
+    18,
+    18
+   ],
+   "individuals": [
+    7,
+    7
+   ],
+   "signatures": [
+    6,
+    6
+   ],
+   "subclass links": [
+    14,
+    14
+   ],
+   "assertions": [
+    7,
+    7
+   ]
+  },
+  "not_holding": []
+ },
+ "v2.2": {
+  "counts": {
+   "classes": [
+    24,
+    24
+   ],
+   "object properties": [
+    18,
+    18
+   ],
+   "individuals": [
+    7,
+    7
+   ],
+   "signatures": [
+    6,
+    6
+   ],
+   "subclass links": [
+    14,
+    14
+   ],
+   "assertions": [
+    7,
+    7
+   ]
+  },
+  "not_holding": []
+ }
+}

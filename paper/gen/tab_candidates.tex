@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\caption{Complete output of the isolated-class analysis on v1.0 (\texttt{scripts/audit.py} with \texttt{claims/sbie2026.json}). Stage~1 returns every named class with neither a named superclass nor a named subclass; stage~2 looks for evidence. Sig.: the class is named in a property signature. Adjudication: what the class is, a legitimate root concept or the defect D1; the analysis has one true positive, no false positive and no false negative. The other six root concepts have subclasses and are not candidates.}
+\label{tab:candidates}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm}p{0.45cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}p{1.05cm}}
+\hline
+\textbf{Stage-1 candidate} & \textbf{Sig.} & \textbf{Stage-2 evidence} & \textbf{Verdict} & \textbf{Adjud.} \\
+\hline
+\texttt{Subjetiva} & no & manifest, usage, unreferenced & \vd{Disconnected} & defect D1 \\
+\texttt{Atitude} & yes & --- & \vd{Root} & root \\
+\texttt{Competencia} & yes & --- & \vd{Root} & root \\
+\texttt{Conhecimento} & yes & --- & \vd{Root} & root \\
+\texttt{Curso} & yes & --- & \vd{Root} & root \\
+\texttt{Habilidade} & yes & --- & \vd{Root} & root \\
+\texttt{Milestone\allowbreak{}De\allowbreak{}Aprendizagem} & yes & --- & \vd{Root} & root \\
+\texttt{Trajetorias\allowbreak{}De\allowbreak{}Aprendizagem} & yes & --- & \vd{Root} & root \\
+\hline
+\end{tabular}
+\end{table}

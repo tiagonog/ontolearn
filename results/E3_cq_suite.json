@@ -1,0 +1,1670 @@
+{
+ "A": {
+  "cq1.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "term :competenciaAvaliada is not declared in the ontology",
+    "no resource has rdfs:label \"Joao Silva\" (the data hold [':nome \"João Silva\"'])"
+   ]
+  },
+  "cq2.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "term :competenciaAvaliada is not declared in the ontology",
+    "no resource has rdfs:label \"Joao Silva\" (the data hold [':nome \"João Silva\"'])",
+    "no resource has rdfs:label \"Heranca em Python\" (the data hold [':nome \"Herança em Python\"'])"
+   ]
+  },
+  "cq3.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "term :temQuestao is not declared in the ontology",
+    "no resource has rdfs:label \"Classes e Objetos em POO\" (that literal occurs under [':nome'])"
+   ]
+  },
+  "cq4.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "no resource has rdfs:label \"Heranca em Python\" (the data hold [':nome \"Herança em Python\"'])"
+   ]
+  },
+  "cq5.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "no resource has rdfs:label \"Heranca em Python\" (the data hold [':nome \"Herança em Python\"'])"
+   ]
+  },
+  "cq6.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "term :competenciaAvaliada is not declared in the ontology",
+    "no resource has :area \"Programacao\"",
+    ":Aplicar is a class used where a level individual is required"
+   ]
+  },
+  "cq7.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "term :acessouRecurso is not declared in the ontology",
+    "no resource has rdfs:label \"Joao Silva\" (the data hold [':nome \"João Silva\"'])"
+   ]
+  },
+  "cq8.rq": {
+   "solutions": {
+    "v1.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.0": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.1": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    },
+    "v2.2": {
+     "asserted": 0,
+     "DL": 0,
+     "RL": 0
+    }
+   },
+   "diagnosis_v1.0": [
+    "no resource has rdfs:label \"Joao Silva\" (the data hold [':nome \"João Silva\"'])"
+   ]
+  }
+ },
+ "B": [
+  {
+   "id": "QC1-a",
+   "query": "qc1.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC1-b",
+   "query": "qc1.rq",
+   "base": "extended",
+   "expected": 2,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC1-c",
+   "query": "qc1.rq",
+   "base": "extended",
+   "expected": 0,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC2-a",
+   "query": "qc2.rq",
+   "base": "reference",
+   "expected": 2,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC2-b",
+   "query": "qc2.rq",
+   "base": "extended",
+   "expected": 2,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC3-a",
+   "query": "qc3.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC3-b",
+   "query": "qc3.rq",
+   "base": "reference",
+   "expected": 2,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC3-c",
+   "query": "qc3.rq",
+   "base": "extended",
+   "expected": 3,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC4-a",
+   "query": "qc4_caminho.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC4-b",
+   "query": "qc4_caminho.rq",
+   "base": "extended",
+   "expected": 3,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 3,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 3,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 3,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 3,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC4-c",
+   "query": "qc4_direta.rq",
+   "base": "extended",
+   "expected": 3,
+   "inference_dependent": 2,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC5-a",
+   "query": "qc5.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC5-b",
+   "query": "qc5.rq",
+   "base": "extended",
+   "expected": 2,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC6-a",
+   "query": "qc6.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC6-b",
+   "query": "qc6.rq",
+   "base": "extended",
+   "expected": 3,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 3,
+      "conforms": true
+     },
+     "RL": {
+      "n": 3,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC7-a",
+   "query": "qc7.rq",
+   "base": "reference",
+   "expected": 0,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 0,
+      "conforms": true
+     },
+     "RL": {
+      "n": 0,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC7-b",
+   "query": "qc7.rq",
+   "base": "extended",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC7-c",
+   "query": "qc7.rq",
+   "base": "extended",
+   "expected": 1,
+   "inference_dependent": 1,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 0,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC8-a",
+   "query": "qc8.rq",
+   "base": "reference",
+   "expected": 1,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 1,
+      "conforms": true
+     },
+     "DL": {
+      "n": 1,
+      "conforms": true
+     },
+     "RL": {
+      "n": 1,
+      "conforms": true
+     }
+    }
+   }
+  },
+  {
+   "id": "QC8-b",
+   "query": "qc8.rq",
+   "base": "extended",
+   "expected": 2,
+   "inference_dependent": 0,
+   "results": {
+    "v1.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.0": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": null,
+      "conforms": false
+     },
+     "RL": {
+      "n": null,
+      "conforms": false
+     }
+    },
+    "v2.1": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    },
+    "v2.2": {
+     "asserted": {
+      "n": 2,
+      "conforms": true
+     },
+     "DL": {
+      "n": 2,
+      "conforms": true
+     },
+     "RL": {
+      "n": 2,
+      "conforms": true
+     }
+    }
+   }
+  }
+ ],
+ "C": {
+  "F1": [],
+  "F2": [],
+  "F2b": [],
+  "F3": [],
+  "F4": [],
+  "F5": [],
+  "F6": [],
+  "T": [
+   {
+    "case": "QC4-c",
+    "lost": 2,
+    "gained": 0
+   }
+  ],
+  "I": [
+   {
+    "case": "QC1-b",
+    "lost": 1,
+    "gained": 0
+   },
+   {
+    "case": "QC3-b",
+    "lost": 1,
+    "gained": 0
+   },
+   {
+    "case": "QC3-c",
+    "lost": 1,
+    "gained": 0
+   },
+   {
+    "case": "QC5-b",
+    "lost": 1,
+    "gained": 0
+   },
+   {
+    "case": "QC6-b",
+    "lost": 1,
+    "gained": 0
+   },
+   {
+    "case": "QC7-c",
+    "lost": 1,
+    "gained": 0
+   }
+  ]
+ },
+ "D": {
+  "P1 question items by subsumption path (?q a/rdfs:subClassOf* :Questao)": {
+   "v1.0": {
+    "asserted": 2,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.0": {
+    "asserted": 3,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.1": {
+    "asserted": 3,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.2": {
+    "asserted": 3,
+    "DL": 3,
+    "RL": 3
+   }
+  },
+  "P2 question items by direct type (?q a :Questao)": {
+   "v1.0": {
+    "asserted": 0,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.0": {
+    "asserted": 0,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.1": {
+    "asserted": 0,
+    "DL": 3,
+    "RL": 3
+   },
+   "v2.2": {
+    "asserted": 0,
+    "DL": 3,
+    "RL": 3
+   }
+  },
+  "P3 KSA components of a competency (?c :temComponenteKSA ?k)": {
+   "v1.0": {
+    "asserted": 0,
+    "DL": 0,
+    "RL": 0
+   },
+   "v2.0": {
+    "asserted": 0,
+    "DL": 2,
+    "RL": 2
+   },
+   "v2.1": {
+    "asserted": 0,
+    "DL": 2,
+    "RL": 2
+   },
+   "v2.2": {
+    "asserted": 0,
+    "DL": 2,
+    "RL": 2
+   }
+  }
+ },
+ "inconsistent_bases": [
+  "v2.0/extended"
+ ],
+ "B_summary": {
+  "v1.0": {
+   "asserted": 20,
+   "DL": 20,
+   "RL": 20
+  },
+  "v2.0": {
+   "asserted": 20,
+   "DL": 9,
+   "RL": 9
+  },
+  "v2.1": {
+   "asserted": 20,
+   "DL": 20,
+   "RL": 20
+  },
+  "v2.2": {
+   "asserted": 20,
+   "DL": 20,
+   "RL": 20
+  }
+ }
+}

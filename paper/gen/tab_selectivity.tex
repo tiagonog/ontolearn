@@ -1,0 +1,21 @@
+\begin{table*}[!t]
+\caption{Selectivity of the audit (\texttt{scripts/audit\_selectivity.py}, \texttt{scripts/audit\_fixtures.py}). Mutants and fixtures have ground truth by construction; the last four rows are negative controls and cross-checks.}
+\label{tab:selectivity}
+\centering
+\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.6cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{6.2cm}}
+\hline
+\textbf{Input} & \textbf{Outcome counted} & \textbf{Result} \\
+\hline
+Released versions (4 versions $\times$ 2 fact bases) & isolated classes flagged & 2 flagged: \texttt{Subjetiva} in v1.0 (both bases); 0 false positives, 0 false negatives \\
+Deleted specialization link (16 mutants of v2.2) & defect reported & 16/16 on the 20-individual ABox (13 by \textit{unreferenced} evidence, 10 through the data); 16/16 on the extended base (13 and 16) \\
+Deleted union member (29 mutants $\times$ 2 fact bases) & \vd{Conflict} $\Leftrightarrow$ inconsistent under OWL~2~DL & agreement on 58/58 (20 and 26 inconsistent mutants) \\
+Deleted axiom family (9 mutants of v2.2) & a claim of this paper becomes unrealized & 9/9 \\
+Fixtures (16 minimal ontologies, one stated assumption each) & outcome as fixed by construction; \vd{Conflict} $\Leftrightarrow$ inconsistent under OWL~2~DL & 16/16; 16/16 (6 inconsistent fixtures) \\
+Root classes (13 $\times$ 4 versions $\times$ 2 bases) & flagged & 0/104 \\
+Annotation removed (100 mutants of v2.2) & audit result changes & 0/100 \\
+External ontologies (10) & \vd{Disconnected} / \vd{Suspect} / mismatches & 0 / 14 / 0 \\
+DL name (14 ontologies) & same as OWL~API construct report & 12/14 \\
+\hline
+\end{tabular}
+\end{table*}

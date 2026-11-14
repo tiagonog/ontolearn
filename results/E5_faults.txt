@@ -1,0 +1,20 @@
+
+== E5. Detections out of 20 bases, per schema version: OWL inconsistency / SHACL violation / audit conflict ==
+  case                                                                        v1.0       v2.0       v2.1       v2.2   
+  X01   contradictory record: a second level, of a different tier           0/20/ 0   0/20/ 0   0/20/ 0  20/20/ 0 
+  X02   incomplete: a performance record loses its level                    0/20/ 0   0/20/ 0   0/20/ 0   0/20/ 0 
+  X03   incomplete: a question loses every competency link                  0/10/ 0   0/20/ 0   0/20/ 0   0/20/ 0 
+  X03s  incomplete: a SUBJECTIVE question loses every competency link       0/ 0/ 0   0/20/ 0   0/20/ 0   0/20/ 0 
+  X04   incomplete: an assessment with no question                          0/20/ 0   0/20/ 0   0/20/ 0   0/20/ 0 
+  X05   unexpected relation: a question is made to require a competency     0/ 0/ 0  20/ 0/20  20/ 0/20  20/ 0/20 
+  X06   type clash: a learner also typed as a competency                    0/ 0/ 0  20/ 0/ 0  20/ 0/ 0  20/ 0/ 0 
+  X07   type clash: a knowledge component also typed as a skill             0/ 0/ 0  20/ 0/ 0  20/ 0/ 0  20/ 0/ 0 
+  X08   type clash: a question typed objective and subjective               0/ 0/ 0  20/ 0/ 0  20/ 0/ 0  20/ 0/ 0 
+  X09   unexpected relation: a competency requires an undeclared, untyped   0/ 0/ 0   0/ 0/ 0   0/ 0/ 0   0/ 0/ 0 
+  X10   prerequisite cycle: an edge closing a loop                          0/ 0/ 0   0/ 0/ 0   0/ 0/ 0   0/ 0/ 0 
+  X11   unexpected attribute: a learner carries a :descricao (its domain i  0/ 0/ 0  20/ 0/20  20/ 0/20  20/ 0/20 
+  L01   legitimate: an instructor enrolled as a learner in a course        20/ 0/20  20/ 0/20   0/ 0/ 0   0/ 0/ 0 
+  L02   legitimate: an attitude carrying a description                      0/ 0/ 0  20/ 0/20   0/ 0/ 0   0/ 0/ 0 
+  L03   legitimate: a performance record carrying a date                    0/ 0/ 0  20/ 0/20   0/ 0/ 0   0/ 0/ 0 
+  OWL 2 RL rule engine on v2.2 (bases out of 20 with an inconsistency message): X01 20, X02 0, X03 0, X03s 0, X04 0, X05 20, X06 20, X07 20, X08 20, X09 0, X10 0, X11 0, L01 0, L02 0, L03 0
+  Prerequisite cycles are found by the query  ASK { ?c :requer+ ?c }  in X10 20/20/20/20 bases (v1.0/v2.0/v2.1/v2.2) and in no other case.

@@ -1,0 +1,229 @@
+{
+ "file": "../ontology/ontolearn-v2.2.owl",
+ "sha256": "2a6223ca283f8cacc37df6f4c5762e3e2c792c9f4bef39f45d7cdfdab2219594",
+ "triples": 805,
+ "inventory": {
+  "rdfs:subClassOf": 19,
+  "rdfs:subPropertyOf": 6,
+  "owl:equivalentClass": 0,
+  "owl:equivalentProperty": 0,
+  "owl:someValuesFrom": 3,
+  "owl:allValuesFrom": 0,
+  "owl:hasValue": 0,
+  "owl:hasSelf": 0,
+  "owl:disjointWith": 5,
+  "owl:propertyDisjointWith": 0,
+  "owl:disjointUnionOf": 0,
+  "owl:inverseOf": 25,
+  "owl:unionOf": 8,
+  "owl:intersectionOf": 0,
+  "owl:complementOf": 0,
+  "owl:oneOf": 0,
+  "owl:propertyChainAxiom": 0,
+  "owl:hasKey": 0,
+  "owl:sameAs": 0,
+  "owl:differentFrom": 0,
+  "owl:imports": 0,
+  "owl:AllDisjointClasses": 2,
+  "owl:AllDifferent": 0,
+  "owl:TransitiveProperty": 2,
+  "owl:FunctionalProperty": 2,
+  "owl:InverseFunctionalProperty": 0,
+  "owl:SymmetricProperty": 0,
+  "owl:AsymmetricProperty": 0,
+  "owl:ReflexiveProperty": 0,
+  "owl:IrreflexiveProperty": 0,
+  "unqualified cardinality": 0,
+  "qualified cardinality": 0,
+  "datatype ranges": 27,
+  "classes": 29,
+  "object properties": 50,
+  "data properties": 27,
+  "individuals": 20,
+  "individuals incl. undeclared": 20,
+  "triples": 805
+ },
+ "expressivity": "SHIF(D)",
+ "expressivity_rules": [
+  "base S: transitive roles=2, full concept negation/union/existential used=True",
+  "H: 6 sub-property axioms",
+  "I: 25 inverse-property axioms",
+  "F: 2 functional object properties, no number restrictions",
+  "(D): 27 data properties"
+ ],
+ "imports": [],
+ "claims": [
+  {
+   "id": "P01",
+   "where": "Table: structural metrics",
+   "claim": "29 classes",
+   "measured": 29,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P02",
+   "where": "Table: structural metrics",
+   "claim": "50 object properties",
+   "measured": 50,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P03",
+   "where": "Table: structural metrics",
+   "claim": "27 data properties",
+   "measured": 27,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P04",
+   "where": "Table: structural metrics",
+   "claim": "20 individuals",
+   "measured": 20,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P05",
+   "where": "Sec. VI",
+   "claim": "DL expressivity is SHIF(D)",
+   "measured": "SHIF(D)",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P06",
+   "where": "F4",
+   "claim": "six sub-property axioms",
+   "measured": 6,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P07",
+   "where": "F3",
+   "claim": "three existential restrictions",
+   "measured": 3,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P08",
+   "where": "F4",
+   "claim": "25 inverse-property axioms",
+   "measured": 25,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P09",
+   "where": "Sec. III",
+   "claim": "two transitive properties",
+   "measured": 2,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P10",
+   "where": "F5",
+   "claim": "two functional properties",
+   "measured": 2,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P11",
+   "where": "F2b, F6",
+   "claim": "two n-ary disjointness axioms (13 roots; 6 tiers)",
+   "measured": 2,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P12",
+   "where": "F2",
+   "claim": "five binary disjointness axioms",
+   "measured": 5,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P13",
+   "where": "Sec. VI",
+   "claim": "no cardinality restriction of any kind",
+   "measured": 0,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P14",
+   "where": "Sec. VI",
+   "claim": "no qualified cardinality restriction",
+   "measured": 0,
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P15",
+   "where": "F2",
+   "claim": "Knowledge, Skill and Attitude are pairwise disjoint; Objetiva and Subjetiva are disjoint",
+   "measured": "4 of 4 pairs",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P16",
+   "where": "F6",
+   "claim": "the six Bloom tiers are pairwise disjoint (15 pairs)",
+   "measured": "15 of 15 pairs",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P17",
+   "where": "F1; Table: classes",
+   "claim": "the 16 specializations of the class table",
+   "measured": "16 of 16 edges",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P18",
+   "where": "Sec. III",
+   "claim": "requer is transitive, with declared inverse ehRequeridaPor",
+   "measured": "characteristics=True, inverse=True",
+   "verdict": "REALIZED"
+  },
+  {
+   "id": "P19",
+   "where": "F5",
+   "claim": "proficienciaAtingida is functional",
+   "measured": "characteristics=True, inverse=True",
+   "verdict": "REALIZED"
+  }
+ ],
+ "isolated": [
+  {
+   "class": "Atitude",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Competencia",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Conhecimento",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Curso",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "Habilidade",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "MilestoneDeAprendizagem",
+   "verdict": "ROOT",
+   "evidence": []
+  },
+  {
+   "class": "TrajetoriasDeAprendizagem",
+   "verdict": "ROOT",
+   "evidence": []
+  }
+ ],
+ "mismatches": [],
+ "signatures_not_evaluated": 0
+}

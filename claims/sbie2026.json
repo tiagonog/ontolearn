@@ -1,0 +1,40 @@
+{
+ "report": "Nogueira, Lima, Nogueira. OntoLearn: A Formal Ontology for Competency-Based Learning Analytics and Semantic Modeling. SBIE 2026, pp. 44-56. doi:10.5753/sbie.2026.25639",
+ "note": "The claims that the report makes, in its text, equations, tables and listings, about the expressivity of the released artifact, the kinds of construct it uses and its entity and axiom counts (C01-C14), and the one specialization that it states in words (C15). 'where' locates each claim in the report. English glosses used in the report are mapped to the artifact identifiers. Statements of the report that only name classes, properties, individuals, signatures, subclass links or assertions are not counted as claims: they are transcribed under 'named' and checked by scripts/report_vocabulary.py. The values that the report tabulates for earlier development states are transcribed under 'trace' and compared with the preserved files by scripts/lineage.py.",
+ "claims": [
+  {"id": "C01", "where": "Sec. 4.4; Fig. 1", "text": "DL expressivity is ALCHIF(D)", "check": "expressivity", "value": "ALCHIF(D)"},
+  {"id": "C02", "where": "Sec. 4.4 (the H of the stated profile)", "text": "the artifact has a role hierarchy", "check": "construct", "construct": "rdfs:subPropertyOf", "min": 1},
+  {"id": "C03", "where": "Sec. 4.3; Sec. 4.4, Eq. (1); Fig. 2", "text": "Knowledge, Skill and Attitude are pairwise disjoint", "check": "disjoint", "pairs": [["Conhecimento", "Habilidade"], ["Conhecimento", "Atitude"], ["Habilidade", "Atitude"]]},
+  {"id": "C04", "where": "Sec. 4.4, Eq. (2)", "text": "existential restrictions are applied", "check": "construct", "construct": "owl:someValuesFrom", "min": 1},
+  {"id": "C05", "where": "Sec. 4.4", "text": "qualified cardinality restrictions are used", "check": "construct", "construct": "qualified cardinality", "min": 1},
+  {"id": "C06", "where": "Sec. 4.4", "text": "a score-valued data property (hasScoreValue) grounds proficiency attribution", "check": "term", "kind": "data property", "pattern": "(?i)score|nota|pontua"},
+  {"id": "C07", "where": "Sec. 4.4 and its footnote 1", "text": "the prerequisite property is transitive and has a declared inverse", "check": "characteristic", "property": "requer", "types": ["owl:TransitiveProperty"], "inverse": "ehRequeridaPor"},
+  {"id": "C08", "where": "Sec. 4.4", "text": "functional properties are used", "check": "construct", "construct": "owl:FunctionalProperty", "min": 1},
+  {"id": "C09", "where": "Sec. 4.5; Table 3", "text": "29 classes", "check": "count", "metric": "classes", "value": 29},
+  {"id": "C10", "where": "Sec. 4.5; Table 3", "text": "48 object properties", "check": "count", "metric": "object properties", "value": 48},
+  {"id": "C11", "where": "Table 3", "text": "27 data properties", "check": "count", "metric": "data properties", "value": 27},
+  {"id": "C12", "where": "Sec. 4.5; Table 3", "text": "24 declared inverses", "check": "count", "metric": "owl:inverseOf", "value": 24},
+  {"id": "C13", "where": "Sec. 4.5; Table 3", "text": "2 transitive properties", "check": "count", "metric": "owl:TransitiveProperty", "value": 2},
+  {"id": "C14", "where": "Table 3; Sec. 5.3 (\"approximately 40\"); Sec. 6", "text": "test ABox of 40 named individuals", "check": "count", "metric": "individuals", "value": 40},
+  {"id": "C15", "where": "Sec. 5.2, Listing 1; Fig. 2", "text": "Questao has the subclasses Objetiva and Subjetiva", "check": "taxonomy", "edges": [["Objetiva", "Questao"], ["Subjetiva", "Questao"]]}
+ ],
+ "named": {
+  "where": "Fig. 2 and Fig. 3 (classes, object properties, individuals, subclass links, assertions); Listing 1 and Sec. 4.3 (signatures); footnote 1 and Sec. 5.3.1",
+  "classes": ["Conhecimento", "Habilidade", "Atitude", "Competencia", "RecursoDeAprendizagem", "Video", "Didatico", "Multimidia", "Interativo", "Aprendiz", "Instrutor", "UsuarioDoAva", "DesempenhoDoAprendiz", "NiveisDeProficiencia", "Lembrar", "Entender", "Aplicar", "Analisar", "Criar", "Avaliacao", "Questao", "Objetiva", "Subjetiva", "Formativo"],
+  "object_properties": ["compoeConhecimentoEm", "compoeHabilidadeEm", "compoeAtitudeEm", "requer", "abordaCompetencia", "historicoAprendizagem", "desempenhoCompetencias", "avaliaDesempenho", "proficienciaAtingida", "competenciasAvaliadas", "fazParteDaAvaliacao", "questaoRespondida", "exigeNivel", "ehRequeridaPor", "teveRespostaEm", "foiAtingidaEm", "ehAbordadaPor", "avaliadaPelaQuestao"],
+  "individuals": {"APR-0001": "Aprendiz", "DEMP-0003": "Formativo", "QUEST-0003": "Objetiva", "NP-Aplicar": "Aplicar", "COMP-0002": "Competencia", "COMP-0001": "Competencia", "REC-0004": "Video"},
+  "signatures": [["desempenhoCompetencias", "Aprendiz", "DesempenhoDoAprendiz"], ["proficienciaAtingida", "DesempenhoDoAprendiz", "NiveisDeProficiencia"], ["questaoRespondida", "DesempenhoDoAprendiz", "Questao"], ["competenciasAvaliadas", "Questao", "Competencia"], ["requer", "Competencia", "Competencia"], ["abordaCompetencia", "RecursoDeAprendizagem", "Competencia"]],
+  "subclass_links": [["Video", "RecursoDeAprendizagem"], ["Didatico", "RecursoDeAprendizagem"], ["Multimidia", "RecursoDeAprendizagem"], ["Interativo", "RecursoDeAprendizagem"], ["Aprendiz", "UsuarioDoAva"], ["Instrutor", "UsuarioDoAva"], ["Objetiva", "Questao"], ["Subjetiva", "Questao"], ["Lembrar", "NiveisDeProficiencia"], ["Entender", "NiveisDeProficiencia"], ["Aplicar", "NiveisDeProficiencia"], ["Analisar", "NiveisDeProficiencia"], ["Criar", "NiveisDeProficiencia"], ["Formativo", "DesempenhoDoAprendiz"]],
+  "assertions": [["APR-0001", "desempenhoCompetencias", "DEMP-0003"], ["DEMP-0003", "questaoRespondida", "QUEST-0003"], ["DEMP-0003", "proficienciaAtingida", "NP-Aplicar"], ["QUEST-0003", "competenciasAvaliadas", "COMP-0002"], ["QUEST-0003", "exigeNivel", "NP-Aplicar"], ["COMP-0002", "requer", "COMP-0001"], ["REC-0004", "abordaCompetencia", "COMP-0002"]]
+ },
+ "trace": {
+  "where": "Table 3 (metrics from the ontology editor); Fig. 1",
+  "note": "A dash in the report's table is transcribed as null and is not compared.",
+  "states": {
+   "v0": {"classes": 82, "object properties": null, "data properties": null, "owl:inverseOf": null, "owl:TransitiveProperty": null, "individuals": 0},
+   "v2": {"classes": 55, "object properties": 26, "data properties": 0, "owl:inverseOf": 4, "owl:TransitiveProperty": 1, "individuals": 0},
+   "v6": {"classes": 28, "object properties": 48, "data properties": 27, "owl:inverseOf": 24, "owl:TransitiveProperty": 2, "individuals": 32},
+   "v10": {"classes": 29, "object properties": 48, "data properties": 27, "owl:inverseOf": 24, "owl:TransitiveProperty": 2, "individuals": 40}
+  }
+ }
+}
